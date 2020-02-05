@@ -13,7 +13,8 @@ class HomeController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        view.backgroundColor = .red
+        navigationItem.title = "XouTube";
+        collectionView?.backgroundColor = UIColor.gray;
     }
     
     
