@@ -14,7 +14,6 @@
 		3803EA7823EA998B00DC745C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3803EA7723EA998B00DC745C /* Assets.xcassets */; };
 		3803EA7B23EA998B00DC745C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3803EA7923EA998B00DC745C /* LaunchScreen.storyboard */; };
 		3803EA8623EA998B00DC745C /* XouTubeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3803EA8523EA998B00DC745C /* XouTubeTests.swift */; };
-		3803EA9123EAAF0A00DC745C /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3803EA9023EAAF0A00DC745C /* HomeController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +38,6 @@
 		3803EA8123EA998B00DC745C /* XouTubeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XouTubeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3803EA8523EA998B00DC745C /* XouTubeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XouTubeTests.swift; sourceTree = "<group>"; };
 		3803EA8723EA998B00DC745C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3803EA9023EAAF0A00DC745C /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +86,6 @@
 				3803EA7723EA998B00DC745C /* Assets.xcassets */,
 				3803EA7923EA998B00DC745C /* LaunchScreen.storyboard */,
 				3803EA7C23EA998B00DC745C /* Info.plist */,
-				3803EA9023EAAF0A00DC745C /* HomeController.swift */,
 			);
 			path = XouTube;
 			sourceTree = "<group>";
@@ -203,7 +200,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3803EA9123EAAF0A00DC745C /* HomeController.swift in Sources */,
 				3803EA7323EA998900DC745C /* ViewController.swift in Sources */,
 				3803EA6F23EA998900DC745C /* AppDelegate.swift in Sources */,
 				3803EA7123EA998900DC745C /* SceneDelegate.swift in Sources */,
