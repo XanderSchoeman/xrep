@@ -17,6 +17,9 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func btnSkip(_ sender: UIButton) {
+        
+    }
     
     
 
