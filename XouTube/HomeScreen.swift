@@ -1,14 +1,14 @@
 //
-//  ViewController.swift
+//  HomeScreen.swift
 //  XouTube
 //
-//  Created by Xander Schoeman on 2020/02/05.
+//  Created by Xander Schoeman on 2020/02/11.
 //  Copyright © 2020 Xander Schoeman. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeScreen: UIViewController {
     @IBOutlet weak var name: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,12 +17,11 @@ class ViewController: UIViewController {
         
     }
     
-    @IBAction func btnSkip(_ sender: UIButton) {
-        
-    }
+    
     
     
 
 
 }
+
 
