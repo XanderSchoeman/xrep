@@ -5,9 +5,6 @@
 //  Created by Xander Schoeman on 2020/02/14.
 //  Copyright © 2020 Xander Schoeman. All rights reserved.
 //
-
-
-
 import UIKit
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
@@ -29,7 +26,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         //Code to make one textField stay in it's content offset if it is already above the keyboard's default popup height
         //if (textField == txtfieldUsername){ scrollview.setContentOffset(CGPoint(x:0,y:150), animated: true)
         //}
-scrollview.setContentOffset(CGPoint(x:0,y:150), animated: true)
+scrollview.setContentOffset(CGPoint(x : 0,y : 150), animated: true)
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
        hidekeyboard()

@@ -12,33 +12,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        
-        
-        
-        //guard let windowScene = (scene as? UIWindowScene) else { return }
-        
-        
-        //window?.windowScene = windowScene
-        //window?.rootViewController = HomeController()    // your ViewController
-        
-        
-      // window = UIWindow(frame: UIScreen.main.bounds)
-      //  window?.makeKeyAndVisible()
-      // window?.rootViewController =
-      // UINavigationController(rootViewController: HomeController())
-        
-        
-        
-        
-        
-        
-        
-        
+        let layout = UICollectionViewFlowLayout()
+        window?.rootViewController =
+        UINavigationController(rootViewController: MainVidViewController(collectionViewLayout: layout))
+        //This is coupled with the WIP preferredStatusBar Style which still needs to be fixed. Ep2
+        /*
+        let statusBarBackgroundView = UIView()
+        statusBarBackgroundView.backgroundColor = UIColor.rgb(red: 194, green: 31, blue: 31, alpha: 1)
+        window?.addSubview(statusBarBackgroundView)
+        window?.addConstraintsWithFormats(format: "H:|[v0]|", views: statusBarBackgroundView)
+        window?.addConstraintsWithFormats(format: "V:|[v0(20)]", views: statusBarBackgroundView)
+        */
         
         guard let _ = (scene as? UIWindowScene) else { return }
     }
@@ -73,4 +61,3 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
 }
-
