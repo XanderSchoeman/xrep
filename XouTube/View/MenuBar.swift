@@ -8,9 +8,7 @@
 
 import UIKit
 
-
  @IBDesignable class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    
     
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -20,16 +18,11 @@ import UIKit
         cv.delegate = self
         return cv
     }()
-    
     let cellId = "cellId"
    let imageNames = ["Home","Trending","Subscriptions","Account"]
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         collectionView.register(MenuCell.self, forCellWithReuseIdentifier: cellId)
-        
-        
         addSubview(collectionView)
         addConstraintsWithFormats(format: "H:|[v0]|", views: collectionView)
         addConstraintsWithFormats(format: "V:|[v0]|", views: collectionView)

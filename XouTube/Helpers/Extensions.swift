@@ -14,18 +14,19 @@ extension UIColor{
     }
 }
 
-extension UIView{
-    //constraints minimized #lessCode
-    func addConstraintsWithFormats(format: String, views: UIView...){
-        var viewsDictionary = [String: UIView]()
-        for(index, view) in views.enumerated(){
-            let key = "v\(index)"
-            view.translatesAutoresizingMaskIntoConstraints = false
-            viewsDictionary[key] = view
-        }
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: format, options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: viewsDictionary))
-    }
-}
+//Going to be added as a pod module
+//extension UIView{
+//    //constraints minimized #lessCode
+//    func addConstraintsWithFormats(format: String, views: UIView...){
+//        var viewsDictionary = [String: UIView]()
+//        for(index, view) in views.enumerated(){
+//            let key = "v\(index)"
+//            view.translatesAutoresizingMaskIntoConstraints = false
+//            viewsDictionary[key] = view
+//        }
+//        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: format, options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: viewsDictionary))
+//    }
+//}
 
 /*extension UINavigationController {
    open override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -46,4 +47,20 @@ extension UINavigationController {
         view.addSubview(statusBarView)
     }
 
+}
+
+extension UIImageView {
+    func loadImageUsingUrlString(urlString: String) {
+        let url = URL(string: urlString)
+        URLSession.shared.dataTask(with: url!) { (data, response, error) in
+            if error != nil {
+                print(error)
+                return
+            }
+            DispatchQueue.main.async{
+            self.image = UIImage(data: data!)
+            }
+            
+        }.resume()
+    }
 }
