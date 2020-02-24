@@ -15,9 +15,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var name: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         //txtfieldUsername.frame.height = 5
-        
         //CGRect frameRect = txtfieldUsername.frame;
         //frameRect.size.height = 100; // <-- Specify the height you want here.
         //textField.frame = frameRect;

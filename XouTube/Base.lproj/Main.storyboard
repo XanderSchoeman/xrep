@@ -7,84 +7,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home Screen-->
-        <scene sceneID="lot-oo-z1G">
-            <objects>
-                <viewController id="eyf-2d-hzw" customClass="HomeScreen" customModule="XouTube" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="pBV-XL-Esz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="din-mX-aGA">
-                                <rect key="frame" x="0.0" y="44" width="414" height="832"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="xtT-vs-lMc">
-                                        <rect key="frame" x="87" y="79" width="240" height="260"/>
-                                    </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zYY-nc-hSl">
-                                        <rect key="frame" x="65" y="371" width="284" height="301.5"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Hw-30-c9O">
-                                                <rect key="frame" x="0.0" y="0.0" width="284" height="69"/>
-                                                <state key="normal" title="Sign in with FaceBook" backgroundImage="FB">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vji-9Q-BVk">
-                                                <rect key="frame" x="0.0" y="79" width="284" height="69"/>
-                                                <state key="normal" title="Sign in with Google" backgroundImage="Google">
-                                                    <color key="titleColor" red="0.018924060879999999" green="0.0043802105320000003" blue="0.01743860203" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8O8-D5-vEo">
-                                                <rect key="frame" x="0.0" y="158" width="284" height="69"/>
-                                                <state key="normal" title="Sign in with Email" backgroundImage="Email">
-                                                    <color key="titleColor" red="0.018924060879999999" green="0.0043802105320000003" blue="0.01743860203" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OcQ-Lq-fim">
-                                                <rect key="frame" x="132.5" y="237" width="19" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFm-ih-I3K">
-                                                <rect key="frame" x="108" y="267.5" width="68" height="34"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                <state key="normal" title="Sign Up"/>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="xtT-vs-lMc" firstAttribute="centerX" secondItem="zYY-nc-hSl" secondAttribute="centerX" id="31J-Mq-tsv"/>
-                                    <constraint firstAttribute="bottom" secondItem="zYY-nc-hSl" secondAttribute="bottom" constant="163.5" id="9If-3d-S2e"/>
-                                    <constraint firstItem="xtT-vs-lMc" firstAttribute="top" secondItem="A7x-VM-BSi" secondAttribute="top" constant="79" id="Yxa-ru-b1S"/>
-                                    <constraint firstItem="xtT-vs-lMc" firstAttribute="centerX" secondItem="din-mX-aGA" secondAttribute="centerX" id="fIw-aO-SKD"/>
-                                    <constraint firstItem="xtT-vs-lMc" firstAttribute="leading" secondItem="JjX-B0-adv" secondAttribute="leading" constant="87" id="gwd-Y0-lbe"/>
-                                    <constraint firstItem="zYY-nc-hSl" firstAttribute="top" secondItem="xtT-vs-lMc" secondAttribute="bottom" constant="32" id="j3Z-GD-Ui6"/>
-                                    <constraint firstItem="zYY-nc-hSl" firstAttribute="top" secondItem="din-mX-aGA" secondAttribute="top" constant="371" id="qSt-Fo-hPj"/>
-                                    <constraint firstAttribute="trailing" secondItem="zYY-nc-hSl" secondAttribute="trailing" constant="65" id="uRq-Eq-XvB"/>
-                                    <constraint firstItem="zYY-nc-hSl" firstAttribute="leading" secondItem="A7x-VM-BSi" secondAttribute="leading" constant="65" id="x6A-9a-rpz"/>
-                                </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="JjX-B0-adv"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="A7x-VM-BSi"/>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="din-mX-aGA" firstAttribute="centerX" secondItem="pBV-XL-Esz" secondAttribute="centerX" id="4gR-86-rA3"/>
-                            <constraint firstItem="din-mX-aGA" firstAttribute="leading" secondItem="KPV-Z2-tBd" secondAttribute="leading" id="A90-Tn-KBK"/>
-                            <constraint firstItem="din-mX-aGA" firstAttribute="top" secondItem="KPV-Z2-tBd" secondAttribute="top" id="iyK-yX-Try"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="din-mX-aGA" secondAttribute="bottom" constant="-14" id="xRi-Y6-AcG"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="KPV-Z2-tBd"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tlP-jo-LHe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2378" y="1645"/>
-        </scene>
         <!--Home-->
         <scene sceneID="yDJ-Xv-rOm">
             <objects>
@@ -205,6 +127,27 @@
             </objects>
             <point key="canvasLocation" x="191" y="125"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="3Je-OF-Fy6">
+            <objects>
+                <viewController id="NAn-lq-x1f" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IOk-Ae-dUX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ellipses" translatesAutoresizingMaskIntoConstraints="NO" id="lbn-1c-tAk">
+                                <rect key="frame" x="108" y="204" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Edc-Jd-gKK"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hac-cm-UjG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-92" y="-615"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="T1l-O6-cOT">
             <objects>
@@ -305,5 +248,6 @@
         <image name="FB" width="285" height="69"/>
         <image name="Google" width="285" height="69"/>
         <image name="Image" width="712" height="260"/>
+        <image name="ellipses" width="16" height="16"/>
     </resources>
 </document>

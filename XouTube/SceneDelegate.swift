@@ -27,6 +27,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.addConstraintsWithFormats(format: "H:|[v0]|", views: statusBarBackgroundView)
         window?.addConstraintsWithFormats(format: "V:|[v0(20)]", views: statusBarBackgroundView)
         */
+        /*
+        if #available(iOS 13.0, *) {
+            let statusBar = UIView(frame: UIApplication.shared.keyWindow?.windowScene?.statusBarManager?.statusBarFrame ?? CGRect.zero)
+             statusBar.backgroundColor = UIColor.init(red: 243/250, green: 243/250, blue: 243/250, alpha: 1)
+             UIApplication.shared.keyWindow?.addSubview(statusBar)
+        } else {
+             UIApplication.shared.statusBarView?.backgroundColor = UIColor.init(red: 243/250, green: 243/250, blue: 243/250, alpha: 1)
+        }
+        */
         
         guard let _ = (scene as? UIWindowScene) else { return }
     }
