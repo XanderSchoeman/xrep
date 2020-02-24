@@ -7,6 +7,7 @@
 //
 
 import UIKit
+//import XouFunctions
 
 @IBDesignable class MainVidViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     /*var videos: [Video] = {
@@ -40,9 +41,8 @@ import UIKit
     func fetchVideos(){
         let url = URL(string: "https://s3-us-west-2.amazonaws.com/youtubeassets/home.json")
         URLSession.shared.dataTask(with: url!)  { (data, response, error) in
-            
             if error != nil {
-                print(error)
+                print(error as Any)
                 return
             }
             do {
@@ -76,7 +76,7 @@ import UIKit
             }
             
             let str = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
-            print(str)
+            print(str as Any)
         
         }.resume()
     }
@@ -102,14 +102,16 @@ import UIKit
     func setupNavBarButtons() {
         let searchImage = UIImage(systemName: "magnifyingglass")?.withRenderingMode(.alwaysOriginal)
         let moreNavigationImage = UIImage(named: "Navigation")?.withRenderingMode(.alwaysOriginal)
-        let searchBarButtonItem = UIBarButtonItem(image: searchImage, style: .plain, target: self, action: #selector(handleSearch))
-        let moreButton = UIBarButtonItem(image: moreNavigationImage, style: .plain, target: self, action: #selector(handleMore))
+        let searchBarButtonItem = UIBarButtonItem(image: searchImage,
+        style: .plain, target: self, action: #selector(handleSearch))
+        let moreButton = UIBarButtonItem(image: moreNavigationImage,
+        style: .plain, target: self, action: #selector(handleMore))
         navigationItem.rightBarButtonItems = [moreButton, searchBarButtonItem]
     }
-    @objc func handleMore(){
+    @objc func handleMore() {
         print(123)
     }
-    @objc func handleSearch(){
+    @objc func handleSearch() {
         print(123)
     }
     let menuBar: MenuBar = {
@@ -131,7 +133,8 @@ import UIKit
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return videos?.count ?? 0
     }
-        //Additional Note - indexPath should be of type NSIndexPath, but it seems type NSIndexPath has been changed to indexpath in swift 3.0
+        //Additional Note - indexPath should be of type NSIndexPath,
+    //but it seems type NSIndexPath has been changed to indexpath in swift 3.0
     //swiftlint:disable all
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
@@ -141,13 +144,17 @@ import UIKit
         return cell
     }
     //swiftlint:enable all
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        //https://www.youtube.com/watch?v=APQVltARKF8&list=PL0dzCUj1L5JGKdVUtA5xds1zcyzsz7HLj&index=2 at 13 mins in for calculations
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        //https://www.youtube.com/watch?v=APQVltARKF8&list=PL0dzCUj1L5JGKdVUtA5xds1zcyzsz7HLj&index=2
+        //at 13 mins in for calculations
         let heightForCell = (view.frame.width - 16 - 16) * 9 / 16
         return CGSize(width: view.frame.width, height: heightForCell + 16 + 88)
     }
 
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
 }
