@@ -20,6 +20,8 @@
 		38A2971323FD495800DBD8A5 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A2971223FD495800DBD8A5 /* VideoCell.swift */; };
 		38A2971623FD4DA300DBD8A5 /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A2971523FD4DA300DBD8A5 /* MenuBar.swift */; };
 		38A2971923FEA84B00DBD8A5 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A2971823FEA84B00DBD8A5 /* Video.swift */; };
+		74649833EDB48EC556486A4D /* Pods_XouTubeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DF2660DE2F39C39C8943B1A /* Pods_XouTubeTests.framework */; };
+		DCD9B9A5CA0C246E04563BBA /* Pods_XouTube.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 065B775C8A52B539C44BC800 /* Pods_XouTube.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		065B775C8A52B539C44BC800 /* Pods_XouTube.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XouTube.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DF2660DE2F39C39C8943B1A /* Pods_XouTubeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XouTubeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3803EA6B23EA998900DC745C /* XouTube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XouTube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3803EA6E23EA998900DC745C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3803EA7023EA998900DC745C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +54,10 @@
 		38A2971223FD495800DBD8A5 /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		38A2971523FD4DA300DBD8A5 /* MenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
 		38A2971823FEA84B00DBD8A5 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		3E03FFAD80158C72216D17A4 /* Pods-XouTubeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XouTubeTests.debug.xcconfig"; path = "Target Support Files/Pods-XouTubeTests/Pods-XouTubeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6A41BE9A6977130A3B14FBB3 /* Pods-XouTubeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XouTubeTests.release.xcconfig"; path = "Target Support Files/Pods-XouTubeTests/Pods-XouTubeTests.release.xcconfig"; sourceTree = "<group>"; };
+		7CD9576BCBEEC3DA13C2CB50 /* Pods-XouTube.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XouTube.debug.xcconfig"; path = "Target Support Files/Pods-XouTube/Pods-XouTube.debug.xcconfig"; sourceTree = "<group>"; };
+		B585A1721C17C897DA839376 /* Pods-XouTube.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XouTube.release.xcconfig"; path = "Target Support Files/Pods-XouTube/Pods-XouTube.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCD9B9A5CA0C246E04563BBA /* Pods_XouTube.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74649833EDB48EC556486A4D /* Pods_XouTubeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +86,8 @@
 				3803EA6D23EA998900DC745C /* XouTube */,
 				3803EA8423EA998B00DC745C /* XouTubeTests */,
 				3803EA6C23EA998900DC745C /* Products */,
+				5770C5905CFB4132DD65FA68 /* Pods */,
+				C1B324DCAA20B8C6C6B30CE5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -149,6 +161,27 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		5770C5905CFB4132DD65FA68 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7CD9576BCBEEC3DA13C2CB50 /* Pods-XouTube.debug.xcconfig */,
+				B585A1721C17C897DA839376 /* Pods-XouTube.release.xcconfig */,
+				3E03FFAD80158C72216D17A4 /* Pods-XouTubeTests.debug.xcconfig */,
+				6A41BE9A6977130A3B14FBB3 /* Pods-XouTubeTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C1B324DCAA20B8C6C6B30CE5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				065B775C8A52B539C44BC800 /* Pods_XouTube.framework */,
+				0DF2660DE2F39C39C8943B1A /* Pods_XouTubeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -156,10 +189,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3803EA8A23EA998B00DC745C /* Build configuration list for PBXNativeTarget "XouTube" */;
 			buildPhases = (
+				211A5F03C035A59A6E2B3D56 /* [CP] Check Pods Manifest.lock */,
 				3803EA6723EA998900DC745C /* Sources */,
 				3803EA6823EA998900DC745C /* Frameworks */,
 				3803EA6923EA998900DC745C /* Resources */,
 				3832795823F2C26B00E9BF23 /* ShellScript */,
+				2C33C473A0A231961B6F5F88 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -174,6 +209,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3803EA8D23EA998B00DC745C /* Build configuration list for PBXNativeTarget "XouTubeTests" */;
 			buildPhases = (
+				E215E031DDFD8454E5F4E2D7 /* [CP] Check Pods Manifest.lock */,
 				3803EA7D23EA998B00DC745C /* Sources */,
 				3803EA7E23EA998B00DC745C /* Frameworks */,
 				3803EA7F23EA998B00DC745C /* Resources */,
@@ -247,6 +283,45 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		211A5F03C035A59A6E2B3D56 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-XouTube-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2C33C473A0A231961B6F5F88 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-XouTube/Pods-XouTube-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-XouTube/Pods-XouTube-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-XouTube/Pods-XouTube-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		3832795823F2C26B00E9BF23 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -263,6 +338,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		E215E031DDFD8454E5F4E2D7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-XouTubeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -437,6 +534,7 @@
 		};
 		3803EA8B23EA998B00DC745C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CD9576BCBEEC3DA13C2CB50 /* Pods-XouTube.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -455,6 +553,7 @@
 		};
 		3803EA8C23EA998B00DC745C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B585A1721C17C897DA839376 /* Pods-XouTube.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -473,6 +572,7 @@
 		};
 		3803EA8E23EA998B00DC745C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E03FFAD80158C72216D17A4 /* Pods-XouTubeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -494,6 +594,7 @@
 		};
 		3803EA8F23EA998B00DC745C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A41BE9A6977130A3B14FBB3 /* Pods-XouTubeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
