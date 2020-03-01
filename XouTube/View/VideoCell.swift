@@ -13,19 +13,15 @@ class BaseCell: UICollectionViewCell {
            super.init(frame: frame)
            setupViews()
     }
-    func setupViews(){
+    func setupViews() {
     }
-            
         required init?(coder: NSCoder) {
             fatalError("init(coder:) has not been implemented")
     }
-    
 }
-    
 class VideoCell: BaseCell {
-   
-    var video: Video?{
-        didSet{
+    var video: Video? {
+        didSet {
             titleLabel.text = video?.title
             setupThumbnailImage()
             setupProfileImage()
@@ -40,7 +36,11 @@ class VideoCell: BaseCell {
             if let title = video?.title {
                 let size = CGSize(width: frame.width - 16 - 44 - 8 - 16, height: 1000)
                 let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
-                let estimatedRect = NSString(string: title).boundingRect(with: size, options: options, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14)], context: nil)
+                let estimatedRect = NSString(string: title).boundingRect(with: size,
+                                                                         options: options,
+                                                                         attributes:
+                    [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14)],
+                                                                         context: nil)
                 if estimatedRect.size.height  > 20 {
                     titleLabelHeightConstraint?.constant = 44
                 } else {
@@ -97,11 +97,10 @@ class VideoCell: BaseCell {
         //textView.backgroundColor = UIColor.red
         textView.translatesAutoresizingMaskIntoConstraints = false
         textView.text = "Something • Unknown amount of views • unknown year/time"
-        textView.textContainerInset = UIEdgeInsets(top: 0,left: -4,bottom: 0,right: 0)
+        textView.textContainerInset = UIEdgeInsets(top: 0, left: -4, bottom: 0, right: 0)
         textView.textColor = UIColor.lightGray
         return textView
     }()
-    
     var titleLabelHeightConstraint: NSLayoutConstraint?
     // swiftlint:disable all
      override func setupViews()
@@ -151,5 +150,4 @@ class VideoCell: BaseCell {
         //addConstraintsWithFormats(format: "H:|[v0]|", views: titleLabel)
     }
     // swiftlint:enable all
-    
 }

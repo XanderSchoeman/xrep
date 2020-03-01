@@ -8,15 +8,16 @@
 
 import UIKit
 
-extension UIView{
+extension UIView {
     //constraints minimized #lessCode
-    func addConstraintsWithFormats(format: String, views: UIView...){
+    func addConstraintsWithFormats(format: String, views: UIView...) {
         var viewsDictionary = [String: UIView]()
-        for(index, view) in views.enumerated(){
+        for(index, view) in views.enumerated() {
             let key = "v\(index)"
             view.translatesAutoresizingMaskIntoConstraints = false
             viewsDictionary[key] = view
         }
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: format, options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: viewsDictionary))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: format,
+        options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: viewsDictionary))
     }
 }

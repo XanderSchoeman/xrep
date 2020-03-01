@@ -11,7 +11,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var txtfieldUsername: UITextField!
     @IBOutlet weak var scrollview: UIScrollView!
     @IBOutlet weak var txtfieldPassword: UITextField!
-    
     @IBOutlet weak var name: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,20 +20,22 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         //textField.frame = frameRect;
     }
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        //Code to make one textField stay in it's content offset if it is already above the keyboard's default popup height
-        //if (textField == txtfieldUsername){ scrollview.setContentOffset(CGPoint(x:0,y:150), animated: true)
+        //Code to make one textField stay in it's content offset if
+        //it is already above the keyboard's default popup height
+        //if (textField == txtfieldUsername){
+        //scrollview.setContentOffset(CGPoint(x:0,y:150), animated: true)
         //}
-scrollview.setContentOffset(CGPoint(x : 0,y : 150), animated: true)
+scrollview.setContentOffset(CGPoint(x: 0, y: 150), animated: true)
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
        hidekeyboard()
         //textField.resignFirstResponder()
         return true
     }
-    func textFieldDidEndEditing(_ textField: UITextField){
-scrollview.setContentOffset(CGPoint(x:0,y:0), animated: true)
+    func textFieldDidEndEditing(_ textField: UITextField) {
+scrollview.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
     }
-    func hidekeyboard(){ txtfieldUsername.resignFirstResponder()
+    func hidekeyboard() { txtfieldUsername.resignFirstResponder()
         txtfieldPassword.resignFirstResponder()
     }
 }
