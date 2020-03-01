@@ -8,8 +8,8 @@
 
 import UIKit
 
- @IBDesignable class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    
+ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate,
+    UICollectionViewDelegateFlowLayout {
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -19,7 +19,7 @@ import UIKit
         return cv
     }()
     let cellId = "cellId"
-   let imageNames = ["Home","Trending","Subscriptions","Account"]
+   let imageNames = ["Home", "Trending", "Subscriptions", "Account"]
     override init(frame: CGRect) {
         super.init(frame: frame)
         collectionView.register(MenuCell.self, forCellWithReuseIdentifier: cellId)
@@ -39,10 +39,14 @@ import UIKit
         return cell
     }
     // swiftlint:enable all
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: frame.width / 4, height: frame.height)
     }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
     required init?(coder: NSCoder) {
@@ -53,20 +57,20 @@ import UIKit
 class MenuCell: BaseCell {
     let imageView: UIImageView = {
         let iv = UIImageView()
-        iv.image = UIImage(named: "Home")?.withTintColor(UIColor.rgb(red: 91, green: 14, blue: 13, alpha: 1), renderingMode: .alwaysTemplate)
+        iv.image = UIImage(named: "Home")?.withTintColor(UIColor.rgb(red: 91, green: 14, blue: 13, alpha: 1),
+                                                         renderingMode: .alwaysTemplate)
         //iv.tintColor =UIColor.rgb(red: 91, green: 14, blue: 13, alpha: 1)
         return iv
     }()
-    
     //Have to set the render with tint colour to fix olour bug
     override var isSelected: Bool {
-        didSet{
+        didSet {
             imageView.tintColor = isSelected ? UIColor.white : UIColor.rgb(red: 91, green: 14, blue: 13, alpha: 1)
         }
     }
     //Have to set the render with tint colour to fix olour bug
     override var isHighlighted: Bool {
-           didSet{
+           didSet {
                imageView.tintColor = isHighlighted ? UIColor.white : UIColor.rgb(red: 91, green: 14, blue: 13, alpha: 1)
            }
        }
@@ -75,10 +79,14 @@ class MenuCell: BaseCell {
         addSubview(imageView)
         addConstraintsWithFormats(format: "H:[v0(28)]", views: imageView)
         addConstraintsWithFormats(format: "V:[v0(28)]", views: imageView)
-        
-        addConstraint(NSLayoutConstraint(item: imageView, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 0))
-        addConstraint(NSLayoutConstraint(item: imageView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: -45))
+        addConstraint(NSLayoutConstraint(item: imageView, attribute: .centerX,
+                                         relatedBy: .equal, toItem: self, attribute: .centerX,
+                                         multiplier: 1, constant: 0))
+        addConstraint(NSLayoutConstraint(item: imageView, attribute: .centerY,
+                                         relatedBy: .equal, toItem: self, attribute: .centerY,
+                                         multiplier: 1, constant: -45))
         //Replace constraint above with one below when you get the status bar to work
-        //addConstraint(NSLayoutConstraint(item: imageView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0))
+        //addConstraint(NSLayoutConstraint(item: imageView, attribute: .centerY,
+        //relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0))
     }
 }
