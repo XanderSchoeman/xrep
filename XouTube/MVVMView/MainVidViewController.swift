@@ -9,6 +9,7 @@
 import UIKit
 import XouDevSpec
 
+
 class MainVidViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
      /*var videos: [Video] = {
         var theChannel = Channel()
@@ -139,65 +140,65 @@ class MainVidViewController: UICollectionViewController, UICollectionViewDelegat
     var animeObj: [TopResponse]?
     override func viewDidLoad() {
         super.viewDidLoad()
-        getTopAnimeFunc{ (res) in
-            switch res {
-            case .success(let responses):
-                //print(responses)
-
-                self.videos = [Video]()
-                let video = Video()
-                self.animeObj = [TopResponse]() // use to append
-                let animeobj = TopResponse() // use for struct ref
-
-                print(responses[0].top[0].id[0].end_date)
-                
-//                for obj in  {
-//                    for arrayItem in responses.top {
-//                        
-//                        print()
-//                        
-//                    }
+//        getTopAnimeFunc{ (res) in
+//            switch res {
+//            case .success(let responses):
+//                //print(responses)
+//
+//                self.videos = [Video]()
+//                let video = Video()
+//                self.animeObj = [TopResponse]() // use to append
+//                let animeobj = TopResponse() // use for struct ref
+//
+//                print(responses[0].top[0].id[0].end_date)
+//
+////                for obj in  {
+////                    for arrayItem in responses.top {
+////
+////                        print()
+////
+////                    }
+////                }
+////                video.thumbnailImageName = responses.top[0].image_url
+////                video.title = responses.top[0]yItem.title
+////                self.videos?.append(video)
+//
+//
+//
+////                for arrayItem in responses.top {
+////
+////                      video.thumbnailImageName = arrayItem.image_url
+////                      video.title = arrayItem.title
+////
+////
+////
+////
+////                    //  for var structItem in animeobj.top {
+////
+////                          self.videos?.append(video)
+////
+////
+////                      }
+//
+//
+//
+//
+//
+//                DispatchQueue.main.async{
+//
+//                self.collectionView.reloadData()
 //                }
-//                video.thumbnailImageName = responses.top[0].image_url
-//                video.title = responses.top[0]yItem.title
-//                self.videos?.append(video)
-                
-                
-
-//                for arrayItem in responses.top {
 //
-//                      video.thumbnailImageName = arrayItem.image_url
-//                      video.title = arrayItem.title
+//               // }
 //
 //
 //
+//            case .failure(let err):
+//                print("Failed the fetch for TopResponse", err)
+//            }
+//        }
 //
-//                    //  for var structItem in animeobj.top {
 //
-//                          self.videos?.append(video)
-//
-//
-//                      }
-
-
-
-
-
-                DispatchQueue.main.async{
-
-                self.collectionView.reloadData()
-                }
-
-               // }
-
-
-
-            case .failure(let err):
-                print("Failed the fetch for TopResponse", err)
-            }
-        }
-        
-        
         
         
         func apiCallTop(){
