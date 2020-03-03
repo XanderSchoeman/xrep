@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         //or session are new (see `application:configurationForConnectingSceneSession` instead).
         let layout = UICollectionViewFlowLayout()
         window?.rootViewController =
-        UINavigationController(rootViewController: MainVidViewController(collectionViewLayout: layout))
+        UINavigationController(rootViewController: MainView(collectionViewLayout: layout))
         guard let _ = (scene as? UIWindowScene) else { return }
     }
 

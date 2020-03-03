@@ -1,0 +1,24 @@
+PODS:
+  - Alamofire (5.0.2)
+  - XouDevSpec (0.1.0):
+    - Alamofire
+
+DEPENDENCIES:
+  - Alamofire
+  - XouDevSpec (from `/Users/xschoeman/Documents/git/Podfolder/XouDevSpec`)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+
+EXTERNAL SOURCES:
+  XouDevSpec:
+    :path: "/Users/xschoeman/Documents/git/Podfolder/XouDevSpec"
+
+SPEC CHECKSUMS:
+  Alamofire: 3ba7a4db18b4f62c4a1c0e1cb39d7f3d52e10ada
+  XouDevSpec: 3064642f452170c61d077b373f423f5581b2e8d6
+
+PODFILE CHECKSUM: 5a7c310a62a15db8f8c9620d2045e809c7fda6e6
+
+COCOAPODS: 1.8.4

@@ -14,7 +14,7 @@
 		3803EA7B23EA998B00DC745C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3803EA7923EA998B00DC745C /* LaunchScreen.storyboard */; };
 		3803EA8623EA998B00DC745C /* XouTubeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3803EA8523EA998B00DC745C /* XouTubeTests.swift */; };
 		38A2970B23F6C28E00DBD8A5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A2970A23F6C28E00DBD8A5 /* LoginViewController.swift */; };
-		38A2970D23FABBB000DBD8A5 /* MainVidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A2970C23FABBB000DBD8A5 /* MainVidViewController.swift */; };
+		38C805E0240D1D7200578FCA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C805DF240D1D7200578FCA /* MainView.swift */; };
 		74649833EDB48EC556486A4D /* Pods_XouTubeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DF2660DE2F39C39C8943B1A /* Pods_XouTubeTests.framework */; };
 		DCD9B9A5CA0C246E04563BBA /* Pods_XouTube.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 065B775C8A52B539C44BC800 /* Pods_XouTube.framework */; };
 /* End PBXBuildFile section */
@@ -43,7 +43,7 @@
 		3803EA8523EA998B00DC745C /* XouTubeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XouTubeTests.swift; sourceTree = "<group>"; };
 		3803EA8723EA998B00DC745C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38A2970A23F6C28E00DBD8A5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		38A2970C23FABBB000DBD8A5 /* MainVidViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVidViewController.swift; sourceTree = "<group>"; };
+		38C805DF240D1D7200578FCA /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		3E03FFAD80158C72216D17A4 /* Pods-XouTubeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XouTubeTests.debug.xcconfig"; path = "Target Support Files/Pods-XouTubeTests/Pods-XouTubeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6A41BE9A6977130A3B14FBB3 /* Pods-XouTubeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XouTubeTests.release.xcconfig"; path = "Target Support Files/Pods-XouTubeTests/Pods-XouTubeTests.release.xcconfig"; sourceTree = "<group>"; };
 		7CD9576BCBEEC3DA13C2CB50 /* Pods-XouTube.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XouTube.debug.xcconfig"; path = "Target Support Files/Pods-XouTube/Pods-XouTube.debug.xcconfig"; sourceTree = "<group>"; };
@@ -116,8 +116,8 @@
 		38A2971423FD49F100DBD8A5 /* MVVMView */ = {
 			isa = PBXGroup;
 			children = (
-				38A2970C23FABBB000DBD8A5 /* MainVidViewController.swift */,
 				38A2970A23F6C28E00DBD8A5 /* LoginViewController.swift */,
+				38C805DF240D1D7200578FCA /* MainView.swift */,
 			);
 			path = MVVMView;
 			sourceTree = "<group>";
@@ -328,9 +328,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38A2970D23FABBB000DBD8A5 /* MainVidViewController.swift in Sources */,
 				3803EA6F23EA998900DC745C /* AppDelegate.swift in Sources */,
 				38A2970B23F6C28E00DBD8A5 /* LoginViewController.swift in Sources */,
+				38C805E0240D1D7200578FCA /* MainView.swift in Sources */,
 				3803EA7123EA998900DC745C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
