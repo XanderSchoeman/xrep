@@ -5,7 +5,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
-  - XouDevSpec (from "/Users/xschoeman/Documents/git/Podfolder/XouDevSpec")
+  - XouDevSpec (from `/Users/xschoeman/Documents/git/Podfolder/XouDevSpec`)
 
 SPEC REPOS:
   trunk:
