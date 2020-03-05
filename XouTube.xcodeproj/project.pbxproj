@@ -15,6 +15,9 @@
 		3803EA8623EA998B00DC745C /* XouTubeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3803EA8523EA998B00DC745C /* XouTubeTests.swift */; };
 		38A2970B23F6C28E00DBD8A5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A2970A23F6C28E00DBD8A5 /* LoginViewController.swift */; };
 		38C805E0240D1D7200578FCA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C805DF240D1D7200578FCA /* MainView.swift */; };
+		38C805E8240E3B0700578FCA /* AnimeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C805E7240E3B0700578FCA /* AnimeTable.swift */; };
+		38C805EA240E66EC00578FCA /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C805E9240E66EC00578FCA /* Home.swift */; };
+		38C805F22410C0AC00578FCA /* Anime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C805F12410C0AC00578FCA /* Anime.swift */; };
 		74649833EDB48EC556486A4D /* Pods_XouTubeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DF2660DE2F39C39C8943B1A /* Pods_XouTubeTests.framework */; };
 		DCD9B9A5CA0C246E04563BBA /* Pods_XouTube.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 065B775C8A52B539C44BC800 /* Pods_XouTube.framework */; };
 /* End PBXBuildFile section */
@@ -44,6 +47,9 @@
 		3803EA8723EA998B00DC745C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38A2970A23F6C28E00DBD8A5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		38C805DF240D1D7200578FCA /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		38C805E7240E3B0700578FCA /* AnimeTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeTable.swift; sourceTree = "<group>"; };
+		38C805E9240E66EC00578FCA /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		38C805F12410C0AC00578FCA /* Anime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anime.swift; sourceTree = "<group>"; };
 		3E03FFAD80158C72216D17A4 /* Pods-XouTubeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XouTubeTests.debug.xcconfig"; path = "Target Support Files/Pods-XouTubeTests/Pods-XouTubeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6A41BE9A6977130A3B14FBB3 /* Pods-XouTubeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XouTubeTests.release.xcconfig"; path = "Target Support Files/Pods-XouTubeTests/Pods-XouTubeTests.release.xcconfig"; sourceTree = "<group>"; };
 		7CD9576BCBEEC3DA13C2CB50 /* Pods-XouTube.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XouTube.debug.xcconfig"; path = "Target Support Files/Pods-XouTube/Pods-XouTube.debug.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +124,9 @@
 			children = (
 				38A2970A23F6C28E00DBD8A5 /* LoginViewController.swift */,
 				38C805DF240D1D7200578FCA /* MainView.swift */,
+				38C805E7240E3B0700578FCA /* AnimeTable.swift */,
+				38C805E9240E66EC00578FCA /* Home.swift */,
+				38C805F12410C0AC00578FCA /* Anime.swift */,
 			);
 			path = MVVMView;
 			sourceTree = "<group>";
@@ -329,6 +338,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3803EA6F23EA998900DC745C /* AppDelegate.swift in Sources */,
+				38C805E8240E3B0700578FCA /* AnimeTable.swift in Sources */,
+				38C805EA240E66EC00578FCA /* Home.swift in Sources */,
+				38C805F22410C0AC00578FCA /* Anime.swift in Sources */,
 				38A2970B23F6C28E00DBD8A5 /* LoginViewController.swift in Sources */,
 				38C805E0240D1D7200578FCA /* MainView.swift in Sources */,
 				3803EA7123EA998900DC745C /* SceneDelegate.swift in Sources */,
