@@ -5,7 +5,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
-  - XouDevSpec (from `https://github.com/XanderSchoeman/XouDevSpec.git`)
+  - XouDevSpec (from `/Users/xschoeman/Documents/git/Podfolder/XouDevSpec`)
 
 SPEC REPOS:
   trunk:
@@ -13,17 +13,12 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   XouDevSpec:
-    :git: https://github.com/XanderSchoeman/XouDevSpec.git
-
-CHECKOUT OPTIONS:
-  XouDevSpec:
-    :commit: 758fd8a9079433b31e62a3093e2e429b20ce4955
-    :git: https://github.com/XanderSchoeman/XouDevSpec.git
+    :path: "/Users/xschoeman/Documents/git/Podfolder/XouDevSpec"
 
 SPEC CHECKSUMS:
   Alamofire: 3ba7a4db18b4f62c4a1c0e1cb39d7f3d52e10ada
   XouDevSpec: cafcaaf2aa63dbb320843fc260c44186d955147b
 
-PODFILE CHECKSUM: 6aa4315e3a797a3bcbac90f2b2c009562d1dea5b
+PODFILE CHECKSUM: cade09486eac7157f142e940053cd5e09379bb72
 
 COCOAPODS: 1.8.4

@@ -21,40 +21,55 @@ public class AnimeTable: UITableViewController {
            
                      }
     override public func viewDidAppear(_ animated: Bool) {
-        createArray()
-    }
+//        let jikanApiCalls = JikanApiCalls()
+//      var topAnimeArrayList =  jikanApiCalls.createArray()
+//        for item in 0...10 {
+//                                     var anime = animeTopInfoStruct()
+//                                    print(animes)
+//            
+//                 //                   anime.top.image_url = topAnimeArrayList.top[item].image_url
+//                 //                   anime.top.title = topAnimeArrayList.top[item].title
+//                //                     anime.top.type = animes.top[item].type as? String
+//                //                     anime.top.rank = animes.top[item].rank as? Int
+//                //                     anime.top.end_date = animes.top[item].end_date as? String
+//                                     self.animes?.append(anime)
+//                                    print(animes)
+//                                    DispatchQueue.main.async {
+//                                    self.tableView.reloadData()
+//                                    }
+//    }
     
-    func createArray() {
-                   let headers: HTTPHeaders = [
-                       "x-rapidapi-host": "jikan1.p.rapidapi.com",
-                       "x-rapidapi-key": "844aa4143cmsha9162c362813b50p169716jsn9c6c8269713a"
-                   ]
-
-                   AF.request("https://jikan1.p.rapidapi.com/top/anime/1/upcoming", headers: headers)
-                     .responseDecodable(of: animeTopInfo.self) { (response) in
-                         guard let animes = response.value else {return}
-                         self.animes = [animeTopInfoStruct]()
-
-                         for item in 0...10 {
-                             var anime = animeTopInfoStruct()
-                            print(animes)
-
-                            anime.top.image_url = animes.top[item].image_url
-                            anime.top.title = animes.top[item].title
-        //                     anime.top.type = animes.top[item].type as? String
-        //                     anime.top.rank = animes.top[item].rank as? Int
-        //                     anime.top.end_date = animes.top[item].end_date as? String
-                             self.animes?.append(anime)
-                            print(animes)
-                            DispatchQueue.main.async {
-                            self.tableView.reloadData()
-                            }
-                             }
-
-
-                         }
-    }
-}
+//    func createArray1() {
+//                   let headers: HTTPHeaders = [
+//                       "x-rapidapi-host": "jikan1.p.rapidapi.com",
+//                       "x-rapidapi-key": "844aa4143cmsha9162c362813b50p169716jsn9c6c8269713a"
+//                   ]
+//
+//                   AF.request("https://jikan1.p.rapidapi.com/top/anime/1/upcoming", headers: headers)
+//                     .responseDecodable(of: animeTopInfo.self) { (response) in
+//                         guard let animes = response.value else {return}
+//                         self.animes = [animeTopInfoStruct]()
+//
+//                         for item in 0...10 {
+//                             var anime = animeTopInfoStruct()
+//                            print(animes)
+//
+//                            anime.top.image_url = animes.top[item].image_url
+//                            anime.top.title = animes.top[item].title
+//        //                     anime.top.type = animes.top[item].type as? String
+//        //                     anime.top.rank = animes.top[item].rank as? Int
+//        //                     anime.top.end_date = animes.top[item].end_date as? String
+//                             self.animes?.append(anime)
+//                            print(animes)
+//                            DispatchQueue.main.async {
+//                            self.tableView.reloadData()
+//                            }
+//                             }
+//
+//
+//                         }
+//    }
+    }}
 //swiftlint:disable all
 extension AnimeTable {
         public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
