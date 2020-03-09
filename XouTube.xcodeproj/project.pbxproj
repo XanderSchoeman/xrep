@@ -16,6 +16,8 @@
 		38C805E8240E3B0700578FCA /* AnimeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C805E7240E3B0700578FCA /* AnimeTable.swift */; };
 		38C805EA240E66EC00578FCA /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C805E9240E66EC00578FCA /* Home.swift */; };
 		38C805F22410C0AC00578FCA /* Anime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C805F12410C0AC00578FCA /* Anime.swift */; };
+		38C8060324160BFA00578FCA /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C8060224160BFA00578FCA /* Structs.swift */; };
+		38C80605241616B900578FCA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C80604241616B900578FCA /* Extensions.swift */; };
 		74649833EDB48EC556486A4D /* Pods_XouTubeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DF2660DE2F39C39C8943B1A /* Pods_XouTubeTests.framework */; };
 		DCD9B9A5CA0C246E04563BBA /* Pods_XouTube.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 065B775C8A52B539C44BC800 /* Pods_XouTube.framework */; };
 /* End PBXBuildFile section */
@@ -46,6 +48,8 @@
 		38C805E7240E3B0700578FCA /* AnimeTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeTable.swift; sourceTree = "<group>"; };
 		38C805E9240E66EC00578FCA /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		38C805F12410C0AC00578FCA /* Anime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anime.swift; sourceTree = "<group>"; };
+		38C8060224160BFA00578FCA /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
+		38C80604241616B900578FCA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		3E03FFAD80158C72216D17A4 /* Pods-XouTubeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XouTubeTests.debug.xcconfig"; path = "Target Support Files/Pods-XouTubeTests/Pods-XouTubeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6A41BE9A6977130A3B14FBB3 /* Pods-XouTubeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XouTubeTests.release.xcconfig"; path = "Target Support Files/Pods-XouTubeTests/Pods-XouTubeTests.release.xcconfig"; sourceTree = "<group>"; };
 		7CD9576BCBEEC3DA13C2CB50 /* Pods-XouTube.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XouTube.debug.xcconfig"; path = "Target Support Files/Pods-XouTube/Pods-XouTube.debug.xcconfig"; sourceTree = "<group>"; };
@@ -111,6 +115,8 @@
 			children = (
 				3803EA8523EA998B00DC745C /* XouTubeTests.swift */,
 				3803EA8723EA998B00DC745C /* Info.plist */,
+				38C8060224160BFA00578FCA /* Structs.swift */,
+				38C80604241616B900578FCA /* Extensions.swift */,
 			);
 			path = XouTubeTests;
 			sourceTree = "<group>";
@@ -343,6 +349,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38C8060324160BFA00578FCA /* Structs.swift in Sources */,
+				38C80605241616B900578FCA /* Extensions.swift in Sources */,
 				3803EA8623EA998B00DC745C /* XouTubeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,7 +505,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F878299AUP;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = GLK7J5PP82;
 				INFOPLIST_FILE = XouTube/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -516,7 +525,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F878299AUP;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = GLK7J5PP82;
 				INFOPLIST_FILE = XouTube/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
