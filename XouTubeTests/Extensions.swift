@@ -8,7 +8,6 @@
 
 
 
-
 import XCTest
 @testable import XouTube
 @testable import XouDevSpec
@@ -18,7 +17,7 @@ class Extensions: XCTestCase {
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
-    func testRGBExtensionIfItChangesColour(){
+    func testRGBExtensionIfItChangesColour() {
         var testText: UIColor
         var testText2: UIColor
         testText = UIColor.rgb(red: 50, green: 50, blue: 50, alpha: 1)
