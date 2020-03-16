@@ -12,7 +12,12 @@
 		<key>XouTubeTests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>1</integer>
+		</dict>
+		<key>XouTubeUITests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -23,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>3803EA8023EA998B00DC745C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>385D2AA6241F450D0004FAE9</key>
 		<dict>
 			<key>primary</key>
 			<true/>

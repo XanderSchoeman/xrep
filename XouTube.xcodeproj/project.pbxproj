@@ -13,6 +13,10 @@
 		3803EA7823EA998B00DC745C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3803EA7723EA998B00DC745C /* Assets.xcassets */; };
 		3803EA7B23EA998B00DC745C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3803EA7923EA998B00DC745C /* LaunchScreen.storyboard */; };
 		3803EA8623EA998B00DC745C /* XouTubeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3803EA8523EA998B00DC745C /* XouTubeTests.swift */; };
+		385D2AB3241F46120004FAE9 /* TestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D2AB2241F46120004FAE9 /* TestCase.swift */; };
+		385D2AB5241F46460004FAE9 /* TestEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D2AB4241F46460004FAE9 /* TestEnvironment.swift */; };
+		385D2AB7241F49580004FAE9 /* FirstTestCheckSomeButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D2AB6241F49580004FAE9 /* FirstTestCheckSomeButtons.swift */; };
+		385D2AB9241F4E5B0004FAE9 /* CheckIfBackButtonsWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D2AB8241F4E5B0004FAE9 /* CheckIfBackButtonsWork.swift */; };
 		38C805E8240E3B0700578FCA /* AnimeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C805E7240E3B0700578FCA /* AnimeTable.swift */; };
 		38C805EA240E66EC00578FCA /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C805E9240E66EC00578FCA /* Home.swift */; };
 		38C805F22410C0AC00578FCA /* Anime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C805F12410C0AC00578FCA /* Anime.swift */; };
@@ -24,6 +28,13 @@
 
 /* Begin PBXContainerItemProxy section */
 		3803EA8223EA998B00DC745C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3803EA6323EA998900DC745C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3803EA6A23EA998900DC745C;
+			remoteInfo = XouTube;
+		};
+		385D2AAC241F450D0004FAE9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3803EA6323EA998900DC745C /* Project object */;
 			proxyType = 1;
@@ -45,6 +56,12 @@
 		3803EA8123EA998B00DC745C /* XouTubeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XouTubeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3803EA8523EA998B00DC745C /* XouTubeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XouTubeTests.swift; sourceTree = "<group>"; };
 		3803EA8723EA998B00DC745C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		385D2AA7241F450D0004FAE9 /* XouTubeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XouTubeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		385D2AAB241F450D0004FAE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		385D2AB2241F46120004FAE9 /* TestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCase.swift; sourceTree = "<group>"; };
+		385D2AB4241F46460004FAE9 /* TestEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestEnvironment.swift; sourceTree = "<group>"; };
+		385D2AB6241F49580004FAE9 /* FirstTestCheckSomeButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTestCheckSomeButtons.swift; sourceTree = "<group>"; };
+		385D2AB8241F4E5B0004FAE9 /* CheckIfBackButtonsWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckIfBackButtonsWork.swift; sourceTree = "<group>"; };
 		38C805E7240E3B0700578FCA /* AnimeTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeTable.swift; sourceTree = "<group>"; };
 		38C805E9240E66EC00578FCA /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		38C805F12410C0AC00578FCA /* Anime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anime.swift; sourceTree = "<group>"; };
@@ -73,6 +90,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		385D2AA4241F450D0004FAE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -81,6 +105,7 @@
 			children = (
 				3803EA6D23EA998900DC745C /* XouTube */,
 				3803EA8423EA998B00DC745C /* XouTubeTests */,
+				385D2AA8241F450D0004FAE9 /* XouTubeUITests */,
 				3803EA6C23EA998900DC745C /* Products */,
 				5770C5905CFB4132DD65FA68 /* Pods */,
 				C1B324DCAA20B8C6C6B30CE5 /* Frameworks */,
@@ -92,6 +117,7 @@
 			children = (
 				3803EA6B23EA998900DC745C /* XouTube.app */,
 				3803EA8123EA998B00DC745C /* XouTubeTests.xctest */,
+				385D2AA7241F450D0004FAE9 /* XouTubeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,6 +145,26 @@
 				38C80604241616B900578FCA /* Extensions.swift */,
 			);
 			path = XouTubeTests;
+			sourceTree = "<group>";
+		};
+		385D2AA8241F450D0004FAE9 /* XouTubeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				385D2AB1241F456F0004FAE9 /* Helper */,
+				385D2AAB241F450D0004FAE9 /* Info.plist */,
+				385D2AB6241F49580004FAE9 /* FirstTestCheckSomeButtons.swift */,
+				385D2AB8241F4E5B0004FAE9 /* CheckIfBackButtonsWork.swift */,
+			);
+			path = XouTubeUITests;
+			sourceTree = "<group>";
+		};
+		385D2AB1241F456F0004FAE9 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				385D2AB2241F46120004FAE9 /* TestCase.swift */,
+				385D2AB4241F46460004FAE9 /* TestEnvironment.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		38A2971423FD49F100DBD8A5 /* MVVMView */ = {
@@ -193,6 +239,24 @@
 			productReference = 3803EA8123EA998B00DC745C /* XouTubeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		385D2AA6241F450D0004FAE9 /* XouTubeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 385D2AB0241F450D0004FAE9 /* Build configuration list for PBXNativeTarget "XouTubeUITests" */;
+			buildPhases = (
+				385D2AA3241F450D0004FAE9 /* Sources */,
+				385D2AA4241F450D0004FAE9 /* Frameworks */,
+				385D2AA5241F450D0004FAE9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				385D2AAD241F450D0004FAE9 /* PBXTargetDependency */,
+			);
+			name = XouTubeUITests;
+			productName = XouTubeUITests;
+			productReference = 385D2AA7241F450D0004FAE9 /* XouTubeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -207,6 +271,10 @@
 						CreatedOnToolsVersion = 11.3.1;
 					};
 					3803EA8023EA998B00DC745C = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 3803EA6A23EA998900DC745C;
+					};
+					385D2AA6241F450D0004FAE9 = {
 						CreatedOnToolsVersion = 11.3.1;
 						TestTargetID = 3803EA6A23EA998900DC745C;
 					};
@@ -227,6 +295,7 @@
 			targets = (
 				3803EA6A23EA998900DC745C /* XouTube */,
 				3803EA8023EA998B00DC745C /* XouTubeTests */,
+				385D2AA6241F450D0004FAE9 /* XouTubeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -243,6 +312,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		3803EA7F23EA998B00DC745C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		385D2AA5241F450D0004FAE9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -355,6 +431,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		385D2AA3241F450D0004FAE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				385D2AB5241F46460004FAE9 /* TestEnvironment.swift in Sources */,
+				385D2AB3241F46120004FAE9 /* TestCase.swift in Sources */,
+				385D2AB7241F49580004FAE9 /* FirstTestCheckSomeButtons.swift in Sources */,
+				385D2AB9241F4E5B0004FAE9 /* CheckIfBackButtonsWork.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -362,6 +449,11 @@
 			isa = PBXTargetDependency;
 			target = 3803EA6A23EA998900DC745C /* XouTube */;
 			targetProxy = 3803EA8223EA998B00DC745C /* PBXContainerItemProxy */;
+		};
+		385D2AAD241F450D0004FAE9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3803EA6A23EA998900DC745C /* XouTube */;
+			targetProxy = 385D2AAC241F450D0004FAE9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -583,6 +675,46 @@
 			};
 			name = Release;
 		};
+		385D2AAE241F450D0004FAE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GLK7J5PP82;
+				INFOPLIST_FILE = XouTubeUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = za.co.dvt.XouTubeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = XouTube;
+			};
+			name = Debug;
+		};
+		385D2AAF241F450D0004FAE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GLK7J5PP82;
+				INFOPLIST_FILE = XouTubeUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = za.co.dvt.XouTubeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = XouTube;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -609,6 +741,15 @@
 			buildConfigurations = (
 				3803EA8E23EA998B00DC745C /* Debug */,
 				3803EA8F23EA998B00DC745C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		385D2AB0241F450D0004FAE9 /* Build configuration list for PBXNativeTarget "XouTubeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				385D2AAE241F450D0004FAE9 /* Debug */,
+				385D2AAF241F450D0004FAE9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
