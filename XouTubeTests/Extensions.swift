@@ -5,19 +5,8 @@
 //  Created by Xander Schoeman on 2020/03/09.
 //  Copyright © 2020 Xander Schoeman. All rights reserved.
 //
-public class TestColor {
-    public var testLabel: UIColor
-    init(testlabel: UIColor) {
-        testLabel.self = testlabel
-    }
-}
 
-public class TestLoadImage {
-    public var testImage: UIImageView
-    init(testimage: UIImageView) {
-        testImage.self = testimage
-    }
-}
+
 
 
 import XCTest
