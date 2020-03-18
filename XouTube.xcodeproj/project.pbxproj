@@ -19,7 +19,6 @@
 		385D2AB9241F4E5B0004FAE9 /* CheckIfBackButtonsWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D2AB8241F4E5B0004FAE9 /* CheckIfBackButtonsWork.swift */; };
 		38C805E8240E3B0700578FCA /* AnimeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C805E7240E3B0700578FCA /* AnimeTable.swift */; };
 		38C805EA240E66EC00578FCA /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C805E9240E66EC00578FCA /* Home.swift */; };
-		38C805F22410C0AC00578FCA /* Anime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C805F12410C0AC00578FCA /* Anime.swift */; };
 		38C8060324160BFA00578FCA /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C8060224160BFA00578FCA /* Structs.swift */; };
 		38C80605241616B900578FCA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C80604241616B900578FCA /* Extensions.swift */; };
 		74649833EDB48EC556486A4D /* Pods_XouTubeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DF2660DE2F39C39C8943B1A /* Pods_XouTubeTests.framework */; };
@@ -64,7 +63,6 @@
 		385D2AB8241F4E5B0004FAE9 /* CheckIfBackButtonsWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckIfBackButtonsWork.swift; sourceTree = "<group>"; };
 		38C805E7240E3B0700578FCA /* AnimeTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeTable.swift; sourceTree = "<group>"; };
 		38C805E9240E66EC00578FCA /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
-		38C805F12410C0AC00578FCA /* Anime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anime.swift; sourceTree = "<group>"; };
 		38C8060224160BFA00578FCA /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
 		38C80604241616B900578FCA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		3E03FFAD80158C72216D17A4 /* Pods-XouTubeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XouTubeTests.debug.xcconfig"; path = "Target Support Files/Pods-XouTubeTests/Pods-XouTubeTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -172,7 +170,6 @@
 			children = (
 				38C805E7240E3B0700578FCA /* AnimeTable.swift */,
 				38C805E9240E66EC00578FCA /* Home.swift */,
-				38C805F12410C0AC00578FCA /* Anime.swift */,
 			);
 			path = MVVMView;
 			sourceTree = "<group>";
@@ -416,7 +413,6 @@
 				3803EA6F23EA998900DC745C /* AppDelegate.swift in Sources */,
 				38C805E8240E3B0700578FCA /* AnimeTable.swift in Sources */,
 				38C805EA240E66EC00578FCA /* Home.swift in Sources */,
-				38C805F22410C0AC00578FCA /* Anime.swift in Sources */,
 				3803EA7123EA998900DC745C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

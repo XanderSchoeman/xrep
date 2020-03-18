@@ -17,9 +17,9 @@ class Structs: XCTestCase {
     }
     func testStructs() {
         animeTopInfoStruct()
-        animeTopInfo()
+        animeInfo()
         TopStruct()
-        Top()
+        AnimeDetails()
         
     }
 
