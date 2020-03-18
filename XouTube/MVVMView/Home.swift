@@ -12,7 +12,7 @@ import XouDevSpec
 
 public class Home: UIViewController {
     @IBAction func btnAnime(_ sender: UIButton) {
-        performSegue(withIdentifier: "segAnime", sender: self)
+        performSegue(withIdentifier: "segAnimeTable", sender: self)
     }
     override public func viewDidLoad() {
         super.viewDidLoad() 

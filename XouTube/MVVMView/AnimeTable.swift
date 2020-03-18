@@ -12,71 +12,51 @@ import Alamofire
 
 public class AnimeTable: UITableViewController {
     @IBOutlet weak var tableViewAnime: UITableView!
-     var animes: [animeTopInfoStruct]?
+    @IBOutlet weak var srchBar: UISearchBar!
+    var animess = [TopStruct]()
+    var animeList = [AnimeDetails]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+                self.navigationItem.title = "Anime: \(self.animeList.count)"
+            }
+        }
+    }
+    var viewModel = AnimeTableViewModel()
     override public func viewDidLoad() {
         super.viewDidLoad()
                      }
     override public func viewDidAppear(_ animated: Bool) {
-        animeTopList()
-//        let jikanApiCalls = JikanApiCalls()
-//      var topAnimeArrayList =  jikanApiCalls.createArray()
-//        for item in 0...10 {
-//                                     var anime = animeTopInfoStruct()
-//                                    print(animes)
-//            
-//                 //                   anime.top.image_url = topAnimeArrayList.top[item].image_url
-//                 //                   anime.top.title = topAnimeArrayList.top[item].title
-//                //                     anime.top.type = animes.top[item].type as? String
-//                //                     anime.top.rank = animes.top[item].rank as? Int
-//                //                     anime.top.end_date = animes.top[item].end_date as? String
-//                                     self.animes?.append(anime)
-//                                    print(animes)
-//                                    DispatchQueue.main.async {
-//                                    self.tableView.reloadData()
-//                                    }
-//    }
+       //animeTopList()
 
     }
-  public  func animeTopList() {
-                   let headers: HTTPHeaders = [
-                       "x-rapidapi-host": "jikan1.p.rapidapi.com",
-                       "x-rapidapi-key": "844aa4143cmsha9162c362813b50p169716jsn9c6c8269713a"
-                   ]
 
-                   AF.request("https://jikan1.p.rapidapi.com/top/anime/1/upcoming", headers: headers)
-                     .responseDecodable(of: animeTopInfo.self) { (response) in
-                         guard let animes = response.value else {return}
-                         self.animes = [animeTopInfoStruct]()
-
-                         for item in 0...10 {
-                             var anime = animeTopInfoStruct()
-                            print(animes)
-
-                            anime.top.image_url = animes.top[item].image_url
-                            anime.top.title = animes.top[item].title
-        //                     anime.top.type = animes.top[item].type as? String
-        //                     anime.top.rank = animes.top[item].rank as? Int
-        //                     anime.top.end_date = animes.top[item].end_date as? String
-                             self.animes?.append(anime)
-                            print(animes)
-                            DispatchQueue.main.async {
-                            self.tableView.reloadData()
-                            }
-                             }
-
-                         }
-    }
 }
 //swiftlint:disable all
-extension AnimeTable {
+extension AnimeTable: UISearchBarDelegate {
         public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return (animes?.count) ?? 0
+            return animeList.count
         }
         public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let animeVid = animes![indexPath.row]
-            let cell = tableView.dequeueReusableCell(withIdentifier: "animeVidCell") as! AnimeVideoCell
-            cell.setAnimeVid(anime: animeVid)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "animeVidCell", for: indexPath) as! AnimeVideoCell
+            let anime = animeList[indexPath.row]
+            
+            cell.setAnimeVidSearch(anime: anime)
+            
+            
             return cell
         }
+    public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let searchBarText = searchBar.text else {return}
+        let apiCaller = ApiCallerModel.init(SearchText: searchBarText)
+        apiCaller.getAnimeData { [weak self] result in
+            switch result {
+            case .failure( let error):
+                print(error)
+            case .success(let animes):
+                self?.animeList = animes
+        }
+        }
+    }
     }
 //swiftlint:enable all
