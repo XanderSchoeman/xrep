@@ -1,7 +1,7 @@
 # xrep
-Homepage for the XouWeeb App.
+Homepage for the XouTube App.
 
-The XouWeeb application can be used as a favourite anime and manga list creater as well as viewing information on any anime or manga.
+The XouTube application can be used as a favourite anime and manga list creater as well as viewing information on any anime or manga.
 
 
 [![Build Status](https://app.bitrise.io/app/d84b8c4a5dbdc70d/status.svg?token=w7mHtAM_Gr-UXlFHvclugA)](https://app.bitrise.io/app/d84b8c4a5dbdc70d)
