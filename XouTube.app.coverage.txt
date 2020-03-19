@@ -1,0 +1,228 @@
+/Users/xschoeman/Documents/git/XouTube/XouTube/AppDelegate.swift:
+    1|       |//
+    2|       |//  AppDelegate.swift
+    3|       |//  XouTube
+    4|       |//
+    5|       |//  Created by Xander Schoeman on 2020/02/05.
+    6|       |//  Copyright © 2020 Xander Schoeman. All rights reserved.
+    7|       |//
+    8|       |
+    9|       |import UIKit
+   10|       |
+   11|       |@UIApplicationMain
+   12|       |class AppDelegate: UIResponder, UIApplicationDelegate {
+   13|       |    func application(_ application: UIApplication,
+   14|      1|                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+   15|      1|        // Override point for customization after application launch.
+   16|      1|        return true
+   17|      1|    }
+   18|       |
+   19|       |    // MARK: UISceneSession Lifecycle
+   20|       |
+   21|       |    func application(_ application: UIApplication,
+   22|       |                     configurationForConnecting connectingSceneSession: UISceneSession,
+   23|      0|                     options: UIScene.ConnectionOptions) -> UISceneConfiguration {
+   24|      0|        // Called when a new scene session is being created.
+   25|      0|        // Use this method to select a configuration to create the new scene with.
+   26|      0|        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+   27|      0|    }
+   28|       |
+   29|      0|    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
+   30|      0|        // Called when the user discards a scene session.
+   31|      0|        // If any sessions were discarded while
+   32|      0|        //the application was not running, this will be
+   33|      0|        //called shortly after application:didFinishLaunchingWithOptions.
+   34|      0|        // Use this method to release any resources that
+   35|      0|        //were specific to the discarded scenes, as they will not return.
+   36|      0|    }
+   37|       |
+   38|       |}
+
+/Users/xschoeman/Documents/git/XouTube/XouTube/MVVMView/Anime.swift:
+    1|       |//
+    2|       |//  Anime.swift
+    3|       |//  XouTube
+    4|       |//
+    5|       |//  Created by Xander Schoeman on 2020/03/05.
+    6|       |//  Copyright © 2020 Xander Schoeman. All rights reserved.
+    7|       |//
+    8|       |
+    9|       |import Foundation
+   10|       |import UIKit
+   11|       |import XouDevSpec
+   12|       |
+   13|       |public class Anime: UIViewController {
+   14|      0|    @IBAction func btnAnime(_ sender: UIButton) {
+   15|      0|        performSegue(withIdentifier: "segAnimeTable", sender: self)
+   16|      0|    }
+   17|       |    @IBOutlet weak var searchBarAnime: UISearchBar!
+   18|       |    
+   19|      0|    override public func viewDidLoad() {
+   20|      0|        super.viewDidLoad()
+   21|      0|    }
+   22|       |}
+
+/Users/xschoeman/Documents/git/XouTube/XouTube/MVVMView/AnimeTable.swift:
+    1|       |//
+    2|       |//  AnimeTable.swift
+    3|       |//  XouTube
+    4|       |//
+    5|       |//  Created by Xander Schoeman on 2020/03/03.
+    6|       |//  Copyright © 2020 Xander Schoeman. All rights reserved.
+    7|       |//
+    8|       |
+    9|       |import UIKit
+   10|       |import XouDevSpec
+   11|       |import Alamofire
+   12|       |
+   13|       |public class AnimeTable: UITableViewController {
+   14|       |    @IBOutlet weak var tableViewAnime: UITableView!
+   15|       |     var animes: [animeTopInfoStruct]?
+   16|      0|    override public func viewDidLoad() {
+   17|      0|        super.viewDidLoad()
+   18|      0|                     }
+   19|      0|    override public func viewDidAppear(_ animated: Bool) {
+   20|      0|        animeTopList()
+   21|      0|//        let jikanApiCalls = JikanApiCalls()
+   22|      0|//      var topAnimeArrayList =  jikanApiCalls.createArray()
+   23|      0|//        for item in 0...10 {
+   24|      0|//                                     var anime = animeTopInfoStruct()
+   25|      0|//                                    print(animes)
+   26|      0|//            
+   27|      0|//                 //                   anime.top.image_url = topAnimeArrayList.top[item].image_url
+   28|      0|//                 //                   anime.top.title = topAnimeArrayList.top[item].title
+   29|      0|//                //                     anime.top.type = animes.top[item].type as? String
+   30|      0|//                //                     anime.top.rank = animes.top[item].rank as? Int
+   31|      0|//                //                     anime.top.end_date = animes.top[item].end_date as? String
+   32|      0|//                                     self.animes?.append(anime)
+   33|      0|//                                    print(animes)
+   34|      0|//                                    DispatchQueue.main.async {
+   35|      0|//                                    self.tableView.reloadData()
+   36|      0|//                                    }
+   37|      0|//    }
+   38|      0|
+   39|      0|    }
+   40|      0|  public  func animeTopList() {
+   41|      0|                   let headers: HTTPHeaders = [
+   42|      0|                       "x-rapidapi-host": "jikan1.p.rapidapi.com",
+   43|      0|                       "x-rapidapi-key": "844aa4143cmsha9162c362813b50p169716jsn9c6c8269713a"
+   44|      0|                   ]
+   45|      0|
+   46|      0|                   AF.request("https://jikan1.p.rapidapi.com/top/anime/1/upcoming", headers: headers)
+   47|      0|                     .responseDecodable(of: animeTopInfo.self) { (response) in
+   48|      0|                         guard let animes = response.value else {return}
+   49|      0|                         self.animes = [animeTopInfoStruct]()
+   50|      0|
+   51|      0|                         for item in 0...10 {
+   52|      0|                             var anime = animeTopInfoStruct()
+   53|      0|                            print(animes)
+   54|      0|
+   55|      0|                            anime.top.image_url = animes.top[item].image_url
+   56|      0|                            anime.top.title = animes.top[item].title
+   57|      0|        //                     anime.top.type = animes.top[item].type as? String
+   58|      0|        //                     anime.top.rank = animes.top[item].rank as? Int
+   59|      0|        //                     anime.top.end_date = animes.top[item].end_date as? String
+   60|      0|                             self.animes?.append(anime)
+   61|      0|                            print(animes)
+   62|      0|                            DispatchQueue.main.async {
+   63|      0|                            self.tableView.reloadData()
+   64|      0|                            }
+   65|      0|                             }
+   66|      0|
+   67|      0|                         }
+   68|      0|    }
+   69|       |}
+   70|       |//swiftlint:disable all
+   71|       |extension AnimeTable {
+   72|      0|        public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+   73|      0|            return (animes?.count) ?? 0
+   74|      0|        }
+   75|      0|        public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+   76|      0|            let animeVid = animes![indexPath.row]
+   77|      0|            let cell = tableView.dequeueReusableCell(withIdentifier: "animeVidCell") as! AnimeVideoCell
+   78|      0|            cell.setAnimeVid(anime: animeVid)
+   79|      0|            return cell
+   80|      0|        }
+   81|       |    }
+   82|       |//swiftlint:enable all
+
+/Users/xschoeman/Documents/git/XouTube/XouTube/MVVMView/Home.swift:
+    1|       |//
+    2|       |//  Anime.swift
+    3|       |//  XouTube
+    4|       |//
+    5|       |//  Created by Xander Schoeman on 2020/03/03.
+    6|       |//  Copyright © 2020 Xander Schoeman. All rights reserved.
+    7|       |//
+    8|       |
+    9|       |import Foundation
+   10|       |import UIKit
+   11|       |import XouDevSpec
+   12|       |
+   13|       |public class Home: UIViewController {
+   14|      0|    @IBAction func btnAnime(_ sender: UIButton) {
+   15|      0|        performSegue(withIdentifier: "segAnime", sender: self)
+   16|      0|    }
+   17|      1|    override public func viewDidLoad() {
+   18|      1|        super.viewDidLoad() 
+   19|      1|    }
+   20|       |}
+
+/Users/xschoeman/Documents/git/XouTube/XouTube/SceneDelegate.swift:
+    1|       |//
+    2|       |//  SceneDelegate.swift
+    3|       |//  XouTube
+    4|       |//
+    5|       |//  Created by Xander Schoeman on 2020/02/05.
+    6|       |//  Copyright © 2020 Xander Schoeman. All rights reserved.
+    7|       |//
+    8|       |
+    9|       |import UIKit
+   10|       |
+   11|       |class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+   12|       |
+   13|       |    var window: UIWindow?
+   14|       |
+   15|       |    func scene(_ scene: UIScene, willConnectTo session: UISceneSession,
+   16|      1|               options connectionOptions: UIScene.ConnectionOptions) {
+   17|      1|        // Use this method to optionally configure and attach the UIWindow
+   18|      1|        //`window` to the provided UIWindowScene `scene`.
+   19|      1|        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
+   20|      1|        // This delegate does not imply the connecting scene
+   21|      1|        //or session are new (see `application:configurationForConnectingSceneSession` instead).
+   22|      1|        //let layout = UICollectionViewFlowLayout()
+   23|      1|       // window?.rootViewController =
+   24|      1|      //  UINavigationController(rootViewController: MainView(collectionViewLayout: layout))
+   25|      1|        guard let _ = (scene as? UIWindowScene) else { return }
+   26|      1|    }
+   27|       |
+   28|      0|    func sceneDidDisconnect(_ scene: UIScene) {
+   29|      0|        // Called as the scene is being released by the system.
+   30|      0|        // This occurs shortly after the scene enters the background, or when its session is discarded.
+   31|      0|        // Release any resources associated with this scene that can be re-created the next time the scene connects.
+   32|      0|        // The scene may re-connect later, as its session was not
+   33|      0|        //neccessarily discarded (see `application:didDiscardSceneSessions` instead).
+   34|      0|    }
+   35|       |
+   36|      1|    func sceneDidBecomeActive(_ scene: UIScene) {
+   37|      1|        // Called when the scene has moved from an inactive state to an active state.
+   38|      1|        // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
+   39|      1|    }
+   40|       |
+   41|      0|    func sceneWillResignActive(_ scene: UIScene) {
+   42|      0|        // Called when the scene will move from an active state to an inactive state.
+   43|      0|        // This may occur due to temporary interruptions (ex. an incoming phone call).
+   44|      0|    }
+   45|       |
+   46|      1|    func sceneWillEnterForeground(_ scene: UIScene) {
+   47|      1|        // Called as the scene transitions from the background to the foreground.
+   48|      1|        // Use this method to undo the changes made on entering the background.
+   49|      1|    }
+   50|       |
+   51|      0|    func sceneDidEnterBackground(_ scene: UIScene) {
+   52|      0|        // Called as the scene transitions from the foreground to the background.
+   53|      0|        // Use this method to save data, release shared resources, and store enough scene-specific state information
+   54|      0|        // to restore the scene back to its current state.
+   55|      0|    }
+   56|       |}
+

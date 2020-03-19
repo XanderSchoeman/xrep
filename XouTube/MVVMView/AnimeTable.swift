@@ -40,11 +40,13 @@ extension AnimeTable: UISearchBarDelegate {
         public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "animeVidCell", for: indexPath) as! AnimeVideoCell
             let anime = animeList[indexPath.row]
-            
             cell.setAnimeVidSearch(anime: anime)
-            
-            
             return cell
+        }
+        public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            let newViewController = storyboard?.instantiateViewController(withIdentifier: "AnimeDetailedInfoID") as? AnimeDetailedInfoView
+            newViewController?.animeList = animeList[indexPath.row]
+            self.navigationController?.pushViewController(newViewController!, animated: true)
         }
     public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let searchBarText = searchBar.text else {return}
