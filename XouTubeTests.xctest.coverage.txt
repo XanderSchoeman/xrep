@@ -1,0 +1,110 @@
+/Users/xschoeman/Documents/git/XouTube/XouTubeTests/Extensions.swift:
+    1|       |//
+    2|       |//  Extensions.swift
+    3|       |//  XouTubeTests
+    4|       |//
+    5|       |//  Created by Xander Schoeman on 2020/03/09.
+    6|       |//  Copyright © 2020 Xander Schoeman. All rights reserved.
+    7|       |//
+    8|       |
+    9|       |
+   10|      0|
+   11|      0|
+   12|      0|import XCTest
+   13|       |@testable import XouTube
+   14|       |@testable import XouDevSpec
+   15|       |
+   16|       |class Extensions: XCTestCase {
+   17|      0|    
+   18|      0|    override func setUp() {
+   19|      0|        // Put setup code here. This method is called before the invocation of each test method in the class.
+   20|       |    }
+   21|       |    func testRGBExtensionIfItChangesColour(){
+   22|       |        var testText: UIColor
+   23|       |        var testText2: UIColor
+   24|       |        testText = UIColor.rgb(red: 50, green: 50, blue: 50, alpha: 1)
+   25|       |        testText2 = UIColor.init(red: 50/255, green: 50/255, blue: 50/255, alpha: 1)
+   26|       |        XCTAssertEqual(testText.cgColor == testText2.cgColor, true)
+   27|       |    }
+   28|       |    func testLoadUIImageExtensionIfItLoads() {
+   29|      2|
+   30|      2|    }
+   31|      2|
+   32|      3|    override func tearDown() {
+   33|      3|        testRGBExtensionIfItChangesColour()
+   34|      3|        testLoadUIImageExtensionIfItLoads()
+   35|      3|        // Put teardown code here. This method is called after the invocation of each test method in the class.
+   36|      3|    }
+   37|      3|
+   38|      3|}
+
+/Users/xschoeman/Documents/git/XouTube/XouTubeTests/Structs.swift:
+    1|       |//
+    2|       |//  Structs.swift
+    3|       |//  XouTubeTests
+    4|       |//
+    5|       |//  Created by Xander Schoeman on 2020/03/09.
+    6|       |//  Copyright © 2020 Xander Schoeman. All rights reserved.
+    7|       |//
+    8|       |
+    9|       |import XCTest
+   10|       |@testable import XouTube
+   11|       |@testable import XouDevSpec
+   12|       |
+   13|       |class Structs: XCTestCase {
+   14|       |
+   15|      1|    override func setUp() {
+   16|      1|        // Put setup code here. This method is called before the invocation of each test method in the class.
+   17|      1|    }
+   18|      2|    func testStructs() {
+   19|      2|        animeTopInfoStruct()
+   20|      2|        animeTopInfo()
+   21|      2|        TopStruct()
+   22|      2|        Top()
+   23|      2|        
+   24|      2|    }
+   25|       |
+   26|      1|    override func tearDown() {
+   27|      1|        testStructs()
+   28|      1|        // Put teardown code here. This method is called after the invocation of each test method in the class.
+   29|      1|    }
+   30|       |
+   31|       |
+   32|       |}
+
+/Users/xschoeman/Documents/git/XouTube/XouTubeTests/XouTubeTests.swift:
+    1|       |//
+    2|       |//  XouTubeTests.swift
+    3|       |//  XouTubeTests
+    4|       |//
+    5|       |//  Created by Xander Schoeman on 2020/02/05.
+    6|       |//  Copyright © 2020 Xander Schoeman. All rights reserved.
+    7|       |//
+    8|       |
+    9|       |import XCTest
+   10|       |@testable import XouTube
+   11|       |
+   12|       |class XouTubeTests: XCTestCase {
+   13|       |
+   14|      2|    override func setUp() {
+   15|      2|        // Put setup code here. This method is called before the invocation of each test method in the class.
+   16|      2|    }
+   17|       |
+   18|      2|    override func tearDown() {
+   19|      2|        // Put teardown code here. This method is called after the invocation of each test method in the class.
+   20|      2|    }
+   21|       |
+   22|      1|    func testExample() {
+   23|      1|        // This is an example of a functional test case.
+   24|      1|        // Use XCTAssert and related functions to verify your tests produce the correct results.
+   25|      1|    }
+   26|       |
+   27|      1|    func testPerformanceExample() {
+   28|      1|        // This is an example of a performance test case.
+   29|     10|        self.measure {
+   30|     10|            // Put the code you want to measure the time of here.
+   31|     10|        }
+   32|      1|    }
+   33|       |
+   34|       |}
+

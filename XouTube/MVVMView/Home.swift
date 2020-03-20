@@ -15,6 +15,6 @@ public class Home: UIViewController {
         performSegue(withIdentifier: "segAnimeTable", sender: self)
     }
     override public func viewDidLoad() {
-        super.viewDidLoad() 
+        super.viewDidLoad()
     }
 }
