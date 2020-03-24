@@ -19,9 +19,11 @@ public class FavouritesView: UITableViewController {
             }
         }
     }
+    
     override public func viewDidLoad() {
         super.viewDidLoad()
                      }
+    
     override public func viewDidAppear(_ animated: Bool) {
     }
 
@@ -31,10 +33,10 @@ extension FavouritesView {
         public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             return animeList.count
         }
+    
         public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "animeFaveVidCell", for: indexPath) as! AnimeVideoCell
             let anime = animeList[indexPath.row]
-           // cell.setAnimeVidSearch(anime: anime)
             return cell
         }
 
