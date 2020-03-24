@@ -11,6 +11,10 @@ import UIKit
 import XouDevSpec
 
 public class AnimeDetailedInfoView: UIViewController {
+    @IBAction func btnHome(_ sender: UIButton) {
+        let newViewController = storyboard?.instantiateViewController(withIdentifier: "HomeID")
+        self.navigationController?.pushViewController(newViewController!, animated: true)
+    }
     @IBOutlet weak var lblAnimeTitle: UILabel!
     @IBOutlet weak var imgAnimeImage: UIImageView!
     @IBOutlet weak var txtViewAnimeSynopsis: UITextView!
@@ -21,21 +25,29 @@ public class AnimeDetailedInfoView: UIViewController {
     @IBOutlet weak var lblAnimeEndDate: UILabel!
     @IBOutlet weak var lblAnimeAiring: UILabel!
     @IBOutlet weak var lblAnimeURL: UILabel!
+    @IBAction func btnFavourite(_ sender: UIButton) {
+        var objc = ObjCAnimeClass()
+        var fave = [FaveAnimeDetails]()
+        objc.airing = "\(animeList.airing ?? true)"
+        objc.start_date = animeList.start_date ?? ""
+        objc.end_date = animeList.end_date ?? ""
+        objc.mal_id = "\(animeList.mal_id ?? 0)"
+        objc.members = "\(animeList.members ?? 0)"
+        objc.rated = animeList.rated ?? ""
+        objc.image_url = animeList.image_url ?? ""
+        objc.url = animeList.url ?? ""
+        objc.synopsis = animeList.synopsis ?? ""
+        objc.end_date = animeList.end_date ?? ""
+        objc.title = animeList.title ?? "Unknown"
+        objc.episodes = "\(animeList.episodes ?? 0)"
+        objc.score = "\(animeList.score ?? 0.0)"
+        displayDefaultAlert(title: "Added to favourites!", message: objc.animeInfoString())
+    }
     var animeList = AnimeDetails()
-//    var animeTitle = ""
-//    var animeImage = UIImage()
-//    var animeSynopsis = ""
-//    var animeScore = ""
-//    var animeEpisodes = ""
-//    var animeRated = ""
-//    var animeStartDate = ""
-//    var animeEndDate = ""
-//    var animeAiring = true
-//    var animeUrl = ""
+
     override public func viewDidLoad() {
         super.viewDidLoad()
         lblAnimeTitle.text = animeList.title
-        //imgAnimeImage.image = UIImage(named: animeList.image_url ?? "")
         if let imageUrl = animeList.image_url {
           imgAnimeImage.loadImageUsingUrlString(urlString: imageUrl)
         }
@@ -51,5 +63,11 @@ public class AnimeDetailedInfoView: UIViewController {
         } else {
             lblAnimeAiring.text = "False"
         }
+    }
+    func displayDefaultAlert(title: String?, message: String?) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
     }
 }

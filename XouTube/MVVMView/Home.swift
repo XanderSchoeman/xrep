@@ -14,6 +14,9 @@ public class Home: UIViewController {
     @IBAction func btnAnime(_ sender: UIButton) {
         performSegue(withIdentifier: "segAnimeTable", sender: self)
     }
+    @IBAction func btnFaves(_ sender: UIButton) {
+        performSegue(withIdentifier: "segFavourites", sender: self)
+    }
     override public func viewDidLoad() {
         super.viewDidLoad()
     }
