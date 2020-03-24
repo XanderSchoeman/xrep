@@ -18,6 +18,7 @@
 		385D2AB7241F49580004FAE9 /* FirstTestCheckSomeButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D2AB6241F49580004FAE9 /* FirstTestCheckSomeButtons.swift */; };
 		385D2AB9241F4E5B0004FAE9 /* CheckIfBackButtonsWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D2AB8241F4E5B0004FAE9 /* CheckIfBackButtonsWork.swift */; };
 		38C2B8AA2423A8A9003EB0AD /* AnimeDetailedInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C2B8A92423A8A9003EB0AD /* AnimeDetailedInfoView.swift */; };
+		38C2B8E024281C70003EB0AD /* FavouritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C2B8DF24281C70003EB0AD /* FavouritesView.swift */; };
 		38C805E8240E3B0700578FCA /* AnimeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C805E7240E3B0700578FCA /* AnimeTable.swift */; };
 		38C805EA240E66EC00578FCA /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C805E9240E66EC00578FCA /* Home.swift */; };
 		38C8060324160BFA00578FCA /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C8060224160BFA00578FCA /* Structs.swift */; };
@@ -63,6 +64,7 @@
 		385D2AB6241F49580004FAE9 /* FirstTestCheckSomeButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTestCheckSomeButtons.swift; sourceTree = "<group>"; };
 		385D2AB8241F4E5B0004FAE9 /* CheckIfBackButtonsWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckIfBackButtonsWork.swift; sourceTree = "<group>"; };
 		38C2B8A92423A8A9003EB0AD /* AnimeDetailedInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeDetailedInfoView.swift; sourceTree = "<group>"; };
+		38C2B8DF24281C70003EB0AD /* FavouritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesView.swift; sourceTree = "<group>"; };
 		38C805E7240E3B0700578FCA /* AnimeTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeTable.swift; sourceTree = "<group>"; };
 		38C805E9240E66EC00578FCA /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		38C8060224160BFA00578FCA /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				38C805E7240E3B0700578FCA /* AnimeTable.swift */,
 				38C805E9240E66EC00578FCA /* Home.swift */,
 				38C2B8A92423A8A9003EB0AD /* AnimeDetailedInfoView.swift */,
+				38C2B8DF24281C70003EB0AD /* FavouritesView.swift */,
 			);
 			path = MVVMView;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				TargetAttributes = {
 					3803EA6A23EA998900DC745C = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 					3803EA8023EA998B00DC745C = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -414,6 +418,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3803EA6F23EA998900DC745C /* AppDelegate.swift in Sources */,
+				38C2B8E024281C70003EB0AD /* FavouritesView.swift in Sources */,
 				38C805E8240E3B0700578FCA /* AnimeTable.swift in Sources */,
 				38C805EA240E66EC00578FCA /* Home.swift in Sources */,
 				38C2B8AA2423A8A9003EB0AD /* AnimeDetailedInfoView.swift in Sources */,
@@ -596,7 +601,9 @@
 			baseConfigurationReference = 7CD9576BCBEEC3DA13C2CB50 /* Pods-XouTube.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = GLK7J5PP82;
 				INFOPLIST_FILE = XouTube/Info.plist;
@@ -606,6 +613,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = za.co.dvt.XouTube;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -616,7 +625,9 @@
 			baseConfigurationReference = B585A1721C17C897DA839376 /* Pods-XouTube.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = GLK7J5PP82;
 				INFOPLIST_FILE = XouTube/Info.plist;
@@ -626,6 +637,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = za.co.dvt.XouTube;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
