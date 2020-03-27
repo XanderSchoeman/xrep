@@ -38,6 +38,7 @@ public class MangaDetailedInfoView: UIViewController {
         fave.title = mangaList.title ?? "Unknown"
         fave.volumes = mangaList.volumes ?? 0
         fave.score = mangaList.score ?? 0.0
+        fave.type = mangaList.type ?? ""
         faveMangalist.append(fave)
         displayDefaultAlert(title: "Added to favourites!", message: " = )")
     }
@@ -55,7 +56,7 @@ public class MangaDetailedInfoView: UIViewController {
         lblAnimeRated.text = "\(mangaList.volumes ?? 0)"
         lblAnimeStartDate.text = mangaList.start_date
         lblAnimeEndDate.text = mangaList.end_date
-        lblAnimeURL.text = mangaList.url
+        lblAnimeURL.text = mangaList.type
         if mangaList.publishing ?? false {
             lblAnimeAiring.text = "True"
         } else {

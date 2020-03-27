@@ -52,6 +52,7 @@ public class AnimeDetailedInfoView: UIViewController {
         fave.title = animeList.title ?? "Unknown"
         fave.episodes = animeList.episodes ?? 0
         fave.score = animeList.score ?? 0.0
+        fave.type = animeList.type ?? ""
         faveAnimelist.append(fave)
         displayDefaultAlert(title: "Added to favourites!", message: objc.animeInfoString())
     }
@@ -70,7 +71,7 @@ public class AnimeDetailedInfoView: UIViewController {
         lblAnimeRated.text = animeList.rated
         lblAnimeStartDate.text = animeList.start_date
         lblAnimeEndDate.text = animeList.end_date
-        lblAnimeURL.text = animeList.url
+        lblAnimeURL.text = animeList.type
         if animeList.airing! {
             lblAnimeAiring.text = "True"
         } else {
