@@ -30,10 +30,10 @@ public class FavouritesView: UITableViewController {
 }
 //swiftlint:disable all
 extension FavouritesView {
-        public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
 
-            return 2
-        }
+    override public func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
         public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             
            var numberOfRows = 1
