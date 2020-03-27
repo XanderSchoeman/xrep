@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (5.0.4)
+  - Alamofire (5.0.5)
   - XouDevSpec (0.1.0):
     - Alamofire
 
@@ -16,8 +16,8 @@ EXTERNAL SOURCES:
     :path: "/Users/xschoeman/Documents/git/Podfolder/XouDevSpec"
 
 SPEC CHECKSUMS:
-  Alamofire: 0fe5fd24b4298dc377a6550da7d5f1b30e286fcb
-  XouDevSpec: a1f3795c16cce1389ca6e490cc03881b96d5328d
+  Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
+  XouDevSpec: 32cde8fea3298129265c7e0123ebbfd6d01b6ad0
 
 PODFILE CHECKSUM: aebb69a59d6a0e8e75410902aad965db3f062d1f
 

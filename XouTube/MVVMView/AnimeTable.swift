@@ -27,8 +27,6 @@ public class AnimeTable: UITableViewController {
         super.viewDidLoad()
                      }
     override public func viewDidAppear(_ animated: Bool) {
-       //animeTopList()
-
     }
 
 }
@@ -49,7 +47,8 @@ extension AnimeTable: UISearchBarDelegate {
             self.navigationController?.pushViewController(newViewController!, animated: true)
         }
     public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        guard let searchBarText = searchBar.text else {return}
+        let replacedString = searchBar.text?.replacingOccurrences(of: " ", with: "%20")
+        guard let searchBarText = replacedString else {return}
         let apiCaller = ApiCallerModel.init(SearchText: searchBarText)
         apiCaller.getAnimeData { [weak self] result in
             switch result {
