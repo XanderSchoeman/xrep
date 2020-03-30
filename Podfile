@@ -14,7 +14,12 @@ pod “Alamofire”
 
   target 'XouTubeTests' do
     inherit! :search_paths
+    pod 'Firebase'
+  target 'XouTubeUITests' do
+    inherit! :search_paths
+    pod 'Firebase'
     # Pods for testing
   end
 
+end
 end

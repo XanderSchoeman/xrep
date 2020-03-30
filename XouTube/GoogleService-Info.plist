@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>205201287628-vviiqk3vpu9h8cg1qfgng7i7cctk8oor.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.205201287628-vviiqk3vpu9h8cg1qfgng7i7cctk8oor</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDAV6AgmguOTTzdEAuHPx27kDahXzfQvxY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>205201287628</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>za.co.dvt.XouTube</string>
+	<key>PROJECT_ID</key>
+	<string>xoutube-ef998</string>
+	<key>STORAGE_BUCKET</key>
+	<string>xoutube-ef998.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:205201287628:ios:a1522138db43619f5cd569</string>
+	<key>DATABASE_URL</key>
+	<string>https://xoutube-ef998.firebaseio.com</string>
+</dict>
+</plist>

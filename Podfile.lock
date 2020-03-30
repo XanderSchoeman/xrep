@@ -1,5 +1,7 @@
 PODS:
   - Alamofire (5.0.5)
+  - Firebase (6.21.0):
+    - Firebase/Core (= 6.21.0)
   - Firebase/Analytics (6.21.0):
     - Firebase/Core
   - Firebase/Core (6.21.0):
@@ -72,6 +74,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - Firebase
   - Firebase/Analytics
   - XouDevSpec (from `/Users/xschoeman/Documents/git/Podfolder/XouDevSpec`)
 
@@ -111,6 +114,6 @@ SPEC CHECKSUMS:
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   XouDevSpec: 7b8f108b748901156e4fcc4664c9c2fdf9d3f9b0
 
-PODFILE CHECKSUM: e01fe75b1c135432797a48cac065f51cb0a5a6c3
+PODFILE CHECKSUM: 023a1d6b9eca9c5d8a2ffd04ecd0370fa4985126
 
 COCOAPODS: 1.9.0
