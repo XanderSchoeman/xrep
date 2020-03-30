@@ -23,7 +23,8 @@
 		38C2B8FA242D50AA003EB0AD /* MangaDetailedInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C2B8F9242D50AA003EB0AD /* MangaDetailedInfoView.swift */; };
 		38C2B9082431C66A003EB0AD /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C2B9072431C66A003EB0AD /* ProfileView.swift */; };
 		38C2B90C2431E639003EB0AD /* HomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C2B90B2431E639003EB0AD /* HomeView.m */; };
-		38C2B91624326FB7003EB0AD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38C2B91524326FB7003EB0AD /* GoogleService-Info.plist */; };
+		38C2B92424329906003EB0AD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38C2B92324329906003EB0AD /* GoogleService-Info.plist */; };
+		38C2B92624329C52003EB0AD /* TestApiMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C2B92524329C52003EB0AD /* TestApiMethods.swift */; };
 		38C805E8240E3B0700578FCA /* AnimeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C805E7240E3B0700578FCA /* AnimeTable.swift */; };
 		38C8060324160BFA00578FCA /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C8060224160BFA00578FCA /* Structs.swift */; };
 		38C80605241616B900578FCA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C80604241616B900578FCA /* Extensions.swift */; };
@@ -72,10 +73,10 @@
 		38C2B8F7242D1E97003EB0AD /* MangaTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangaTableView.swift; sourceTree = "<group>"; };
 		38C2B8F9242D50AA003EB0AD /* MangaDetailedInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangaDetailedInfoView.swift; sourceTree = "<group>"; };
 		38C2B9072431C66A003EB0AD /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		38C2B9092431E638003EB0AD /* XouTube-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XouTube-Bridging-Header.h"; sourceTree = "<group>"; };
 		38C2B90A2431E639003EB0AD /* HomeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeView.h; sourceTree = "<group>"; };
 		38C2B90B2431E639003EB0AD /* HomeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeView.m; sourceTree = "<group>"; };
-		38C2B91524326FB7003EB0AD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		38C2B92324329906003EB0AD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		38C2B92524329C52003EB0AD /* TestApiMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApiMethods.swift; sourceTree = "<group>"; };
 		38C805E7240E3B0700578FCA /* AnimeTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeTable.swift; sourceTree = "<group>"; };
 		38C8060224160BFA00578FCA /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
 		38C80604241616B900578FCA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -144,7 +145,7 @@
 				3803EA7723EA998B00DC745C /* Assets.xcassets */,
 				3803EA7923EA998B00DC745C /* LaunchScreen.storyboard */,
 				3803EA7C23EA998B00DC745C /* Info.plist */,
-				38C2B91524326FB7003EB0AD /* GoogleService-Info.plist */,
+				38C2B92324329906003EB0AD /* GoogleService-Info.plist */,
 			);
 			path = XouTube;
 			sourceTree = "<group>";
@@ -156,6 +157,7 @@
 				3803EA8723EA998B00DC745C /* Info.plist */,
 				38C8060224160BFA00578FCA /* Structs.swift */,
 				38C80604241616B900578FCA /* Extensions.swift */,
+				38C2B92524329C52003EB0AD /* TestApiMethods.swift */,
 			);
 			path = XouTubeTests;
 			sourceTree = "<group>";
@@ -191,7 +193,6 @@
 				38C2B9072431C66A003EB0AD /* ProfileView.swift */,
 				38C2B90A2431E639003EB0AD /* HomeView.h */,
 				38C2B90B2431E639003EB0AD /* HomeView.m */,
-				38C2B9092431E638003EB0AD /* XouTube-Bridging-Header.h */,
 			);
 			path = MVVMView;
 			sourceTree = "<group>";
@@ -326,7 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3803EA7B23EA998B00DC745C /* LaunchScreen.storyboard in Resources */,
-				38C2B91624326FB7003EB0AD /* GoogleService-Info.plist in Resources */,
+				38C2B92424329906003EB0AD /* GoogleService-Info.plist in Resources */,
 				3803EA7823EA998B00DC745C /* Assets.xcassets in Resources */,
 				3803EA7623EA998900DC745C /* Main.storyboard in Resources */,
 			);
@@ -451,6 +452,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38C8060324160BFA00578FCA /* Structs.swift in Sources */,
+				38C2B92624329C52003EB0AD /* TestApiMethods.swift in Sources */,
 				38C80605241616B900578FCA /* Extensions.swift in Sources */,
 				3803EA8623EA998B00DC745C /* XouTubeTests.swift in Sources */,
 			);
@@ -633,7 +635,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = za.co.dvt.XouTube;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "XouTube/MVVMView/XouTube-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -657,7 +658,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = za.co.dvt.XouTube;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "XouTube/MVVMView/XouTube-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -721,6 +721,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = za.co.dvt.XouTubeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = XouTube;
@@ -741,6 +742,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = za.co.dvt.XouTubeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = XouTube;
