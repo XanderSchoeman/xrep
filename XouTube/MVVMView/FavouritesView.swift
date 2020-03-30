@@ -11,35 +11,83 @@ import XouDevSpec
 
 public class FavouritesView: UITableViewController {
     @IBOutlet weak var tableViewAnime: UITableView!
-    var animeList = [AnimeDetails]() {
+
+    var mangaList = faveMangaListViewModelObject {
         didSet {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
-                self.navigationItem.title = "Anime: \(self.animeList.count)"
+                self.navigationItem.title = "Favourites Left: \(self.animeList.count + self.mangaList.count)"
             }
         }
     }
-    
+    var animeList = faveAnimeListViewModelObject {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+                self.navigationItem.title = "Favourites Left: \(self.animeList.count + self.mangaList.count)"
+            }
+        }
+    }
     override public func viewDidLoad() {
         super.viewDidLoad()
                      }
-    
     override public func viewDidAppear(_ animated: Bool) {
     }
 
 }
-//swiftlint:disable all
-extension FavouritesView {
-        public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return animeList.count
-        }
-    
-        public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "animeFaveVidCell", for: indexPath) as! AnimeVideoCell
-            let anime = animeList[indexPath.row]
-            return cell
-        }
 
+extension FavouritesView {
+
+    override public func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+        public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+           var numberOfRows = 1
+            if (section == 0) {
+              numberOfRows =  animeList.count
+                return numberOfRows
+            } else if (section == 1) {
+               numberOfRows =  mangaList.count
+               return numberOfRows
+            }
+            return numberOfRows
+        }
+        //swiftlint:disable all
+        public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            var cell = AnimeFavouriteCell()
+            switch indexPath.section {
+             case 0:
+                cell = tableView.dequeueReusableCell(withIdentifier: "animeFavouriteCell", for: indexPath) as! AnimeFavouriteCell
+             let anime = animeList[indexPath.row]
+             cell.animeViewModel = anime
+             case 1:
+             cell = tableView.dequeueReusableCell(withIdentifier: "mangaFavouriteCell", for: indexPath) as! AnimeFavouriteCell
+             let manga = mangaList[indexPath.row]
+             cell.mangaViewModel = manga
+             default:
+             print("An error has occured in the table cells")
+               }
+             return cell
+        }
+        //swiftlint:enable all
+    public override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle,
+                                   forRowAt indexPath: IndexPath) {
+        switch indexPath.section {
+         case 0:
+         if editingStyle == .delete {
+         animeList.remove(at: indexPath.row)
+         tableView.deleteRows(at: [indexPath], with: .bottom)
+         faveAnimeListViewModelObject.remove(at: indexPath.row)
+         }
+         case 1:
+         if editingStyle == .delete {
+         mangaList.remove(at: indexPath.row)
+         tableView.deleteRows(at: [indexPath], with: .bottom)
+         faveMangaListViewModelObject.remove(at: indexPath.row)
+         }
+         default:
+         print("An error has occured in the table delete")
+           }
+    }
 
     }
-//swiftlint:enable all

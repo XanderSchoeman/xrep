@@ -17,6 +17,12 @@ public class Home: UIViewController {
     @IBAction func btnFaves(_ sender: UIButton) {
         performSegue(withIdentifier: "segFavourites", sender: self)
     }
+    @IBAction func btnManga(_ sender: UIButton) {
+        performSegue(withIdentifier: "segMangaTable", sender: self)
+    }
+    @IBAction func btnProfile(_ sender: UIButton) {
+        performSegue(withIdentifier: "segProfile", sender: self)
+    }
     override public func viewDidLoad() {
         super.viewDidLoad()
     }
