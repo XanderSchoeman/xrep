@@ -8,7 +8,7 @@
 
 import UIKit
 import XouDevSpec
-import Alamofire
+import Firebase
 
 public class MangaTableView: UITableViewController {
     @IBOutlet weak var tableViewAnime: UITableView!
@@ -41,12 +41,14 @@ extension MangaTableView: UISearchBarDelegate {
         }
         //swiftlint:enable all
         public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            Analytics.logEvent(AnalyticsEventSelectItem, parameters: ["MangaItemFromApiSelected": indexPath.row])
             let newViewController = storyboard?.instantiateViewController(withIdentifier:
                 "MangaDetailedInfoID") as? MangaDetailedInfoView
             newViewController?.mangaList = mangaList[indexPath.row]
             self.navigationController?.pushViewController(newViewController!, animated: true)
         }
     public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        Analytics.logEvent(AnalyticsEventSearch, parameters: ["MangaSearchValue": searchBar.text as Any])
           var objcGenreglobal = GlobalDataGenre()
           let replacedString = searchBar.text?.replacingOccurrences(of: " ", with: "%20")
           guard let searchBarText = replacedString else {return}

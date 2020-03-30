@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import XouDevSpec
+import Firebase
 
 public var faveAnimeListViewModelObject = [AnimeTableViewModel]()
 public class AnimeDetailedInfoView: UIViewController {
@@ -24,6 +25,7 @@ public class AnimeDetailedInfoView: UIViewController {
     @IBOutlet weak var lblAnimeAiring: UILabel!
     @IBOutlet weak var lblAnimeURL: UILabel!
     @IBAction func btnFavourite(_ sender: UIButton) {
+        Analytics.logEvent("FavouriteAnimePressed", parameters: nil)
         var fave = AnimeTableViewModel()
         fave.airing = animeList.airing ?? true
         fave.start_date = animeList.start_date ?? ""

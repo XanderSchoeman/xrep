@@ -25,7 +25,6 @@
 		38C2B90C2431E639003EB0AD /* HomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C2B90B2431E639003EB0AD /* HomeView.m */; };
 		38C2B91624326FB7003EB0AD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38C2B91524326FB7003EB0AD /* GoogleService-Info.plist */; };
 		38C805E8240E3B0700578FCA /* AnimeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C805E7240E3B0700578FCA /* AnimeTable.swift */; };
-		38C805EA240E66EC00578FCA /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C805E9240E66EC00578FCA /* Home.swift */; };
 		38C8060324160BFA00578FCA /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C8060224160BFA00578FCA /* Structs.swift */; };
 		38C80605241616B900578FCA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C80604241616B900578FCA /* Extensions.swift */; };
 		74649833EDB48EC556486A4D /* Pods_XouTubeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DF2660DE2F39C39C8943B1A /* Pods_XouTubeTests.framework */; };
@@ -78,7 +77,6 @@
 		38C2B90B2431E639003EB0AD /* HomeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeView.m; sourceTree = "<group>"; };
 		38C2B91524326FB7003EB0AD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		38C805E7240E3B0700578FCA /* AnimeTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeTable.swift; sourceTree = "<group>"; };
-		38C805E9240E66EC00578FCA /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		38C8060224160BFA00578FCA /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
 		38C80604241616B900578FCA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		3E03FFAD80158C72216D17A4 /* Pods-XouTubeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XouTubeTests.debug.xcconfig"; path = "Target Support Files/Pods-XouTubeTests/Pods-XouTubeTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -186,7 +184,6 @@
 			isa = PBXGroup;
 			children = (
 				38C805E7240E3B0700578FCA /* AnimeTable.swift */,
-				38C805E9240E66EC00578FCA /* Home.swift */,
 				38C2B8A92423A8A9003EB0AD /* AnimeDetailedInfoView.swift */,
 				38C2B8DF24281C70003EB0AD /* FavouritesView.swift */,
 				38C2B8F7242D1E97003EB0AD /* MangaTableView.swift */,
@@ -441,7 +438,6 @@
 				38C2B9082431C66A003EB0AD /* ProfileView.swift in Sources */,
 				38C2B8E024281C70003EB0AD /* FavouritesView.swift in Sources */,
 				38C805E8240E3B0700578FCA /* AnimeTable.swift in Sources */,
-				38C805EA240E66EC00578FCA /* Home.swift in Sources */,
 				38C2B8F8242D1E97003EB0AD /* MangaTableView.swift in Sources */,
 				38C2B8FA242D50AA003EB0AD /* MangaDetailedInfoView.swift in Sources */,
 				38C2B90C2431E639003EB0AD /* HomeView.m in Sources */,

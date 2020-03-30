@@ -8,6 +8,7 @@
 
 import UIKit
 import XouDevSpec
+import Firebase
 
 public class FavouritesView: UITableViewController {
     @IBOutlet weak var tableViewAnime: UITableView!
@@ -75,12 +76,14 @@ extension FavouritesView {
         switch indexPath.section {
          case 0:
          if editingStyle == .delete {
+         Analytics.logEvent("AnimeDeleted", parameters: nil)
          animeList.remove(at: indexPath.row)
          tableView.deleteRows(at: [indexPath], with: .bottom)
          faveAnimeListViewModelObject.remove(at: indexPath.row)
          }
          case 1:
          if editingStyle == .delete {
+         Analytics.logEvent("MangaDeleted", parameters: nil)
          mangaList.remove(at: indexPath.row)
          tableView.deleteRows(at: [indexPath], with: .bottom)
          faveMangaListViewModelObject.remove(at: indexPath.row)

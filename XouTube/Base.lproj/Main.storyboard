@@ -1182,12 +1182,18 @@
                                                                 <state key="normal" title="Sign In">
                                                                     <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="btnSignIn:" destination="6NL-QX-26B" eventType="touchUpInside" id="XJP-Eg-fie"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="an5-RA-fs4">
                                                                 <rect key="frame" x="188" y="0.0" width="188" height="30"/>
                                                                 <state key="normal" title="Sign Up">
                                                                     <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="btnSignUp:" destination="6NL-QX-26B" eventType="touchUpInside" id="SXa-Bz-tsC"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
