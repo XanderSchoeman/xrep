@@ -10,7 +10,7 @@
         <!--Home-->
         <scene sceneID="zt8-Dw-P82">
             <objects>
-                <viewController storyboardIdentifier="HomeID" title="Home" id="6z8-4G-mMe" customClass="Home" customModule="XouTube" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeID" title="Home" id="6z8-4G-mMe" customClass="HomeView" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RJa-ED-rxX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,6 +29,9 @@
                                                         <state key="normal" title="Home">
                                                             <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="btnHome:" destination="6z8-4G-mMe" eventType="touchUpInside" id="Ueu-3O-Rv9"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCJ-36-7qg">
                                                         <rect key="frame" x="70" y="0.0" width="44" height="30"/>
@@ -36,7 +39,7 @@
                                                             <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="btnAnime:" destination="6z8-4G-mMe" eventType="touchUpInside" id="7bX-Vi-qFh"/>
+                                                            <action selector="btnAnime:" destination="6z8-4G-mMe" eventType="touchUpInside" id="S9t-jd-GyI"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Pw-3b-Vxg">
@@ -45,7 +48,7 @@
                                                             <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="btnManga:" destination="6z8-4G-mMe" eventType="touchUpInside" id="Kwi-Cl-UeS"/>
+                                                            <action selector="btnManga:" destination="6z8-4G-mMe" eventType="touchUpInside" id="3Vx-tA-dOY"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uNa-Md-I26">
@@ -54,7 +57,7 @@
                                                             <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="btnFaves:" destination="6z8-4G-mMe" eventType="touchUpInside" id="XYc-JF-Tqv"/>
+                                                            <action selector="btnFaves:" destination="6z8-4G-mMe" eventType="touchUpInside" id="hWj-aP-YAw"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T4e-Bg-t4k">
@@ -63,13 +66,13 @@
                                                             <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="btnProfile:" destination="6z8-4G-mMe" eventType="touchUpInside" id="6Uk-fl-GgA"/>
+                                                            <action selector="btnProfile:" destination="6z8-4G-mMe" eventType="touchUpInside" id="krU-za-tv2"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cPC-cP-mAY">
-                                                <rect key="frame" x="19" y="48" width="376" height="700"/>
+                                                <rect key="frame" x="19" y="48" width="376" height="450"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cmA-Cv-Ev8">
                                                         <rect key="frame" x="0.0" y="0.0" width="376" height="50"/>
@@ -84,7 +87,7 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start by choosing some genre's to match your taste:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cc6-Yk-EY9">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start by choosing a genre to match your taste:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cc6-Yk-EY9">
                                                         <rect key="frame" x="0.0" y="100" width="376" height="50"/>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -98,24 +101,36 @@
                                                                 <state key="normal" title="Action">
                                                                     <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="btnAction:" destination="6z8-4G-mMe" eventType="touchUpInside" id="y0t-8c-TEK"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3zm-O6-TcM">
                                                                 <rect key="frame" x="94" y="0.0" width="94" height="50"/>
                                                                 <state key="normal" title="Game">
                                                                     <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="btnGame:" destination="6z8-4G-mMe" eventType="touchUpInside" id="Ytk-I4-2yL"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mdd-Zu-yu2">
                                                                 <rect key="frame" x="188" y="0.0" width="94" height="50"/>
-                                                                <state key="normal" title="Samurai">
+                                                                <state key="normal" title="Slice Of Life">
                                                                     <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="btnSliceOfLife:" destination="6z8-4G-mMe" eventType="touchUpInside" id="aBN-K6-7b9"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GxA-YE-Gyb">
                                                                 <rect key="frame" x="282" y="0.0" width="94" height="50"/>
                                                                 <state key="normal" title="Super Power">
                                                                     <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="btnSuperPower:" destination="6z8-4G-mMe" eventType="touchUpInside" id="Rz3-u7-ihW"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -127,24 +142,36 @@
                                                                 <state key="normal" title="Adventure">
                                                                     <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="btnAdventure:" destination="6z8-4G-mMe" eventType="touchUpInside" id="2DX-P4-EQb"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYc-Dp-oRF">
                                                                 <rect key="frame" x="94" y="0.0" width="94" height="50"/>
-                                                                <state key="normal" title="H+">
+                                                                <state key="normal" title="Military">
                                                                     <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="btnMilitary:" destination="6z8-4G-mMe" eventType="touchUpInside" id="tfe-LC-eQx"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="akM-TT-c62">
                                                                 <rect key="frame" x="188" y="0.0" width="94" height="50"/>
                                                                 <state key="normal" title="Romance">
                                                                     <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="btnRomance:" destination="6z8-4G-mMe" eventType="touchUpInside" id="YmP-5b-4jO"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VSz-GX-2iO">
                                                                 <rect key="frame" x="282" y="0.0" width="94" height="50"/>
                                                                 <state key="normal" title="Vampire">
                                                                     <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="btnVampire:" destination="6z8-4G-mMe" eventType="touchUpInside" id="EJy-BP-4bb"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -153,27 +180,39 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNw-A3-wtD">
                                                                 <rect key="frame" x="0.0" y="0.0" width="94" height="50"/>
-                                                                <state key="normal" title="Cars">
+                                                                <state key="normal" title="Sports">
                                                                     <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="btnSports:" destination="6z8-4G-mMe" eventType="touchUpInside" id="kfJ-gL-niK"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Vo-wF-JGv">
                                                                 <rect key="frame" x="94" y="0.0" width="94" height="50"/>
-                                                                <state key="normal" title="Historical">
+                                                                <state key="normal" title="Supernatural">
                                                                     <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="btnSupernatural:" destination="6z8-4G-mMe" eventType="touchUpInside" id="y5A-Pe-tBh"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MpQ-5w-GIf">
                                                                 <rect key="frame" x="188" y="0.0" width="94" height="50"/>
                                                                 <state key="normal" title="School">
                                                                     <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="btnSchool:" destination="6z8-4G-mMe" eventType="touchUpInside" id="bBX-vu-8bo"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AxS-fi-JOH">
                                                                 <rect key="frame" x="282" y="0.0" width="94" height="50"/>
-                                                                <state key="normal" title="Yaoi">
+                                                                <state key="normal" title="Drama">
                                                                     <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="btnDrama:" destination="6z8-4G-mMe" eventType="touchUpInside" id="xQd-8F-1JO"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -185,24 +224,36 @@
                                                                 <state key="normal" title="Comedy">
                                                                     <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="btnComedy:" destination="6z8-4G-mMe" eventType="touchUpInside" id="zx2-cb-2g2"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M09-Ec-W8d">
                                                                 <rect key="frame" x="94" y="0.0" width="94" height="50"/>
                                                                 <state key="normal" title="Horror">
                                                                     <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="btnHorror:" destination="6z8-4G-mMe" eventType="touchUpInside" id="9Bg-4n-15Z"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y91-cX-h3R">
                                                                 <rect key="frame" x="188" y="0.0" width="94" height="50"/>
                                                                 <state key="normal" title="Sci Fi">
                                                                     <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="btnSciFi:" destination="6z8-4G-mMe" eventType="touchUpInside" id="YkZ-Kx-equ"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Woh-6Z-6fk">
                                                                 <rect key="frame" x="282" y="0.0" width="94" height="50"/>
-                                                                <state key="normal" title="Yuri">
+                                                                <state key="normal" title="Fantasy">
                                                                     <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="btnFantasy:" destination="6z8-4G-mMe" eventType="touchUpInside" id="uZX-N3-9Kn"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -211,177 +262,44 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GrU-9q-6hv">
                                                                 <rect key="frame" x="0.0" y="0.0" width="94" height="50"/>
-                                                                <state key="normal" title="Dementia">
+                                                                <state key="normal" title="Martial Arts">
                                                                     <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="btnMartialArts:" destination="6z8-4G-mMe" eventType="touchUpInside" id="Iob-4l-Sa1"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7lk-Ch-uDh">
                                                                 <rect key="frame" x="94" y="0.0" width="94" height="50"/>
                                                                 <state key="normal" title="Kids">
                                                                     <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="btnKids:" destination="6z8-4G-mMe" eventType="touchUpInside" id="2xZ-WI-T84"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9vz-oi-iXD">
                                                                 <rect key="frame" x="188" y="0.0" width="94" height="50"/>
-                                                                <state key="normal" title="Shoujo">
-                                                                    <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                </state>
-                                                            </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LMy-dM-v5L">
-                                                                <rect key="frame" x="282" y="0.0" width="94" height="50"/>
-                                                                <state key="normal" title="Harem">
-                                                                    <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                </state>
-                                                            </button>
-                                                        </subviews>
-                                                    </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="O82-NV-RsD">
-                                                        <rect key="frame" x="0.0" y="400" width="376" height="50"/>
-                                                        <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jPs-l2-l60">
-                                                                <rect key="frame" x="0.0" y="0.0" width="94" height="50"/>
-                                                                <state key="normal" title="Demons">
-                                                                    <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                </state>
-                                                            </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bl4-3H-dki">
-                                                                <rect key="frame" x="94" y="0.0" width="94" height="50"/>
                                                                 <state key="normal" title="Magic">
                                                                     <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="btnMagic:" destination="6z8-4G-mMe" eventType="touchUpInside" id="OCX-fL-zcm"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rRb-TF-44C">
-                                                                <rect key="frame" x="188" y="0.0" width="94" height="50"/>
-                                                                <state key="normal" title="Shoujo Ai">
-                                                                    <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                </state>
-                                                            </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Of-qt-tlR">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LMy-dM-v5L">
                                                                 <rect key="frame" x="282" y="0.0" width="94" height="50"/>
-                                                                <state key="normal" title="Slice Of Life">
-                                                                    <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                </state>
-                                                            </button>
-                                                        </subviews>
-                                                    </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="7yT-yG-3gV">
-                                                        <rect key="frame" x="0.0" y="450" width="376" height="50"/>
-                                                        <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9v5-ps-pgu">
-                                                                <rect key="frame" x="0.0" y="0.0" width="94" height="50"/>
                                                                 <state key="normal" title="Mystery">
                                                                     <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
-                                                            </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xmA-df-pNJ">
-                                                                <rect key="frame" x="94" y="0.0" width="94" height="50"/>
-                                                                <state key="normal" title="Martial Arts">
-                                                                    <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                </state>
-                                                            </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mem-ls-57L">
-                                                                <rect key="frame" x="188" y="0.0" width="94" height="50"/>
-                                                                <state key="normal" title="Shounen">
-                                                                    <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                </state>
-                                                            </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8I-98-7Wn">
-                                                                <rect key="frame" x="282" y="0.0" width="94" height="50"/>
-                                                                <state key="normal" title="Supernatural">
-                                                                    <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                </state>
-                                                            </button>
-                                                        </subviews>
-                                                    </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="y7q-Ca-KEm">
-                                                        <rect key="frame" x="0.0" y="500" width="376" height="50"/>
-                                                        <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0SO-dA-MxX">
-                                                                <rect key="frame" x="0.0" y="0.0" width="94" height="50"/>
-                                                                <state key="normal" title="Drama">
-                                                                    <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                </state>
-                                                            </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xy3-U6-orv">
-                                                                <rect key="frame" x="94" y="0.0" width="94" height="50"/>
-                                                                <state key="normal" title="Mecha">
-                                                                    <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                </state>
-                                                            </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1kU-Df-6V5">
-                                                                <rect key="frame" x="188" y="0.0" width="94" height="50"/>
-                                                                <state key="normal" title="Shounen Ai">
-                                                                    <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                </state>
-                                                            </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hq0-yY-Yzv">
-                                                                <rect key="frame" x="282" y="0.0" width="94" height="50"/>
-                                                                <state key="normal" title="Military">
-                                                                    <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                </state>
-                                                            </button>
-                                                        </subviews>
-                                                    </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="CPi-kz-9zq">
-                                                        <rect key="frame" x="0.0" y="550" width="376" height="50"/>
-                                                        <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wUj-LE-aeX">
-                                                                <rect key="frame" x="0.0" y="0.0" width="94" height="50"/>
-                                                                <state key="normal" title="Ecchi">
-                                                                    <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                </state>
-                                                            </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i4S-xb-cGK">
-                                                                <rect key="frame" x="94" y="0.0" width="94" height="50"/>
-                                                                <state key="normal" title="Music">
-                                                                    <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                </state>
-                                                            </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4HA-IB-yLa">
-                                                                <rect key="frame" x="188" y="0.0" width="94" height="50"/>
-                                                                <state key="normal" title="Space">
-                                                                    <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                </state>
-                                                            </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mNn-AN-9dj">
-                                                                <rect key="frame" x="282" y="0.0" width="94" height="50"/>
-                                                                <state key="normal" title="Police">
-                                                                    <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                </state>
-                                                            </button>
-                                                        </subviews>
-                                                    </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Tqh-wT-FJr">
-                                                        <rect key="frame" x="0.0" y="600" width="376" height="50"/>
-                                                        <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3wJ-rK-bh6">
-                                                                <rect key="frame" x="0.0" y="0.0" width="94" height="50"/>
-                                                                <state key="normal" title="Fantasy">
-                                                                    <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                </state>
-                                                            </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kox-i4-yLX">
-                                                                <rect key="frame" x="94" y="0.0" width="94" height="50"/>
-                                                                <state key="normal" title="Parody">
-                                                                    <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                </state>
-                                                            </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ikK-ij-dpM">
-                                                                <rect key="frame" x="188" y="0.0" width="94" height="50"/>
-                                                                <state key="normal" title="Sports">
-                                                                    <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                </state>
-                                                            </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NaI-Os-OPB">
-                                                                <rect key="frame" x="282" y="0.0" width="94" height="50"/>
-                                                                <state key="normal" title="Psychological">
-                                                                    <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                </state>
+                                                                <connections>
+                                                                    <action selector="btnMystery:" destination="6z8-4G-mMe" eventType="touchUpInside" id="wY0-TZ-3An"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQc-ln-dmF">
-                                                        <rect key="frame" x="0.0" y="650" width="376" height="50"/>
+                                                        <rect key="frame" x="0.0" y="400" width="376" height="50"/>
                                                         <color key="backgroundColor" red="0.0098104076460000002" green="0.40432071689999999" blue="0.37254861" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -425,6 +343,28 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="rTD-sY-KkP"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="lblAction" destination="hEZ-YP-157" id="O8J-vr-tf8"/>
+                        <outlet property="lblAdventure" destination="i64-cD-XQ2" id="rdv-do-rVe"/>
+                        <outlet property="lblComedy" destination="Rr2-vf-ZpT" id="3ll-Su-O0x"/>
+                        <outlet property="lblDescription" destination="Cc6-Yk-EY9" id="Foy-vN-sah"/>
+                        <outlet property="lblDrama" destination="AxS-fi-JOH" id="tJY-NW-rEf"/>
+                        <outlet property="lblFantasy" destination="Woh-6Z-6fk" id="saW-Vp-sZd"/>
+                        <outlet property="lblGame" destination="3zm-O6-TcM" id="9Gm-WY-oRd"/>
+                        <outlet property="lblHorror" destination="M09-Ec-W8d" id="3U3-fR-a0f"/>
+                        <outlet property="lblKids" destination="7lk-Ch-uDh" id="Vew-b6-gsX"/>
+                        <outlet property="lblMagic" destination="9vz-oi-iXD" id="7AG-3f-ECW"/>
+                        <outlet property="lblMartialArts" destination="GrU-9q-6hv" id="97j-1N-fck"/>
+                        <outlet property="lblMilitary" destination="MYc-Dp-oRF" id="CxP-Bp-mb0"/>
+                        <outlet property="lblMystery" destination="LMy-dM-v5L" id="gLv-Qd-X9J"/>
+                        <outlet property="lblRomance" destination="akM-TT-c62" id="SaY-SM-71i"/>
+                        <outlet property="lblSchool" destination="MpQ-5w-GIf" id="jqO-Sw-FmF"/>
+                        <outlet property="lblSciFi" destination="y91-cX-h3R" id="4WG-pY-0SH"/>
+                        <outlet property="lblSliceOfLife" destination="mdd-Zu-yu2" id="KZl-MG-d3i"/>
+                        <outlet property="lblSports" destination="cNw-A3-wtD" id="p5c-HF-kO6"/>
+                        <outlet property="lblSuperPower" destination="GxA-YE-Gyb" id="CmH-Jt-fvC"/>
+                        <outlet property="lblSupernatural" destination="1Vo-wF-JGv" id="BLl-xD-bb0"/>
+                        <outlet property="lblVampire" destination="VSz-GX-2iO" id="1RO-E9-k8w"/>
+                        <outlet property="lblWelcome" destination="FGv-u1-Cq3" id="RUz-sy-gZb"/>
                         <segue destination="QS9-IP-DQd" kind="show" identifier="segAnimeTable" id="LPR-qZ-Pni"/>
                         <segue destination="bWS-u8-tq8" kind="show" identifier="segFavourites" id="b2k-n1-EY1"/>
                         <segue destination="QLC-vU-uUV" kind="show" identifier="segMangaTable" id="HOa-pW-Nlv"/>

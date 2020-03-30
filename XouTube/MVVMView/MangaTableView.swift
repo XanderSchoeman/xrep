@@ -47,9 +47,10 @@ extension MangaTableView: UISearchBarDelegate {
             self.navigationController?.pushViewController(newViewController!, animated: true)
         }
     public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+          var objcGenreglobal = GlobalDataGenre()
           let replacedString = searchBar.text?.replacingOccurrences(of: " ", with: "%20")
           guard let searchBarText = replacedString else {return}
-          let apiCaller = ApiCallerRepo.init(SearchText: searchBarText)
+        let apiCaller = ApiCallerRepo.init(SearchText: searchBarText, GenreSelected: objcGenreglobal.message)
           apiCaller.getMangaData { [weak self] result in
               switch result {
               case .failure( let error):

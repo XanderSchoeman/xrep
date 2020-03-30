@@ -9,6 +9,7 @@ target 'XouTube' do
 
 #pod 'XouDevSpec', :path => '/Users/xschoeman/Documents/git/Podfolder/XouDevSpec'
 pod 'XouDevSpec', :git => 'git@github.com:XanderSchoeman/XouDevSpec.git'
+#pod 'Firebase/Analytics'
 pod “Alamofire”
 
   target 'XouTubeTests' do
