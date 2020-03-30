@@ -10,7 +10,6 @@ import UIKit
 import XouDevSpec
 import Alamofire
 
-
 public class AnimeTable: UITableViewController {
     @IBOutlet weak var tableViewAnime: UITableView!
     @IBOutlet weak var srchBar: UISearchBar!
@@ -40,51 +39,25 @@ public class AnimeTable: UITableViewController {
                 DispatchQueue.main.async {
                 self?.tableView.reloadData()
                 }
-                
         }
         }
     }
-//    public func fetchAnimeData() {
-//        var apiCaller = ApiCallerModel()
-//        apiCaller.getAnimeData { [weak self] result in
-//            switch result {
-//            case .failure( let error):
-//                print(error)
-//            case .success(let animes):
-//                self?.animeViewModel = animes.map({return AnimeTableViewModel(SearchedAnime: $0)})
-//                DispatchQueue.main.async {
-//                self?.tableView.reloadData()
-//                }
-//
-//        }
-//        }
-//    }
 
 }
-//swiftlint:disable all
+
  extension AnimeTable: UISearchBarDelegate {
         public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            
                 return animeViewModel.count
-
-                //return animeList.count
-            
-            
         }
-        public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "animeVidCell", for: indexPath) as! AnimeVideoCell
-                let anime = animeViewModel[indexPath.row]
-                cell.animeViewModel = anime
-                return cell
-                
-//                let anime = animeList[indexPath.row]
-//                cell.setAnimeVidSearch(anime: anime)
-//                return cell
-            
-            
+    public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "animeVidCell", for: indexPath) as? AnimeVideoCell
+            let anime = animeViewModel[indexPath.row]
+            cell?.animeViewModel = anime
+            return cell!
         }
         public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            let newViewController = storyboard?.instantiateViewController(withIdentifier: "AnimeDetailedInfoID") as? AnimeDetailedInfoView
+            let newViewController = storyboard?.instantiateViewController(withIdentifier:
+                "AnimeDetailedInfoID") as? AnimeDetailedInfoView
             newViewController?.animeList = animeViewModel[indexPath.row]
             self.navigationController?.pushViewController(newViewController!, animated: true)
         }
@@ -101,10 +74,7 @@ public class AnimeTable: UITableViewController {
                 DispatchQueue.main.async {
                 self?.tableView.reloadData()
                 }
-                
         }
         }
     }
     }
-//swiftlint:enable all
-

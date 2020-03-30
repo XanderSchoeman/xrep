@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 import XouDevSpec
 
-//public var faveAnimelist = [AnimeDetails]()
 public var faveAnimeListViewModelObject = [AnimeTableViewModel]()
 public class AnimeDetailedInfoView: UIViewController {
 
@@ -59,7 +58,6 @@ public class AnimeDetailedInfoView: UIViewController {
         displayDefaultAlert(title: "Added to favourites!", message: objc.animeInfoString())
     }
     var animeList = AnimeTableViewModel()
-
 
     override public func viewDidLoad() {
         super.viewDidLoad()

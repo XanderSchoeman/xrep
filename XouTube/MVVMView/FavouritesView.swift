@@ -35,34 +35,29 @@ public class FavouritesView: UITableViewController {
     }
 
 }
-//swiftlint:disable all
+
 extension FavouritesView {
 
     override public func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
         public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            
            var numberOfRows = 1
-            if (section == 0)
-            {
+            if (section == 0) {
               numberOfRows =  animeList.count
                 return numberOfRows
-            }
-            else if (section == 1)
-            {
+            } else if (section == 1) {
                numberOfRows =  mangaList.count
                return numberOfRows
             }
             return numberOfRows
         }
-    
+        //swiftlint:disable all
         public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            
             var cell = AnimeFavouriteCell()
             switch indexPath.section {
              case 0:
-             cell = tableView.dequeueReusableCell(withIdentifier: "animeFavouriteCell", for: indexPath) as! AnimeFavouriteCell
+                cell = tableView.dequeueReusableCell(withIdentifier: "animeFavouriteCell", for: indexPath) as! AnimeFavouriteCell
              let anime = animeList[indexPath.row]
              cell.animeViewModel = anime
              case 1:
@@ -73,29 +68,26 @@ extension FavouritesView {
              print("An error has occured in the table cells")
                }
              return cell
-            
-            
         }
-
-    public override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        
+        //swiftlint:enable all
+    public override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle,
+                                   forRowAt indexPath: IndexPath) {
         switch indexPath.section {
          case 0:
          if editingStyle == .delete {
          animeList.remove(at: indexPath.row)
          tableView.deleteRows(at: [indexPath], with: .bottom)
          faveAnimeListViewModelObject.remove(at: indexPath.row)
-             }
+         }
          case 1:
          if editingStyle == .delete {
          mangaList.remove(at: indexPath.row)
          tableView.deleteRows(at: [indexPath], with: .bottom)
          faveMangaListViewModelObject.remove(at: indexPath.row)
-             }
+         }
          default:
          print("An error has occured in the table delete")
            }
     }
 
     }
-//swiftlint:enable all

@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 import XouDevSpec
 
-//public var faveMangalist = [MangaDetails]()
 public var faveMangaListViewModelObject = [MangaTableViewModel]()
 public class MangaDetailedInfoView: UIViewController {
 

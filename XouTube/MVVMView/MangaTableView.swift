@@ -28,19 +28,21 @@ public class MangaTableView: UITableViewController {
     }
 
 }
-//swiftlint:disable all
 extension MangaTableView: UISearchBarDelegate {
         public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             return mangaList.count
         }
+        //swiftlint:disable all
         public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "animeVidCell", for: indexPath) as! AnimeVideoCell
             let manga = mangaList[indexPath.row]
             cell.mangaViewModel = manga
             return cell
         }
+        //swiftlint:enable all
         public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            let newViewController = storyboard?.instantiateViewController(withIdentifier: "MangaDetailedInfoID") as? MangaDetailedInfoView
+            let newViewController = storyboard?.instantiateViewController(withIdentifier:
+                "MangaDetailedInfoID") as? MangaDetailedInfoView
             newViewController?.mangaList = mangaList[indexPath.row]
             self.navigationController?.pushViewController(newViewController!, animated: true)
         }
@@ -57,9 +59,7 @@ extension MangaTableView: UISearchBarDelegate {
                   DispatchQueue.main.async {
                   self?.tableView.reloadData()
                   }
-                  
           }
           }
     }
     }
-//swiftlint:enable all
