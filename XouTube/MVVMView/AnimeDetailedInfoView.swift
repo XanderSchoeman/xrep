@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 import XouDevSpec
 
-var faveAnimelist = [FaveAnimeDetails]()
+//public var faveAnimelist = [AnimeDetails]()
+public var faveAnimeListViewModelObject = [AnimeTableViewModel]()
 public class AnimeDetailedInfoView: UIViewController {
 
     @IBOutlet weak var lblAnimeTitle: UILabel!
@@ -25,7 +26,7 @@ public class AnimeDetailedInfoView: UIViewController {
     @IBOutlet weak var lblAnimeURL: UILabel!
     @IBAction func btnFavourite(_ sender: UIButton) {
         var objc = ObjCAnimeClass()
-        var fave = FaveAnimeDetails()
+        var fave = AnimeTableViewModel()
         objc.airing = "\(animeList.airing ?? true)"
         objc.start_date = animeList.start_date ?? ""
         objc.end_date = animeList.end_date ?? ""
@@ -39,6 +40,7 @@ public class AnimeDetailedInfoView: UIViewController {
         objc.title = animeList.title ?? "Unknown"
         objc.episodes = "\(animeList.episodes ?? 0)"
         objc.score = "\(animeList.score ?? 0.0)"
+        
         fave.airing = animeList.airing ?? true
         fave.start_date = animeList.start_date ?? ""
         fave.end_date = animeList.end_date ?? ""
@@ -53,10 +55,10 @@ public class AnimeDetailedInfoView: UIViewController {
         fave.episodes = animeList.episodes ?? 0
         fave.score = animeList.score ?? 0.0
         fave.type = animeList.type ?? ""
-        faveAnimelist.append(fave)
+        faveAnimeListViewModelObject.append(fave)
         displayDefaultAlert(title: "Added to favourites!", message: objc.animeInfoString())
     }
-    var animeList = AnimeDetails()
+    var animeList = AnimeTableViewModel()
 
 
     override public func viewDidLoad() {
@@ -72,7 +74,7 @@ public class AnimeDetailedInfoView: UIViewController {
         lblAnimeStartDate.text = animeList.start_date
         lblAnimeEndDate.text = animeList.end_date
         lblAnimeURL.text = animeList.type
-        if animeList.airing! {
+        if animeList.airing ?? false {
             lblAnimeAiring.text = "True"
         } else {
             lblAnimeAiring.text = "False"

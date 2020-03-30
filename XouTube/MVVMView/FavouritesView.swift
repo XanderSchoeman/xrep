@@ -12,8 +12,15 @@ import XouDevSpec
 public class FavouritesView: UITableViewController {
     @IBOutlet weak var tableViewAnime: UITableView!
 
-    var mangaList = faveMangalist
-    var animeList = faveAnimelist {
+    var mangaList = faveMangaListViewModelObject {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+                self.navigationItem.title = "Favourites Left: \(self.animeList.count + self.mangaList.count)"
+            }
+        }
+    }
+    var animeList = faveAnimeListViewModelObject {
         didSet {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -55,15 +62,15 @@ extension FavouritesView {
             var cell = AnimeFavouriteCell()
             switch indexPath.section {
              case 0:
-                 cell = tableView.dequeueReusableCell(withIdentifier: "animeFavouriteCell", for: indexPath) as! AnimeFavouriteCell
-                 let anime = animeList[indexPath.row]
-                 cell.setAnimeVidFaves(anime: anime)
+             cell = tableView.dequeueReusableCell(withIdentifier: "animeFavouriteCell", for: indexPath) as! AnimeFavouriteCell
+             let anime = animeList[indexPath.row]
+             cell.animeViewModel = anime
              case 1:
-                 cell = tableView.dequeueReusableCell(withIdentifier: "mangaFavouriteCell", for: indexPath) as! AnimeFavouriteCell
-                 let manga = mangaList[indexPath.row]
-                 cell.setMangaFaves(manga: manga)
+             cell = tableView.dequeueReusableCell(withIdentifier: "mangaFavouriteCell", for: indexPath) as! AnimeFavouriteCell
+             let manga = mangaList[indexPath.row]
+             cell.mangaViewModel = manga
              default:
-                 print("An error has occured in the table cells")
+             print("An error has occured in the table cells")
                }
              return cell
             
@@ -74,21 +81,20 @@ extension FavouritesView {
         
         switch indexPath.section {
          case 0:
-                        if editingStyle == .delete {
-                        animeList.remove(at: indexPath.row)
-                        tableView.deleteRows(at: [indexPath], with: .bottom)
-                        faveAnimelist.remove(at: indexPath.row)
-                        }
+         if editingStyle == .delete {
+         animeList.remove(at: indexPath.row)
+         tableView.deleteRows(at: [indexPath], with: .bottom)
+         faveAnimeListViewModelObject.remove(at: indexPath.row)
+             }
          case 1:
-              if editingStyle == .delete {
-              mangaList.remove(at: indexPath.row)
-              tableView.deleteRows(at: [indexPath], with: .bottom)
-              faveMangalist.remove(at: indexPath.row)
+         if editingStyle == .delete {
+         mangaList.remove(at: indexPath.row)
+         tableView.deleteRows(at: [indexPath], with: .bottom)
+         faveMangaListViewModelObject.remove(at: indexPath.row)
              }
          default:
-             print("An error has occured in the table delete")
+         print("An error has occured in the table delete")
            }
-
     }
 
     }

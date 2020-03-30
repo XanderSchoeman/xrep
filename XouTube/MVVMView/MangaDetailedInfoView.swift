@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 import XouDevSpec
 
-var faveMangalist = [faveMangaDetails]()
+//public var faveMangalist = [MangaDetails]()
+public var faveMangaListViewModelObject = [MangaTableViewModel]()
 public class MangaDetailedInfoView: UIViewController {
 
     @IBOutlet weak var lblAnimeTitle: UILabel!
@@ -24,7 +25,7 @@ public class MangaDetailedInfoView: UIViewController {
     @IBOutlet weak var lblAnimeAiring: UILabel!
     @IBOutlet weak var lblAnimeURL: UILabel!
     @IBAction func btnFavourite(_ sender: UIButton) {
-        var fave = faveMangaDetails()
+        var fave = MangaTableViewModel()
         fave.publishing = mangaList.publishing ?? true
         fave.start_date = mangaList.start_date ?? ""
         fave.end_date = mangaList.end_date ?? ""
@@ -39,10 +40,10 @@ public class MangaDetailedInfoView: UIViewController {
         fave.volumes = mangaList.volumes ?? 0
         fave.score = mangaList.score ?? 0.0
         fave.type = mangaList.type ?? ""
-        faveMangalist.append(fave)
+        faveMangaListViewModelObject.append(fave)
         displayDefaultAlert(title: "Added to favourites!", message: " = )")
     }
-    var mangaList = MangaDetails()
+    var mangaList = MangaTableViewModel()
 
     override public func viewDidLoad() {
         super.viewDidLoad()

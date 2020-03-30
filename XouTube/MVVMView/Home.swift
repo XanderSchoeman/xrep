@@ -21,7 +21,7 @@ public class Home: UIViewController {
         performSegue(withIdentifier: "segMangaTable", sender: self)
     }
     @IBAction func btnProfile(_ sender: UIButton) {
-        performSegue(withIdentifier: "segFaveList", sender: self)
+        performSegue(withIdentifier: "segProfile", sender: self)
     }
     override public func viewDidLoad() {
         super.viewDidLoad()

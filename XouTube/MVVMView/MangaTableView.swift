@@ -13,7 +13,7 @@ import Alamofire
 public class MangaTableView: UITableViewController {
     @IBOutlet weak var tableViewAnime: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
-    var mangaList = [MangaDetails]() {
+    var mangaList = [MangaTableViewModel]() {
         didSet {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -35,8 +35,8 @@ extension MangaTableView: UISearchBarDelegate {
         }
         public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "animeVidCell", for: indexPath) as! AnimeVideoCell
-            let anime = mangaList[indexPath.row]
-            cell.setMangaSearch(manga: anime)
+            let manga = mangaList[indexPath.row]
+            cell.mangaViewModel = manga
             return cell
         }
         public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -45,17 +45,21 @@ extension MangaTableView: UISearchBarDelegate {
             self.navigationController?.pushViewController(newViewController!, animated: true)
         }
     public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        let replacedString = searchBar.text?.replacingOccurrences(of: " ", with: "%20")
-        guard let searchBarText = replacedString else {return}
-        let apiCaller = ApiCallerModel.init(SearchText: searchBarText)
-        apiCaller.getMangaData { [weak self] result in
-            switch result {
-            case .failure( let error):
-                print(error)
-            case .success(let animes):
-                self?.mangaList = animes
-        }
-        }
+          let replacedString = searchBar.text?.replacingOccurrences(of: " ", with: "%20")
+          guard let searchBarText = replacedString else {return}
+          let apiCaller = ApiCallerRepo.init(SearchText: searchBarText)
+          apiCaller.getMangaData { [weak self] result in
+              switch result {
+              case .failure( let error):
+                  print(error)
+              case .success(let animes):
+                  self?.mangaList = animes.map({return MangaTableViewModel(SearchedManga: $0)})
+                  DispatchQueue.main.async {
+                  self?.tableView.reloadData()
+                  }
+                  
+          }
+          }
     }
     }
 //swiftlint:enable all

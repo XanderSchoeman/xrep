@@ -10,11 +10,13 @@ import UIKit
 import XouDevSpec
 import Alamofire
 
+
 public class AnimeTable: UITableViewController {
     @IBOutlet weak var tableViewAnime: UITableView!
     @IBOutlet weak var srchBar: UISearchBar!
-    var animess = [TopStruct]()
-    var animeList = [AnimeDetails]() {
+    var animeViewModel = [AnimeTableViewModel]()
+    var animeListt = [AnimeTableViewModel]()
+    var animeList = [AnimeTableViewModel]() {
         didSet {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -22,42 +24,87 @@ public class AnimeTable: UITableViewController {
             }
         }
     }
-    var viewModel = AnimeTableViewModel()
+
     override public func viewDidLoad() {
         super.viewDidLoad()
+        fetchTopData()
                      }
-    override public func viewDidAppear(_ animated: Bool) {
+    public func fetchTopData() {
+        var apiCaller = ApiCallerRepo()
+        apiCaller.getAnimeTopData { [weak self] result in
+            switch result {
+            case .failure( let error):
+                print(error)
+            case .success(let animes):
+                self?.animeViewModel = animes.map({return AnimeTableViewModel(topAnime: $0)})
+                DispatchQueue.main.async {
+                self?.tableView.reloadData()
+                }
+                
+        }
+        }
     }
+//    public func fetchAnimeData() {
+//        var apiCaller = ApiCallerModel()
+//        apiCaller.getAnimeData { [weak self] result in
+//            switch result {
+//            case .failure( let error):
+//                print(error)
+//            case .success(let animes):
+//                self?.animeViewModel = animes.map({return AnimeTableViewModel(SearchedAnime: $0)})
+//                DispatchQueue.main.async {
+//                self?.tableView.reloadData()
+//                }
+//
+//        }
+//        }
+//    }
 
 }
 //swiftlint:disable all
-extension AnimeTable: UISearchBarDelegate {
+ extension AnimeTable: UISearchBarDelegate {
         public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return animeList.count
+            
+                return animeViewModel.count
+
+                //return animeList.count
+            
+            
         }
         public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "animeVidCell", for: indexPath) as! AnimeVideoCell
-            let anime = animeList[indexPath.row]
-            cell.setAnimeVidSearch(anime: anime)
-            return cell
+                let anime = animeViewModel[indexPath.row]
+                cell.animeViewModel = anime
+                return cell
+                
+//                let anime = animeList[indexPath.row]
+//                cell.setAnimeVidSearch(anime: anime)
+//                return cell
+            
+            
         }
         public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             let newViewController = storyboard?.instantiateViewController(withIdentifier: "AnimeDetailedInfoID") as? AnimeDetailedInfoView
-            newViewController?.animeList = animeList[indexPath.row]
+            newViewController?.animeList = animeViewModel[indexPath.row]
             self.navigationController?.pushViewController(newViewController!, animated: true)
         }
     public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         let replacedString = searchBar.text?.replacingOccurrences(of: " ", with: "%20")
         guard let searchBarText = replacedString else {return}
-        let apiCaller = ApiCallerModel.init(SearchText: searchBarText)
+        let apiCaller = ApiCallerRepo.init(SearchText: searchBarText)
         apiCaller.getAnimeData { [weak self] result in
             switch result {
             case .failure( let error):
                 print(error)
             case .success(let animes):
-                self?.animeList = animes
+                self?.animeViewModel = animes.map({return AnimeTableViewModel(SearchedAnime: $0)})
+                DispatchQueue.main.async {
+                self?.tableView.reloadData()
+                }
+                
         }
         }
     }
     }
 //swiftlint:enable all
+
