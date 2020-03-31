@@ -21,7 +21,6 @@ class Structs: XCTestCase {
         TopStruct()
         AnimeDetails()
         MangaDetails()
-        
     }
 
     override func tearDown() {
