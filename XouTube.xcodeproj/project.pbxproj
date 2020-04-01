@@ -13,7 +13,6 @@
 		3803EA7623EA998900DC745C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3803EA7423EA998900DC745C /* Main.storyboard */; };
 		3803EA7823EA998B00DC745C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3803EA7723EA998B00DC745C /* Assets.xcassets */; };
 		3803EA7B23EA998B00DC745C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3803EA7923EA998B00DC745C /* LaunchScreen.storyboard */; };
-		3803EA8623EA998B00DC745C /* XouTubeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3803EA8523EA998B00DC745C /* XouTubeTests.swift */; };
 		385D2AB3241F46120004FAE9 /* TestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D2AB2241F46120004FAE9 /* TestCase.swift */; };
 		385D2AB5241F46460004FAE9 /* TestEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D2AB4241F46460004FAE9 /* TestEnvironment.swift */; };
 		385D2AB7241F49580004FAE9 /* FirstTestCheckSomeButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D2AB6241F49580004FAE9 /* FirstTestCheckSomeButtons.swift */; };
@@ -62,7 +61,6 @@
 		3803EA7A23EA998B00DC745C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3803EA7C23EA998B00DC745C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3803EA8123EA998B00DC745C /* XouTubeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XouTubeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3803EA8523EA998B00DC745C /* XouTubeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XouTubeTests.swift; sourceTree = "<group>"; };
 		3803EA8723EA998B00DC745C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		385D2AA7241F450D0004FAE9 /* XouTubeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XouTubeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		385D2AAB241F450D0004FAE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -168,7 +166,6 @@
 		3803EA8423EA998B00DC745C /* XouTubeTests */ = {
 			isa = PBXGroup;
 			children = (
-				3803EA8523EA998B00DC745C /* XouTubeTests.swift */,
 				3803EA8723EA998B00DC745C /* Info.plist */,
 				38C8060224160BFA00578FCA /* Structs.swift */,
 				38C80604241616B900578FCA /* Extensions.swift */,
@@ -521,7 +518,6 @@
 				38C8060324160BFA00578FCA /* Structs.swift in Sources */,
 				38C2B92624329C52003EB0AD /* TestApiMethods.swift in Sources */,
 				38C80605241616B900578FCA /* Extensions.swift in Sources */,
-				3803EA8623EA998B00DC745C /* XouTubeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
