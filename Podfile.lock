@@ -1,5 +1,4 @@
 PODS:
-  - Alamofire (5.0.5)
   - Firebase (6.21.0):
     - Firebase/Core (= 6.21.0)
   - Firebase/Analytics (6.21.0):
@@ -69,18 +68,15 @@ PODS:
   - nanopb/encode (0.3.9011)
   - PromisesObjC (1.2.8)
   - XouDevSpec (0.1.0):
-    - Alamofire
     - Firebase/Analytics
 
 DEPENDENCIES:
-  - Alamofire
   - Firebase
   - Firebase/Analytics
   - XouDevSpec (from `/Users/xschoeman/Documents/git/Podfolder/XouDevSpec`)
 
 SPEC REPOS:
   trunk:
-    - Alamofire
     - Firebase
     - FirebaseAnalytics
     - FirebaseCore
@@ -99,7 +95,6 @@ EXTERNAL SOURCES:
     :path: "/Users/xschoeman/Documents/git/Podfolder/XouDevSpec"
 
 SPEC CHECKSUMS:
-  Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
   Firebase: f378c80340dd41c0ad0914af740c021eb282a04b
   FirebaseAnalytics: a1a0b3327ceb5cd5b4bacffdb293f6c909aa087d
   FirebaseCore: 9f495d3afacb7b558711e6218ebb14b1c51b5802
@@ -112,8 +107,8 @@ SPEC CHECKSUMS:
   GoogleUtilities: ad0f3b691c67909d03a3327cc205222ab8f42e0e
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
-  XouDevSpec: 7b8f108b748901156e4fcc4664c9c2fdf9d3f9b0
+  XouDevSpec: f6c0f7b20aa28227d7d7c2fd780d4aa804c3d7a5
 
-PODFILE CHECKSUM: 023a1d6b9eca9c5d8a2ffd04ecd0370fa4985126
+PODFILE CHECKSUM: 0b65e15e0992e75865129c6e75459c0df0c15f30
 
 COCOAPODS: 1.9.0
