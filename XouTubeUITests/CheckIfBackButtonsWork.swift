@@ -23,7 +23,7 @@ class CheckIfBackButtonsWork: TestCase {
         sleep(1)
         application.buttons["Back"].tap()
         sleep(1)
-        XCTAssert(application.buttons["Home"].exists)
+        XCTAssert(application.buttons["Anime"].exists)
     }
 
 }

@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import XouDevSpec
+import Firebase
 
 public var faveMangaListViewModelObject = [MangaTableViewModel]()
 public class MangaDetailedInfoView: UIViewController {
@@ -24,6 +25,7 @@ public class MangaDetailedInfoView: UIViewController {
     @IBOutlet weak var lblAnimeAiring: UILabel!
     @IBOutlet weak var lblAnimeURL: UILabel!
     @IBAction func btnFavourite(_ sender: UIButton) {
+        Analytics.logEvent("FavouriteMangaPressed", parameters: nil)
         var fave = MangaTableViewModel()
         fave.publishing = mangaList.publishing ?? true
         fave.start_date = mangaList.start_date ?? ""

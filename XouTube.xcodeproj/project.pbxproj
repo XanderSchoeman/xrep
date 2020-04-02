@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13536F21B069E95B95D2BDBA /* Pods_XouTubeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B92912492BD8F24A255E9A3 /* Pods_XouTubeUITests.framework */; };
 		3803EA6F23EA998900DC745C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3803EA6E23EA998900DC745C /* AppDelegate.swift */; };
 		3803EA7123EA998900DC745C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3803EA7023EA998900DC745C /* SceneDelegate.swift */; };
 		3803EA7623EA998900DC745C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3803EA7423EA998900DC745C /* Main.storyboard */; };
 		3803EA7823EA998B00DC745C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3803EA7723EA998B00DC745C /* Assets.xcassets */; };
 		3803EA7B23EA998B00DC745C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3803EA7923EA998B00DC745C /* LaunchScreen.storyboard */; };
-		3803EA8623EA998B00DC745C /* XouTubeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3803EA8523EA998B00DC745C /* XouTubeTests.swift */; };
 		385D2AB3241F46120004FAE9 /* TestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D2AB2241F46120004FAE9 /* TestCase.swift */; };
 		385D2AB5241F46460004FAE9 /* TestEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D2AB4241F46460004FAE9 /* TestEnvironment.swift */; };
 		385D2AB7241F49580004FAE9 /* FirstTestCheckSomeButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D2AB6241F49580004FAE9 /* FirstTestCheckSomeButtons.swift */; };
@@ -22,12 +22,14 @@
 		38C2B8F8242D1E97003EB0AD /* MangaTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C2B8F7242D1E97003EB0AD /* MangaTableView.swift */; };
 		38C2B8FA242D50AA003EB0AD /* MangaDetailedInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C2B8F9242D50AA003EB0AD /* MangaDetailedInfoView.swift */; };
 		38C2B9082431C66A003EB0AD /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C2B9072431C66A003EB0AD /* ProfileView.swift */; };
+		38C2B90C2431E639003EB0AD /* HomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C2B90B2431E639003EB0AD /* HomeView.m */; };
+		38C2B92624329C52003EB0AD /* TestApiMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C2B92524329C52003EB0AD /* TestApiMethods.swift */; };
+		38C2B92A2432AEBE003EB0AD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38C2B9292432AEBE003EB0AD /* GoogleService-Info.plist */; };
 		38C805E8240E3B0700578FCA /* AnimeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C805E7240E3B0700578FCA /* AnimeTable.swift */; };
-		38C805EA240E66EC00578FCA /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C805E9240E66EC00578FCA /* Home.swift */; };
 		38C8060324160BFA00578FCA /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C8060224160BFA00578FCA /* Structs.swift */; };
 		38C80605241616B900578FCA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C80604241616B900578FCA /* Extensions.swift */; };
-		74649833EDB48EC556486A4D /* Pods_XouTubeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DF2660DE2F39C39C8943B1A /* Pods_XouTubeTests.framework */; };
-		DCD9B9A5CA0C246E04563BBA /* Pods_XouTube.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 065B775C8A52B539C44BC800 /* Pods_XouTube.framework */; };
+		DD32E4A9350342CEE671CE1A /* Pods_XouTubeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8F4C2BE90B70319AACDCB35 /* Pods_XouTubeTests.framework */; };
+		F50BE9D12F470709E1271F85 /* Pods_XouTube.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32375F9F68EF04EDD50D984D /* Pods_XouTube.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +50,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		065B775C8A52B539C44BC800 /* Pods_XouTube.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XouTube.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0DF2660DE2F39C39C8943B1A /* Pods_XouTubeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XouTubeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		18FB1BF811D48B585E15CBB9 /* Pods-XouTubeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XouTubeUITests.release.xcconfig"; path = "Target Support Files/Pods-XouTubeUITests/Pods-XouTubeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		32375F9F68EF04EDD50D984D /* Pods_XouTube.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XouTube.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		36EB77F0C2468B6FCD921A78 /* Pods-XouTube.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XouTube.debug.xcconfig"; path = "Target Support Files/Pods-XouTube/Pods-XouTube.debug.xcconfig"; sourceTree = "<group>"; };
 		3803EA6B23EA998900DC745C /* XouTube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XouTube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3803EA6E23EA998900DC745C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3803EA7023EA998900DC745C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,7 +61,6 @@
 		3803EA7A23EA998B00DC745C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3803EA7C23EA998B00DC745C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3803EA8123EA998B00DC745C /* XouTubeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XouTubeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3803EA8523EA998B00DC745C /* XouTubeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XouTubeTests.swift; sourceTree = "<group>"; };
 		3803EA8723EA998B00DC745C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		385D2AA7241F450D0004FAE9 /* XouTubeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XouTubeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		385D2AAB241F450D0004FAE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,14 +73,19 @@
 		38C2B8F7242D1E97003EB0AD /* MangaTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangaTableView.swift; sourceTree = "<group>"; };
 		38C2B8F9242D50AA003EB0AD /* MangaDetailedInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangaDetailedInfoView.swift; sourceTree = "<group>"; };
 		38C2B9072431C66A003EB0AD /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		38C2B90A2431E639003EB0AD /* HomeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeView.h; sourceTree = "<group>"; };
+		38C2B90B2431E639003EB0AD /* HomeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeView.m; sourceTree = "<group>"; };
+		38C2B92524329C52003EB0AD /* TestApiMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApiMethods.swift; sourceTree = "<group>"; };
+		38C2B9292432AEBE003EB0AD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		38C805E7240E3B0700578FCA /* AnimeTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeTable.swift; sourceTree = "<group>"; };
-		38C805E9240E66EC00578FCA /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		38C8060224160BFA00578FCA /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
 		38C80604241616B900578FCA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		3E03FFAD80158C72216D17A4 /* Pods-XouTubeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XouTubeTests.debug.xcconfig"; path = "Target Support Files/Pods-XouTubeTests/Pods-XouTubeTests.debug.xcconfig"; sourceTree = "<group>"; };
-		6A41BE9A6977130A3B14FBB3 /* Pods-XouTubeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XouTubeTests.release.xcconfig"; path = "Target Support Files/Pods-XouTubeTests/Pods-XouTubeTests.release.xcconfig"; sourceTree = "<group>"; };
-		7CD9576BCBEEC3DA13C2CB50 /* Pods-XouTube.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XouTube.debug.xcconfig"; path = "Target Support Files/Pods-XouTube/Pods-XouTube.debug.xcconfig"; sourceTree = "<group>"; };
-		B585A1721C17C897DA839376 /* Pods-XouTube.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XouTube.release.xcconfig"; path = "Target Support Files/Pods-XouTube/Pods-XouTube.release.xcconfig"; sourceTree = "<group>"; };
+		4B92912492BD8F24A255E9A3 /* Pods_XouTubeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XouTubeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E3B18DD7D94C9EF59139DCA /* Pods-XouTubeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XouTubeTests.release.xcconfig"; path = "Target Support Files/Pods-XouTubeTests/Pods-XouTubeTests.release.xcconfig"; sourceTree = "<group>"; };
+		7A979C09E08E5BD74ED13403 /* Pods-XouTubeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XouTubeTests.debug.xcconfig"; path = "Target Support Files/Pods-XouTubeTests/Pods-XouTubeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		887F29845E2C81E73E0C899D /* Pods-XouTubeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XouTubeUITests.debug.xcconfig"; path = "Target Support Files/Pods-XouTubeUITests/Pods-XouTubeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B8F4C2BE90B70319AACDCB35 /* Pods_XouTubeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XouTubeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DADB7731995483F6A8A01587 /* Pods-XouTube.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XouTube.release.xcconfig"; path = "Target Support Files/Pods-XouTube/Pods-XouTube.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCD9B9A5CA0C246E04563BBA /* Pods_XouTube.framework in Frameworks */,
+				F50BE9D12F470709E1271F85 /* Pods_XouTube.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,7 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74649833EDB48EC556486A4D /* Pods_XouTubeTests.framework in Frameworks */,
+				DD32E4A9350342CEE671CE1A /* Pods_XouTubeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,12 +109,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13536F21B069E95B95D2BDBA /* Pods_XouTubeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2121C3D468F0CCF692BB0C54 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				32375F9F68EF04EDD50D984D /* Pods_XouTube.framework */,
+				B8F4C2BE90B70319AACDCB35 /* Pods_XouTubeTests.framework */,
+				4B92912492BD8F24A255E9A3 /* Pods_XouTubeUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3803EA6223EA998900DC745C = {
 			isa = PBXGroup;
 			children = (
@@ -116,7 +134,7 @@
 				385D2AA8241F450D0004FAE9 /* XouTubeUITests */,
 				3803EA6C23EA998900DC745C /* Products */,
 				5770C5905CFB4132DD65FA68 /* Pods */,
-				C1B324DCAA20B8C6C6B30CE5 /* Frameworks */,
+				2121C3D468F0CCF692BB0C54 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +158,7 @@
 				3803EA7723EA998B00DC745C /* Assets.xcassets */,
 				3803EA7923EA998B00DC745C /* LaunchScreen.storyboard */,
 				3803EA7C23EA998B00DC745C /* Info.plist */,
+				38C2B9292432AEBE003EB0AD /* GoogleService-Info.plist */,
 			);
 			path = XouTube;
 			sourceTree = "<group>";
@@ -147,10 +166,10 @@
 		3803EA8423EA998B00DC745C /* XouTubeTests */ = {
 			isa = PBXGroup;
 			children = (
-				3803EA8523EA998B00DC745C /* XouTubeTests.swift */,
 				3803EA8723EA998B00DC745C /* Info.plist */,
 				38C8060224160BFA00578FCA /* Structs.swift */,
 				38C80604241616B900578FCA /* Extensions.swift */,
+				38C2B92524329C52003EB0AD /* TestApiMethods.swift */,
 			);
 			path = XouTubeTests;
 			sourceTree = "<group>";
@@ -179,12 +198,13 @@
 			isa = PBXGroup;
 			children = (
 				38C805E7240E3B0700578FCA /* AnimeTable.swift */,
-				38C805E9240E66EC00578FCA /* Home.swift */,
 				38C2B8A92423A8A9003EB0AD /* AnimeDetailedInfoView.swift */,
 				38C2B8DF24281C70003EB0AD /* FavouritesView.swift */,
 				38C2B8F7242D1E97003EB0AD /* MangaTableView.swift */,
 				38C2B8F9242D50AA003EB0AD /* MangaDetailedInfoView.swift */,
 				38C2B9072431C66A003EB0AD /* ProfileView.swift */,
+				38C2B90A2431E639003EB0AD /* HomeView.h */,
+				38C2B90B2431E639003EB0AD /* HomeView.m */,
 			);
 			path = MVVMView;
 			sourceTree = "<group>";
@@ -192,21 +212,14 @@
 		5770C5905CFB4132DD65FA68 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7CD9576BCBEEC3DA13C2CB50 /* Pods-XouTube.debug.xcconfig */,
-				B585A1721C17C897DA839376 /* Pods-XouTube.release.xcconfig */,
-				3E03FFAD80158C72216D17A4 /* Pods-XouTubeTests.debug.xcconfig */,
-				6A41BE9A6977130A3B14FBB3 /* Pods-XouTubeTests.release.xcconfig */,
+				36EB77F0C2468B6FCD921A78 /* Pods-XouTube.debug.xcconfig */,
+				DADB7731995483F6A8A01587 /* Pods-XouTube.release.xcconfig */,
+				7A979C09E08E5BD74ED13403 /* Pods-XouTubeTests.debug.xcconfig */,
+				6E3B18DD7D94C9EF59139DCA /* Pods-XouTubeTests.release.xcconfig */,
+				887F29845E2C81E73E0C899D /* Pods-XouTubeUITests.debug.xcconfig */,
+				18FB1BF811D48B585E15CBB9 /* Pods-XouTubeUITests.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		C1B324DCAA20B8C6C6B30CE5 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				065B775C8A52B539C44BC800 /* Pods_XouTube.framework */,
-				0DF2660DE2F39C39C8943B1A /* Pods_XouTubeTests.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,12 +229,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3803EA8A23EA998B00DC745C /* Build configuration list for PBXNativeTarget "XouTube" */;
 			buildPhases = (
-				211A5F03C035A59A6E2B3D56 /* [CP] Check Pods Manifest.lock */,
+				8377900CD1D63A03CFDCDAE8 /* [CP] Check Pods Manifest.lock */,
 				3803EA6723EA998900DC745C /* Sources */,
 				3803EA6823EA998900DC745C /* Frameworks */,
 				3803EA6923EA998900DC745C /* Resources */,
 				3832795823F2C26B00E9BF23 /* ShellScript */,
-				2C33C473A0A231961B6F5F88 /* [CP] Embed Pods Frameworks */,
+				39078235640DA300D533C71B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -236,10 +249,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3803EA8D23EA998B00DC745C /* Build configuration list for PBXNativeTarget "XouTubeTests" */;
 			buildPhases = (
-				E215E031DDFD8454E5F4E2D7 /* [CP] Check Pods Manifest.lock */,
+				C3503CABC7870B84DA056728 /* [CP] Check Pods Manifest.lock */,
 				3803EA7D23EA998B00DC745C /* Sources */,
 				3803EA7E23EA998B00DC745C /* Frameworks */,
 				3803EA7F23EA998B00DC745C /* Resources */,
+				6D31B55DEF3EAAD08FBDE0FC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -255,9 +269,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 385D2AB0241F450D0004FAE9 /* Build configuration list for PBXNativeTarget "XouTubeUITests" */;
 			buildPhases = (
+				FF64B949157715CC726BD16D /* [CP] Check Pods Manifest.lock */,
 				385D2AA3241F450D0004FAE9 /* Sources */,
 				385D2AA4241F450D0004FAE9 /* Frameworks */,
 				385D2AA5241F450D0004FAE9 /* Resources */,
+				A2298E79A9857DC716CBF7FE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -319,6 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3803EA7B23EA998B00DC745C /* LaunchScreen.storyboard in Resources */,
+				38C2B92A2432AEBE003EB0AD /* GoogleService-Info.plist in Resources */,
 				3803EA7823EA998B00DC745C /* Assets.xcassets in Resources */,
 				3803EA7623EA998900DC745C /* Main.storyboard in Resources */,
 			);
@@ -341,7 +358,58 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		211A5F03C035A59A6E2B3D56 /* [CP] Check Pods Manifest.lock */ = {
+		3832795823F2C26B00E9BF23 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		39078235640DA300D533C71B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-XouTube/Pods-XouTube-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-XouTube/Pods-XouTube-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-XouTube/Pods-XouTube-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D31B55DEF3EAAD08FBDE0FC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-XouTubeTests/Pods-XouTubeTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-XouTubeTests/Pods-XouTubeTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-XouTubeTests/Pods-XouTubeTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8377900CD1D63A03CFDCDAE8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -363,41 +431,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2C33C473A0A231961B6F5F88 /* [CP] Embed Pods Frameworks */ = {
+		A2298E79A9857DC716CBF7FE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-XouTube/Pods-XouTube-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-XouTubeUITests/Pods-XouTubeUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-XouTube/Pods-XouTube-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-XouTubeUITests/Pods-XouTubeUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-XouTube/Pods-XouTube-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-XouTubeUITests/Pods-XouTubeUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3832795823F2C26B00E9BF23 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
-		};
-		E215E031DDFD8454E5F4E2D7 /* [CP] Check Pods Manifest.lock */ = {
+		C3503CABC7870B84DA056728 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -419,6 +470,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FF64B949157715CC726BD16D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-XouTubeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -430,9 +503,9 @@
 				38C2B9082431C66A003EB0AD /* ProfileView.swift in Sources */,
 				38C2B8E024281C70003EB0AD /* FavouritesView.swift in Sources */,
 				38C805E8240E3B0700578FCA /* AnimeTable.swift in Sources */,
-				38C805EA240E66EC00578FCA /* Home.swift in Sources */,
 				38C2B8F8242D1E97003EB0AD /* MangaTableView.swift in Sources */,
 				38C2B8FA242D50AA003EB0AD /* MangaDetailedInfoView.swift in Sources */,
+				38C2B90C2431E639003EB0AD /* HomeView.m in Sources */,
 				38C2B8AA2423A8A9003EB0AD /* AnimeDetailedInfoView.swift in Sources */,
 				3803EA7123EA998900DC745C /* SceneDelegate.swift in Sources */,
 			);
@@ -443,8 +516,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				38C8060324160BFA00578FCA /* Structs.swift in Sources */,
+				38C2B92624329C52003EB0AD /* TestApiMethods.swift in Sources */,
 				38C80605241616B900578FCA /* Extensions.swift in Sources */,
-				3803EA8623EA998B00DC745C /* XouTubeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,6 +603,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -590,6 +664,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -610,7 +685,7 @@
 		};
 		3803EA8B23EA998B00DC745C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7CD9576BCBEEC3DA13C2CB50 /* Pods-XouTube.debug.xcconfig */;
+			baseConfigurationReference = 36EB77F0C2468B6FCD921A78 /* Pods-XouTube.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -619,13 +694,13 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = GLK7J5PP82;
 				INFOPLIST_FILE = XouTube/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = za.co.dvt.XouTube;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -634,7 +709,7 @@
 		};
 		3803EA8C23EA998B00DC745C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B585A1721C17C897DA839376 /* Pods-XouTube.release.xcconfig */;
+			baseConfigurationReference = DADB7731995483F6A8A01587 /* Pods-XouTube.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -643,13 +718,13 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = GLK7J5PP82;
 				INFOPLIST_FILE = XouTube/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = za.co.dvt.XouTube;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -657,13 +732,13 @@
 		};
 		3803EA8E23EA998B00DC745C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3E03FFAD80158C72216D17A4 /* Pods-XouTubeTests.debug.xcconfig */;
+			baseConfigurationReference = 7A979C09E08E5BD74ED13403 /* Pods-XouTubeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = XouTubeTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -679,13 +754,13 @@
 		};
 		3803EA8F23EA998B00DC745C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6A41BE9A6977130A3B14FBB3 /* Pods-XouTubeTests.release.xcconfig */;
+			baseConfigurationReference = 6E3B18DD7D94C9EF59139DCA /* Pods-XouTubeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = XouTubeTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -701,18 +776,57 @@
 		};
 		385D2AAE241F450D0004FAE9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 887F29845E2C81E73E0C899D /* Pods-XouTubeUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GLK7J5PP82;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"$(inherited)",
+					"PB_FIELD_32BIT=1",
+					"PB_NO_PACKED_STRUCTS=1",
+					"PB_ENABLE_MALLOC=1",
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = XouTubeUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"FBLPromises\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GoogleUtilities\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"nanopb\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = za.co.dvt.XouTubeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = XouTube;
@@ -721,18 +835,57 @@
 		};
 		385D2AAF241F450D0004FAE9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18FB1BF811D48B585E15CBB9 /* Pods-XouTubeUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GLK7J5PP82;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"$(inherited)",
+					"PB_FIELD_32BIT=1",
+					"PB_NO_PACKED_STRUCTS=1",
+					"PB_ENABLE_MALLOC=1",
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = XouTubeUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"FBLPromises\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GoogleUtilities\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"nanopb\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = za.co.dvt.XouTubeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = XouTube;

@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import XouDevSpec
+import Firebase
 
 public var faveAnimeListViewModelObject = [AnimeTableViewModel]()
 public class AnimeDetailedInfoView: UIViewController {
@@ -24,22 +25,8 @@ public class AnimeDetailedInfoView: UIViewController {
     @IBOutlet weak var lblAnimeAiring: UILabel!
     @IBOutlet weak var lblAnimeURL: UILabel!
     @IBAction func btnFavourite(_ sender: UIButton) {
-        var objc = ObjCAnimeClass()
+        Analytics.logEvent("FavouriteAnimePressed", parameters: nil)
         var fave = AnimeTableViewModel()
-        objc.airing = "\(animeList.airing ?? true)"
-        objc.start_date = animeList.start_date ?? ""
-        objc.end_date = animeList.end_date ?? ""
-        objc.mal_id = "\(animeList.mal_id ?? 0)"
-        objc.members = "\(animeList.members ?? 0)"
-        objc.rated = animeList.rated ?? ""
-        objc.image_url = animeList.image_url ?? ""
-        objc.url = animeList.url ?? ""
-        objc.synopsis = animeList.synopsis ?? ""
-        objc.end_date = animeList.end_date ?? ""
-        objc.title = animeList.title ?? "Unknown"
-        objc.episodes = "\(animeList.episodes ?? 0)"
-        objc.score = "\(animeList.score ?? 0.0)"
-        
         fave.airing = animeList.airing ?? true
         fave.start_date = animeList.start_date ?? ""
         fave.end_date = animeList.end_date ?? ""
@@ -55,7 +42,7 @@ public class AnimeDetailedInfoView: UIViewController {
         fave.score = animeList.score ?? 0.0
         fave.type = animeList.type ?? ""
         faveAnimeListViewModelObject.append(fave)
-        displayDefaultAlert(title: "Added to favourites!", message: objc.animeInfoString())
+        displayDefaultAlert(title: "Added to favourites!", message: "= )")
     }
     var animeList = AnimeTableViewModel()
 

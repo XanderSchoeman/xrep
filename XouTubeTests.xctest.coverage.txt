@@ -7,36 +7,32 @@
     6|       |//  Copyright © 2020 Xander Schoeman. All rights reserved.
     7|       |//
     8|       |
-    9|       |
-   10|      0|
-   11|      0|
-   12|      0|import XCTest
-   13|       |@testable import XouTube
-   14|       |@testable import XouDevSpec
-   15|       |
-   16|       |class Extensions: XCTestCase {
-   17|      0|    
-   18|      0|    override func setUp() {
-   19|      0|        // Put setup code here. This method is called before the invocation of each test method in the class.
-   20|       |    }
-   21|       |    func testRGBExtensionIfItChangesColour(){
-   22|       |        var testText: UIColor
-   23|       |        var testText2: UIColor
-   24|       |        testText = UIColor.rgb(red: 50, green: 50, blue: 50, alpha: 1)
-   25|       |        testText2 = UIColor.init(red: 50/255, green: 50/255, blue: 50/255, alpha: 1)
-   26|       |        XCTAssertEqual(testText.cgColor == testText2.cgColor, true)
-   27|       |    }
-   28|       |    func testLoadUIImageExtensionIfItLoads() {
-   29|      2|
-   30|      2|    }
-   31|      2|
-   32|      3|    override func tearDown() {
-   33|      3|        testRGBExtensionIfItChangesColour()
-   34|      3|        testLoadUIImageExtensionIfItLoads()
-   35|      3|        // Put teardown code here. This method is called after the invocation of each test method in the class.
-   36|      3|    }
-   37|      3|
-   38|      3|}
+    9|       |import XCTest
+   10|       |@testable import XouTube
+   11|       |@testable import XouDevSpec
+   12|       |
+   13|       |class Extensions: XCTestCase {
+   14|      2|    override func setUp() {
+   15|      2|        // Put setup code here. This method is called before the invocation of each test method in the class.
+   16|      2|    }
+   17|      3|    func testRGBExtensionIfItChangesColour() {
+   18|      3|        var testText: UIColor
+   19|      3|        var testText2: UIColor
+   20|      3|        testText = UIColor.rgb(red: 50, green: 50, blue: 50, alpha: 1)
+   21|      3|        testText2 = UIColor.init(red: 50/255, green: 50/255, blue: 50/255, alpha: 1)
+   22|      3|        XCTAssertEqual(testText.cgColor == testText2.cgColor, true)
+   23|      3|    }
+   24|      3|    func testLoadUIImageExtensionIfItLoads() {
+   25|      3|
+   26|      3|    }
+   27|       |
+   28|      2|    override func tearDown() {
+   29|      2|        testRGBExtensionIfItChangesColour()
+   30|      2|        testLoadUIImageExtensionIfItLoads()
+   31|      2|        // Put teardown code here. This method is called after the invocation of each test method in the class.
+   32|      2|    }
+   33|       |
+   34|       |}
 
 /Users/xschoeman/Documents/git/XouTube/XouTubeTests/Structs.swift:
     1|       |//
@@ -58,19 +54,88 @@
    17|      1|    }
    18|      2|    func testStructs() {
    19|      2|        animeTopInfoStruct()
-   20|      2|        animeTopInfo()
+   20|      2|        animeInfo()
    21|      2|        TopStruct()
-   22|      2|        Top()
-   23|      2|        
-   24|      2|    }
-   25|       |
-   26|      1|    override func tearDown() {
-   27|      1|        testStructs()
-   28|      1|        // Put teardown code here. This method is called after the invocation of each test method in the class.
-   29|      1|    }
-   30|       |
+   22|      2|        AnimeDetails()
+   23|      2|        MangaDetails()
+   24|      2|        
+   25|      2|    }
+   26|       |
+   27|      1|    override func tearDown() {
+   28|      1|        testStructs()
+   29|      1|        // Put teardown code here. This method is called after the invocation of each test method in the class.
+   30|      1|    }
    31|       |
    32|       |}
+
+/Users/xschoeman/Documents/git/XouTube/XouTubeTests/TestApiMethods.swift:
+    1|       |//
+    2|       |//  TestApiMethods.swift
+    3|       |//  XouTubeTests
+    4|       |//
+    5|       |//  Created by Xander Schoeman on 2020/03/30.
+    6|       |//  Copyright © 2020 Xander Schoeman. All rights reserved.
+    7|       |//
+    8|       |
+    9|       |import XCTest
+   10|       |import XouTube
+   11|       |import XouDevSpec
+   12|       |
+   13|       |class TestApiMethods: XCTestCase {
+   14|       |
+   15|      3|    override func setUp() {
+   16|      3|    }
+   17|      1|    func testApiGetAnimeDataTopIsNotEmpty () {
+   18|      1|        var testSearchString = "Attack"
+   19|      1|
+   20|      1|        var dataObj = [TopStruct]()
+   21|      1|        var apiCaller = ApiCallerRepo()
+   22|      1|        apiCaller = .init(SearchText: testSearchString)
+   23|      1|            apiCaller.getAnimeTopData { [weak self] result in
+   24|      0|            switch result {
+   25|      0|            case .failure( let error):
+   26|      0|            print(error)
+   27|      0|            case .success(let animes):
+   28|      0|            dataObj = animes
+   29|      0|            XCTAssert(!animes.isEmpty)
+   30|      0|        }
+   31|      0|        }
+   32|      1|    }
+   33|      1|    func testApiGetAnimeDetailsSearchIsNotEmpty () {
+   34|      1|        var testSearchString = "Attack"
+   35|      1|        var testGenreString = "action"
+   36|      1|
+   37|      1|        var dataObj = [AnimeDetails]()
+   38|      1|        var apiCaller = ApiCallerRepo()
+   39|      1|        apiCaller = .init(SearchText: testSearchString, GenreSelected: testGenreString)
+   40|      1|            apiCaller.getAnimeData { [weak self] result in
+   41|      0|            switch result {
+   42|      0|            case .failure( let error):
+   43|      0|            print(error)
+   44|      0|            case .success(let animes):
+   45|      0|            dataObj = animes
+   46|      0|            XCTAssert(!animes.isEmpty)
+   47|      0|        }
+   48|      0|        }
+   49|      1|    }
+   50|      1|    func testApiGetMangaDetailsSearchIsNotEmpty () {
+   51|      1|        var testSearchString = "Tokyo"
+   52|      1|        var testGenreString = "romance"
+   53|      1|
+   54|      1|        var dataObj = [MangaDetails]()
+   55|      1|        var apiCaller = ApiCallerRepo()
+   56|      1|        apiCaller = .init(SearchText: testSearchString, GenreSelected: testGenreString)
+   57|      1|            apiCaller.getMangaData { [weak self] result in
+   58|      0|            switch result {
+   59|      0|            case .failure( let error):
+   60|      0|            print(error)
+   61|      0|            case .success(let animes):
+   62|      0|            dataObj = animes
+   63|      0|            XCTAssert(!animes.isEmpty)
+   64|      0|        }
+   65|      0|        }
+   66|      1|    }
+   67|       |}
 
 /Users/xschoeman/Documents/git/XouTube/XouTubeTests/XouTubeTests.swift:
     1|       |//

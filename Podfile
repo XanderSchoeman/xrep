@@ -9,11 +9,16 @@ target 'XouTube' do
 
 #pod 'XouDevSpec', :path => '/Users/xschoeman/Documents/git/Podfolder/XouDevSpec'
 pod 'XouDevSpec', :git => 'git@github.com:XanderSchoeman/XouDevSpec.git'
-pod “Alamofire”
+pod 'Firebase/Analytics'
 
   target 'XouTubeTests' do
     inherit! :search_paths
+    pod 'Firebase'
+  target 'XouTubeUITests' do
+    inherit! :search_paths
+    pod 'Firebase'
     # Pods for testing
   end
 
+end
 end

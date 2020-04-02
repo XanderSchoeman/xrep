@@ -8,7 +8,7 @@
 
 import UIKit
 import XouDevSpec
-import Alamofire
+import Firebase
 
 public class AnimeTable: UITableViewController {
     @IBOutlet weak var tableViewAnime: UITableView!
@@ -25,20 +25,20 @@ public class AnimeTable: UITableViewController {
     }
 
     override public func viewDidLoad() {
-        super.viewDidLoad()
-        fetchTopData()
+    super.viewDidLoad()
+    fetchTopData()
                      }
     public func fetchTopData() {
         var apiCaller = ApiCallerRepo()
         apiCaller.getAnimeTopData { [weak self] result in
-            switch result {
-            case .failure( let error):
-                print(error)
-            case .success(let animes):
-                self?.animeViewModel = animes.map({return AnimeTableViewModel(topAnime: $0)})
-                DispatchQueue.main.async {
-                self?.tableView.reloadData()
-                }
+        switch result {
+        case .failure( let error):
+        print(error)
+        case .success(let animes):
+        self?.animeViewModel = animes.map({return AnimeTableViewModel(topAnime: $0)})
+        DispatchQueue.main.async {
+        self?.tableView.reloadData()
+           }
         }
         }
     }
@@ -56,24 +56,28 @@ public class AnimeTable: UITableViewController {
             return cell!
         }
         public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            Analytics.logEvent(AnalyticsEventSelectItem, parameters: ["AnimeItemFromApiSelected": indexPath.row])
             let newViewController = storyboard?.instantiateViewController(withIdentifier:
                 "AnimeDetailedInfoID") as? AnimeDetailedInfoView
             newViewController?.animeList = animeViewModel[indexPath.row]
             self.navigationController?.pushViewController(newViewController!, animated: true)
         }
     public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        Analytics.logEvent(AnalyticsEventSearch, parameters: ["AnimeSearchValue": searchBar.text as Any])
+        var objcGenreglobal = GlobalDataGenre()
+        print(objcGenreglobal.genre)
         let replacedString = searchBar.text?.replacingOccurrences(of: " ", with: "%20")
         guard let searchBarText = replacedString else {return}
-        let apiCaller = ApiCallerRepo.init(SearchText: searchBarText)
+        let apiCaller = ApiCallerRepo.init(SearchText: searchBarText, GenreSelected: objcGenreglobal.message)
         apiCaller.getAnimeData { [weak self] result in
             switch result {
             case .failure( let error):
-                print(error)
+            print(error)
             case .success(let animes):
-                self?.animeViewModel = animes.map({return AnimeTableViewModel(SearchedAnime: $0)})
-                DispatchQueue.main.async {
-                self?.tableView.reloadData()
-                }
+            self?.animeViewModel = animes.map({return AnimeTableViewModel(SearchedAnime: $0)})
+            DispatchQueue.main.async {
+            self?.tableView.reloadData()
+            }
         }
         }
     }

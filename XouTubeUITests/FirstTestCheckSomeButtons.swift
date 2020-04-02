@@ -16,11 +16,6 @@ class FirstTestCheckSomeButtons: TestCase {
         environment = TestEnvironment(application: application)
     }
 
-    func testHomeButtonExists() {
-        application.launch()
-        sleep(2)
-        XCTAssert(application.buttons["Home"].exists)
-    }
     func testAnimeButtonExists() {
         application.launch()
         sleep(2)
