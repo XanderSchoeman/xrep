@@ -21,14 +21,14 @@ class ProfileView: UIViewController {
     @IBOutlet weak var lblGenrePref: UILabel!
     @IBOutlet weak var imgProfile: UIImageView!
     @IBAction func btnSignIn(_ sender: UIButton) {
-        //Analytics.logEvent("SignInPressed", parameters: nil)
+        Analytics.logEvent("SignInPressed", parameters: nil)
         performSegue(withIdentifier: "segSignIn", sender: self)
     }
     @IBAction func btnSignUp(_ sender: UIButton) {
-        //Analytics.logEvent("SignUpPressed", parameters: nil)
+        Analytics.logEvent("SignUpPressed", parameters: nil)
         performSegue(withIdentifier: "segSignUp", sender: self)
     }
-    public var user = [User]()
+    public var user = User()
     override func viewDidLoad() {
         super.viewDidLoad()
         let apiCaller = XouBaseApiCalls()
@@ -37,15 +37,16 @@ class ProfileView: UIViewController {
             case .failure( let error):
             print(error)
             case .success(let users):
-                self?.user = users
+                guard let user = users.first else {return}
+                self?.user = user
                 DispatchQueue.main.async {
                     self?.lblUsername.text = users[0].username
                     self?.lblFullName.text = users[0].fullName
                     self?.lblEmail.text = users[0].email
                     self?.lblGender.text = users[0].gender
-                    self?.lblAge.text = "\(users[0].age ?? 18)"
+                    self?.lblAge.text = "\(users[0].age)"
                     self?.lblGenrePref.text = users[0].genrePref
-                    self?.lblFavouriteCount.text = "\(users[0].favouriteCount ?? 0)"
+                    self?.lblFavouriteCount.text = "\(users[0].favouriteCount)"
                     if let imageUrl = users[0].profileImage {
                         self?.imgProfile.loadImageUsingUrlString(urlString: imageUrl)
                     }
