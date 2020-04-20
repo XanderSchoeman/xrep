@@ -151,6 +151,7 @@
 		3803EA6D23EA998900DC745C /* XouTube */ = {
 			isa = PBXGroup;
 			children = (
+				38C2CA85244CEBC8003EB0AD /* features */,
 				38A2971423FD49F100DBD8A5 /* MVVMView */,
 				3803EA6E23EA998900DC745C /* AppDelegate.swift */,
 				3803EA7023EA998900DC745C /* SceneDelegate.swift */,
@@ -207,6 +208,21 @@
 				38C2B90B2431E639003EB0AD /* HomeView.m */,
 			);
 			path = MVVMView;
+			sourceTree = "<group>";
+		};
+		38C2CA85244CEBC8003EB0AD /* features */ = {
+			isa = PBXGroup;
+			children = (
+				38C2CA86244CEBD7003EB0AD /* ProfileAndCredentials */,
+			);
+			path = features;
+			sourceTree = "<group>";
+		};
+		38C2CA86244CEBD7003EB0AD /* ProfileAndCredentials */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ProfileAndCredentials;
 			sourceTree = "<group>";
 		};
 		5770C5905CFB4132DD65FA68 /* Pods */ = {
