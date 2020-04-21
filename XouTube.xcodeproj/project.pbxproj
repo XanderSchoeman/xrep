@@ -152,7 +152,6 @@
 			isa = PBXGroup;
 			children = (
 				38C2CA85244CEBC8003EB0AD /* features */,
-				38A2971423FD49F100DBD8A5 /* MVVMView */,
 				3803EA6E23EA998900DC745C /* AppDelegate.swift */,
 				3803EA7023EA998900DC745C /* SceneDelegate.swift */,
 				3803EA7423EA998900DC745C /* Main.storyboard */,
@@ -195,34 +194,67 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
-		38A2971423FD49F100DBD8A5 /* MVVMView */ = {
+		3862E36B244F1BAA00A4C6FA /* AnimeScreen */ = {
 			isa = PBXGroup;
 			children = (
 				38C805E7240E3B0700578FCA /* AnimeTable.swift */,
-				38C2B8A92423A8A9003EB0AD /* AnimeDetailedInfoView.swift */,
-				38C2B8DF24281C70003EB0AD /* FavouritesView.swift */,
-				38C2B8F7242D1E97003EB0AD /* MangaTableView.swift */,
-				38C2B8F9242D50AA003EB0AD /* MangaDetailedInfoView.swift */,
-				38C2B9072431C66A003EB0AD /* ProfileView.swift */,
-				38C2B90A2431E639003EB0AD /* HomeView.h */,
-				38C2B90B2431E639003EB0AD /* HomeView.m */,
 			);
-			path = MVVMView;
+			path = AnimeScreen;
+			sourceTree = "<group>";
+		};
+		3862E36D244F1C0A00A4C6FA /* MangaScreen */ = {
+			isa = PBXGroup;
+			children = (
+				38C2B8F7242D1E97003EB0AD /* MangaTableView.swift */,
+			);
+			path = MangaScreen;
+			sourceTree = "<group>";
+		};
+		3862E36E244F1C1700A4C6FA /* DetailsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				38C2B8F9242D50AA003EB0AD /* MangaDetailedInfoView.swift */,
+				38C2B8A92423A8A9003EB0AD /* AnimeDetailedInfoView.swift */,
+			);
+			path = DetailsScreen;
+			sourceTree = "<group>";
+		};
+		3862E36F244F1C2F00A4C6FA /* FavouritesScreen */ = {
+			isa = PBXGroup;
+			children = (
+				38C2B8DF24281C70003EB0AD /* FavouritesView.swift */,
+			);
+			path = FavouritesScreen;
+			sourceTree = "<group>";
+		};
+		3862E370244F1C4400A4C6FA /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				38C2B90B2431E639003EB0AD /* HomeView.m */,
+				38C2B90A2431E639003EB0AD /* HomeView.h */,
+			);
+			path = HomeScreen;
 			sourceTree = "<group>";
 		};
 		38C2CA85244CEBC8003EB0AD /* features */ = {
 			isa = PBXGroup;
 			children = (
-				38C2CA86244CEBD7003EB0AD /* ProfileAndCredentials */,
+				3862E370244F1C4400A4C6FA /* HomeScreen */,
+				3862E36F244F1C2F00A4C6FA /* FavouritesScreen */,
+				3862E36E244F1C1700A4C6FA /* DetailsScreen */,
+				3862E36D244F1C0A00A4C6FA /* MangaScreen */,
+				3862E36B244F1BAA00A4C6FA /* AnimeScreen */,
+				38C2CA86244CEBD7003EB0AD /* ProfileAndCredentialsScreens */,
 			);
 			path = features;
 			sourceTree = "<group>";
 		};
-		38C2CA86244CEBD7003EB0AD /* ProfileAndCredentials */ = {
+		38C2CA86244CEBD7003EB0AD /* ProfileAndCredentialsScreens */ = {
 			isa = PBXGroup;
 			children = (
+				38C2B9072431C66A003EB0AD /* ProfileView.swift */,
 			);
-			path = ProfileAndCredentials;
+			path = ProfileAndCredentialsScreens;
 			sourceTree = "<group>";
 		};
 		5770C5905CFB4132DD65FA68 /* Pods */ = {
