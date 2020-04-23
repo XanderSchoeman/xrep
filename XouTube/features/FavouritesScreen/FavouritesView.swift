@@ -55,14 +55,14 @@ extension FavouritesView {
         }
         //swiftlint:disable all
         public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            var cell = AnimeFavouriteCell()
+            var cell = FavouriteCell()
             switch indexPath.section {
              case 0:
-                cell = tableView.dequeueReusableCell(withIdentifier: "animeFavouriteCell", for: indexPath) as! AnimeFavouriteCell
+                cell = tableView.dequeueReusableCell(withIdentifier: "animeFavouriteCell", for: indexPath) as! FavouriteCell
              let anime = animeList[indexPath.row]
              cell.animeViewModel = anime
              case 1:
-             cell = tableView.dequeueReusableCell(withIdentifier: "mangaFavouriteCell", for: indexPath) as! AnimeFavouriteCell
+             cell = tableView.dequeueReusableCell(withIdentifier: "mangaFavouriteCell", for: indexPath) as! FavouriteCell
              let manga = mangaList[indexPath.row]
              cell.mangaViewModel = manga
              default:

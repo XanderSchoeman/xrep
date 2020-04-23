@@ -13,9 +13,9 @@ import Firebase
 public class AnimeTable: UITableViewController {
     @IBOutlet weak var tableViewAnime: UITableView!
     @IBOutlet weak var srchBar: UISearchBar!
-    var animeViewModel = [AnimeTableViewModel]()
-    var animeListt = [AnimeTableViewModel]()
-    var animeList = [AnimeTableViewModel]() {
+    var animeViewModel = [AnimeTableModel]()
+    var animeListt = [AnimeTableModel]()
+    var animeList = [AnimeTableModel]() {
         didSet {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -26,23 +26,11 @@ public class AnimeTable: UITableViewController {
 
     override public func viewDidLoad() {
     super.viewDidLoad()
-    fetchTopData()
+        viewModel.getTopAnimeData()
                      }
-    public func fetchTopData() {
-        var apiCaller = ApiCallerRepo()
-        apiCaller.getAnimeTopData { [weak self] result in
-        switch result {
-        case .failure( let error):
-        print(error)
-        case .success(let animes):
-        self?.animeViewModel = animes.map({return AnimeTableViewModel(topAnime: $0)})
-        DispatchQueue.main.async {
-        self?.tableView.reloadData()
-           }
-        }
-        }
-    }
-
+    lazy var viewModel: AnimeViewModel = {
+        AnimeViewModel(with: self, repo: ApiCallerRepo())
+    }()
 }
 
  extension AnimeTable: UISearchBarDelegate {
@@ -50,7 +38,7 @@ public class AnimeTable: UITableViewController {
                 return animeViewModel.count
         }
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "animeVidCell", for: indexPath) as? AnimeVideoCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "animeVidCell", for: indexPath) as? CustomCell
             let anime = animeViewModel[indexPath.row]
             cell?.animeViewModel = anime
             return cell!
@@ -65,20 +53,23 @@ public class AnimeTable: UITableViewController {
     public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         Analytics.logEvent(AnalyticsEventSearch, parameters: ["AnimeSearchValue": searchBar.text as Any])
         var objcGenreglobal = GlobalDataGenre()
-        print(objcGenreglobal.genre)
         let replacedString = searchBar.text?.replacingOccurrences(of: " ", with: "%20")
         guard let searchBarText = replacedString else {return}
-        let apiCaller = ApiCallerRepo.init(SearchText: searchBarText, GenreSelected: objcGenreglobal.message)
-        apiCaller.getAnimeData { [weak self] result in
-            switch result {
-            case .failure( let error):
-            print(error)
-            case .success(let animes):
-            self?.animeViewModel = animes.map({return AnimeTableViewModel(SearchedAnime: $0)})
-            DispatchQueue.main.async {
-            self?.tableView.reloadData()
-            }
-        }
+        viewModel.getAnimeData(searchString: searchBarText, genreString: objcGenreglobal.message)
         }
     }
+
+extension AnimeTable: AnimeViewProtocol {
+    public func animeRetrieveTopData(animeDetails: [TopStruct]) {
+        self.animeViewModel = animeDetails.map({return AnimeTableModel(topAnime: $0)})
+        DispatchQueue.main.async {
+        self.tableView.reloadData()
+        }
     }
+    public func animeRetrieveData(animeDetails: [AnimeDetails]) {
+        self.animeViewModel = animeDetails.map({return AnimeTableModel(SearchedAnime: $0)})
+        DispatchQueue.main.async {
+        self.tableView.reloadData()
+        }
+    }
+}
