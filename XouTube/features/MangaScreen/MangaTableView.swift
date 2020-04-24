@@ -35,14 +35,14 @@ extension MangaTableView: UISearchBarDelegate {
         public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             return mangaList.count
         }
-        //swiftlint:disable all
         public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "animeVidCell", for: indexPath) as! CustomCell
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "animeVidCell", for: indexPath) as? CustomCell else {
+                return UITableViewCell()
+            }
             let manga = mangaList[indexPath.row]
             cell.mangaViewModel = manga
             return cell
         }
-        //swiftlint:enable all
         public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             Analytics.logEvent(AnalyticsEventSelectItem, parameters: ["MangaItemFromApiSelected": indexPath.row])
             let newViewController = storyboard?.instantiateViewController(withIdentifier:

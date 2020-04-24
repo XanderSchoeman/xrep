@@ -13,8 +13,6 @@ import Firebase
 public class AnimeTable: UITableViewController {
     @IBOutlet weak var tableViewAnime: UITableView!
     @IBOutlet weak var srchBar: UISearchBar!
-    var animeViewModel = [AnimeTableModel]()
-    var animeListt = [AnimeTableModel]()
     var animeList = [AnimeTableModel]() {
         didSet {
             DispatchQueue.main.async {
@@ -35,19 +33,19 @@ public class AnimeTable: UITableViewController {
 
  extension AnimeTable: UISearchBarDelegate {
         public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-                return animeViewModel.count
+                return animeList.count
         }
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "animeVidCell", for: indexPath) as? CustomCell
-            let anime = animeViewModel[indexPath.row]
+            let anime = animeList[indexPath.row]
             cell?.animeViewModel = anime
-            return cell!
+            return cell ?? UITableViewCell()
         }
         public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             Analytics.logEvent(AnalyticsEventSelectItem, parameters: ["AnimeItemFromApiSelected": indexPath.row])
             let newViewController = storyboard?.instantiateViewController(withIdentifier:
                 "AnimeDetailedInfoID") as? AnimeDetailedInfoView
-            newViewController?.animeList = animeViewModel[indexPath.row]
+            newViewController?.animeList = animeList[indexPath.row]
             self.navigationController?.pushViewController(newViewController!, animated: true)
         }
     public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -60,14 +58,14 @@ public class AnimeTable: UITableViewController {
     }
 
 extension AnimeTable: AnimeViewProtocol {
-    public func animeRetrieveTopData(animeDetails: [TopStruct]) {
-        self.animeViewModel = animeDetails.map({return AnimeTableModel(topAnime: $0)})
+    public func animeRetrieveTopData(animeDetails: [TopAnime]) {
+        self.animeList = animeDetails.map({return AnimeTableModel(topAnime: $0)})
         DispatchQueue.main.async {
         self.tableView.reloadData()
         }
     }
     public func animeRetrieveData(animeDetails: [AnimeDetails]) {
-        self.animeViewModel = animeDetails.map({return AnimeTableModel(SearchedAnime: $0)})
+        self.animeList = animeDetails.map({return AnimeTableModel(SearchedAnime: $0)})
         DispatchQueue.main.async {
         self.tableView.reloadData()
         }
