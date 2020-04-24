@@ -17,7 +17,7 @@ class TestApiMethods: XCTestCase {
     func testApiGetAnimeDataTopIsNotEmpty () {
         var testSearchString = "Attack"
 
-        var dataObj = [TopStruct]()
+        var dataObj = [TopAnime]()
         var apiCaller = ApiCallerRepo()
         apiCaller = .init(SearchText: testSearchString)
             apiCaller.getAnimeTopData { [weak self] result in

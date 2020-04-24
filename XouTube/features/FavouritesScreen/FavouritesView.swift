@@ -54,22 +54,28 @@ extension FavouritesView {
             return numberOfRows
         }
         //swiftlint:disable all
-        public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            var cell = AnimeFavouriteCell()
-            switch indexPath.section {
-             case 0:
-                cell = tableView.dequeueReusableCell(withIdentifier: "animeFavouriteCell", for: indexPath) as! AnimeFavouriteCell
-             let anime = animeList[indexPath.row]
-             cell.animeViewModel = anime
-             case 1:
-             cell = tableView.dequeueReusableCell(withIdentifier: "mangaFavouriteCell", for: indexPath) as! AnimeFavouriteCell
-             let manga = mangaList[indexPath.row]
-             cell.mangaViewModel = manga
-             default:
-             print("An error has occured in the table cells")
-               }
-             return cell
-        }
+    public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //var cell = FavouriteCell()
+        switch indexPath.section {
+         case 0:
+           guard let cell = tableView.dequeueReusableCell(withIdentifier: "animeFavouriteCell", for: indexPath) as? FavouriteCell else {
+                return UITableViewCell()
+            }
+         let anime = animeList[indexPath.row]
+         cell.animeViewModel = anime
+            return cell
+         case 1:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "mangaFavouriteCell", for: indexPath) as? FavouriteCell else {
+                return UITableViewCell()
+            }
+         let manga = mangaList[indexPath.row]
+         cell.mangaViewModel = manga
+            return cell
+         default:
+         print("An error has occured in the table cells")
+            return UITableViewCell()
+           }
+    }
         //swiftlint:enable all
     public override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle,
                                    forRowAt indexPath: IndexPath) {

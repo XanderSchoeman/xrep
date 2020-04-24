@@ -11,7 +11,7 @@ import UIKit
 import XouDevSpec
 import Firebase
 
-public var faveMangaListViewModelObject = [MangaTableViewModel]()
+public var faveMangaListViewModelObject = [MangaTableModel]()
 public class MangaDetailedInfoView: UIViewController {
 
     @IBOutlet weak var lblAnimeTitle: UILabel!
@@ -26,7 +26,7 @@ public class MangaDetailedInfoView: UIViewController {
     @IBOutlet weak var lblAnimeURL: UILabel!
     @IBAction func btnFavourite(_ sender: UIButton) {
         Analytics.logEvent("FavouriteMangaPressed", parameters: nil)
-        var fave = MangaTableViewModel()
+        var fave = MangaTableModel()
         fave.publishing = mangaList.publishing ?? true
         fave.start_date = mangaList.start_date ?? ""
         fave.end_date = mangaList.end_date ?? ""
@@ -44,7 +44,7 @@ public class MangaDetailedInfoView: UIViewController {
         faveMangaListViewModelObject.append(fave)
         displayDefaultAlert(title: "Added to favourites!", message: " = )")
     }
-    var mangaList = MangaTableViewModel()
+    var mangaList = MangaTableModel()
 
     override public func viewDidLoad() {
         super.viewDidLoad()

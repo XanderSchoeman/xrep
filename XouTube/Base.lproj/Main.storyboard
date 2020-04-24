@@ -402,24 +402,24 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="animeVidCell" id="zHY-kD-PEZ" customClass="AnimeVideoCell" customModule="XouDevSpec">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="animeVidCell" id="0MM-NZ-Pgm" customClass="CustomCell" customModule="XouTube" customModuleProvider="target">
                                 <rect key="frame" x="20" y="99.5" width="374" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zHY-kD-PEZ" id="hAU-Xj-2Tm">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0MM-NZ-Pgm" id="iKh-A7-PXK">
                                     <rect key="frame" x="0.0" y="0.0" width="374" height="90"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="khy-MP-9Eh">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zRP-UG-TWE">
                                             <rect key="frame" x="12" y="8" width="132" height="74"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="132" id="h54-JQ-Zp1"/>
-                                                <constraint firstAttribute="width" secondItem="khy-MP-9Eh" secondAttribute="height" multiplier="16:9" id="nwm-q9-I46"/>
+                                                <constraint firstAttribute="width" constant="132" id="ApS-YK-bAK"/>
+                                                <constraint firstAttribute="width" secondItem="zRP-UG-TWE" secondAttribute="height" multiplier="16:9" id="E31-0H-iFf"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="CA2-d7-pRj">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="1c8-3f-HCs">
                                             <rect key="frame" x="156" y="32.5" width="186" height="25"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="25" id="2Xc-90-cvo"/>
+                                                <constraint firstAttribute="height" constant="25" id="0WA-vI-95t"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="16"/>
                                             <nil key="textColor"/>
@@ -427,16 +427,16 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="CA2-d7-pRj" firstAttribute="centerY" secondItem="hAU-Xj-2Tm" secondAttribute="centerY" id="ATE-Hs-wki"/>
-                                        <constraint firstItem="khy-MP-9Eh" firstAttribute="centerY" secondItem="hAU-Xj-2Tm" secondAttribute="centerY" id="MNf-PY-Ezd"/>
-                                        <constraint firstItem="CA2-d7-pRj" firstAttribute="leading" secondItem="khy-MP-9Eh" secondAttribute="trailing" constant="12" id="X0E-B3-xuH"/>
-                                        <constraint firstItem="khy-MP-9Eh" firstAttribute="leading" secondItem="hAU-Xj-2Tm" secondAttribute="leading" constant="12" id="aDA-Ic-RkZ"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="CA2-d7-pRj" secondAttribute="trailing" constant="12" id="iBh-UP-WMj"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="1c8-3f-HCs" secondAttribute="trailing" constant="12" id="DUA-Mh-PS1"/>
+                                        <constraint firstItem="zRP-UG-TWE" firstAttribute="centerY" secondItem="iKh-A7-PXK" secondAttribute="centerY" id="HTt-xQ-bPv"/>
+                                        <constraint firstItem="1c8-3f-HCs" firstAttribute="leading" secondItem="zRP-UG-TWE" secondAttribute="trailing" constant="12" id="MYS-Ev-sNl"/>
+                                        <constraint firstItem="zRP-UG-TWE" firstAttribute="leading" secondItem="iKh-A7-PXK" secondAttribute="leading" constant="12" id="SRR-H2-g8u"/>
+                                        <constraint firstItem="1c8-3f-HCs" firstAttribute="centerY" secondItem="iKh-A7-PXK" secondAttribute="centerY" id="jDm-3j-uZH"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="videoImageView" destination="khy-MP-9Eh" id="ReK-eK-azV"/>
-                                    <outlet property="videoTitleLabel" destination="CA2-d7-pRj" id="MxE-ej-ZbW"/>
+                                    <outlet property="imgListItem" destination="zRP-UG-TWE" id="KQc-Hr-mLt"/>
+                                    <outlet property="lblListItem" destination="1c8-3f-HCs" id="VUi-jN-R03"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -719,7 +719,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="animeFavouriteCell" id="k11-Aq-T81" customClass="AnimeFavouriteCell" customModule="XouDevSpec">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="animeFavouriteCell" id="k11-Aq-T81" customClass="FavouriteCell" customModule="XouTube" customModuleProvider="target">
                                 <rect key="frame" x="20" y="99.5" width="374" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="k11-Aq-T81" id="83c-WZ-hVs">
@@ -752,11 +752,11 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="imgFaveAnime" destination="nam-Px-Bbq" id="pMi-5n-8eG"/>
-                                    <outlet property="lblFaveAnime" destination="rVd-h8-kdi" id="5Xv-Ve-JH9"/>
+                                    <outlet property="imgListItemAnime" destination="nam-Px-Bbq" id="JNf-AU-1sP"/>
+                                    <outlet property="lblListItemAnime" destination="rVd-h8-kdi" id="edv-TB-qRb"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="mangaFavouriteCell" id="JIr-YB-iWB" customClass="AnimeFavouriteCell" customModule="XouDevSpec">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="mangaFavouriteCell" id="JIr-YB-iWB" customClass="FavouriteCell" customModule="XouTube" customModuleProvider="target">
                                 <rect key="frame" x="20" y="189.5" width="374" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JIr-YB-iWB" id="6Iw-nA-Ln6">
@@ -789,10 +789,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="imgFaveAnime" destination="Ljh-KB-kaN" id="scg-lD-P0b"/>
-                                    <outlet property="imgManga" destination="Ljh-KB-kaN" id="bHt-LQ-2ac"/>
-                                    <outlet property="lblFaveAnime" destination="QEi-3g-jeG" id="y5R-i9-ka3"/>
-                                    <outlet property="lblManga" destination="QEi-3g-jeG" id="FQ2-QP-AFS"/>
+                                    <outlet property="imgListItemManga" destination="Ljh-KB-kaN" id="3B2-kw-JAA"/>
+                                    <outlet property="lblListItemManga" destination="QEi-3g-jeG" id="Yo6-bf-t9g"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -825,7 +823,7 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="animeVidCell" id="re1-vX-LxG" customClass="AnimeVideoCell" customModule="XouDevSpec">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="animeVidCell" id="re1-vX-LxG" customClass="CustomCell" customModule="XouTube" customModuleProvider="target">
                                 <rect key="frame" x="20" y="99.5" width="374" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="re1-vX-LxG" id="Kab-Dg-F60">
@@ -858,8 +856,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="videoImageView" destination="a3U-J0-aih" id="j69-fS-zXj"/>
-                                    <outlet property="videoTitleLabel" destination="JHN-ma-oYD" id="glP-VH-lW5"/>
+                                    <outlet property="imgListItem" destination="a3U-J0-aih" id="mTd-Vj-eWQ"/>
+                                    <outlet property="lblListItem" destination="JHN-ma-oYD" id="5P1-1y-9Lq"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
