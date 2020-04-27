@@ -20,30 +20,30 @@ class RegisterView: UIViewController {
     @IBOutlet weak var txtFavouriteCount: UITextField!
     @IBOutlet weak var txtGenrePref: UITextField!
     @IBAction func btnRegister(_ sender: UIButton) {
-        var userFirst = User(gender: txtGender.text ?? "",
+        var user = User(gender: txtGender.text ?? "",
                              password: txtPassword.text ?? "", profileImage: "",
                              age: Int(txtAge.text ?? "0") ?? 0,
-                             favouriteCount: Int(txtFavouriteCount.text ?? "0") ?? 0,
                              fullName: txtFullName.text ?? "",
                              username: txtUsername.text ?? "",
                              email: txtEmail.text ?? "",
                              genrePref: txtGenrePref.text ?? "Action")
- 
-        let xouCalls = XouBaseApiCalls()
-        xouCalls.registerUser(theUser: userFirst, completetionHandler: { result in
-            switch result {
-            case .success(let user):
-                print("Succes the user: \(user.username) has been registered")
-            case .failure(let error):
-                print("An error has occured: \(error)")
-            }
-        })
-
+        viewModel.registerAUser(withUser: user)
+        self.showSpinner()
+        _ = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { (_) in
+            _ = self.navigationController?.popViewController(animated: true)
+            self.removeSpinner()
+        }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    lazy var viewModel: RegisterViewModel = {
+        RegisterViewModel(with: self, repo: XouBaseApiCalls())
+    }()
+}
+extension RegisterView: RegisterViewProtocol {
+    func retrieveRegisterData(with: User) {
+    }
 }

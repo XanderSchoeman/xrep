@@ -23,8 +23,12 @@ public class MangaTableView: UITableViewController {
     }
     override public func viewDidLoad() {
         super.viewDidLoad()
-                     }
+        DispatchQueue.main.async {
+            self.showSpinner()
+        }
+    }
     override public func viewDidAppear(_ animated: Bool) {
+        self.removeSpinner()
     }
     lazy var viewModel: MangaViewModel = {
         MangaViewModel(with: self, repo: ApiCallerRepo())
@@ -51,11 +55,18 @@ extension MangaTableView: UISearchBarDelegate {
             self.navigationController?.pushViewController(newViewController!, animated: true)
         }
     public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        Analytics.logEvent(AnalyticsEventSearch, parameters: ["MangaSearchValue": searchBar.text as Any])
-          var objcGenreglobal = GlobalDataGenre()
-          let replacedString = searchBar.text?.replacingOccurrences(of: " ", with: "%20")
-          guard let searchBarText = replacedString else {return}
-        viewModel.getMangaData(searchString: searchBarText, genreString: objcGenreglobal.message)
+        DispatchQueue.main.async {
+            self.showSpinner()
+            Analytics.logEvent(AnalyticsEventSearch, parameters: ["MangaSearchValue": searchBar.text as Any])
+            var objcGenreglobal = GlobalDataGenre()
+            let replacedString = searchBar.text?.replacingOccurrences(of: " ", with: "%20")
+            guard let searchBarText = replacedString else {return}
+            self.viewModel.getMangaData(searchString: searchBarText, genreString: objcGenreglobal.message)
+            _ = Timer.scheduledTimer(withTimeInterval: 2.5, repeats: false) { (_) in
+                self.removeSpinner()
+            }
+            }
+
         }
     }
 

@@ -24,8 +24,15 @@ public class AnimeTable: UITableViewController {
 
     override public func viewDidLoad() {
     super.viewDidLoad()
-        viewModel.getTopAnimeData()
-                     }
+        DispatchQueue.main.async {
+            //self.tableView.reloadData()
+            self.showSpinner()
+            self.viewModel.getTopAnimeData()
+        }
+    }
+    public override func viewDidAppear(_ animated: Bool) {
+        self.removeSpinner()
+    }
     lazy var viewModel: AnimeViewModel = {
         AnimeViewModel(with: self, repo: ApiCallerRepo())
     }()
@@ -50,10 +57,17 @@ public class AnimeTable: UITableViewController {
         }
     public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         Analytics.logEvent(AnalyticsEventSearch, parameters: ["AnimeSearchValue": searchBar.text as Any])
-        var objcGenreglobal = GlobalDataGenre()
-        let replacedString = searchBar.text?.replacingOccurrences(of: " ", with: "%20")
-        guard let searchBarText = replacedString else {return}
-        viewModel.getAnimeData(searchString: searchBarText, genreString: objcGenreglobal.message)
+        DispatchQueue.main.async {
+            self.showSpinner()
+            var objcGenreglobal = GlobalDataGenre()
+            let replacedString = searchBar.text?.replacingOccurrences(of: " ", with: "%20")
+            guard let searchBarText = replacedString else {return}
+            self.viewModel.getAnimeData(searchString: searchBarText, genreString: objcGenreglobal.message)
+            _ = Timer.scheduledTimer(withTimeInterval: 2.5, repeats: false) { (_) in
+            self.removeSpinner()
+            }
+        }
+
         }
     }
 
