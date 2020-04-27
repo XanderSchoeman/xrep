@@ -1146,7 +1146,7 @@
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillProportionally" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="DqX-qu-M5m">
-                                                <rect key="frame" x="19" y="198.5" width="376" height="300"/>
+                                                <rect key="frame" x="19" y="198.5" width="376" height="331"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5F7-nj-frq">
                                                         <rect key="frame" x="0.0" y="0.0" width="376" height="50"/>
@@ -1179,7 +1179,6 @@
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="btnSignIn:" destination="6NL-QX-26B" eventType="touchUpInside" id="XJP-Eg-fie"/>
-                                                                    <segue destination="rJn-3D-ZoC" kind="show" identifier="segSignIn" id="gZn-x4-LOR"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="an5-RA-fs4">
@@ -1189,13 +1188,12 @@
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="btnSignUp:" destination="6NL-QX-26B" eventType="touchUpInside" id="SXa-Bz-tsC"/>
-                                                                    <segue destination="kUV-8j-JQf" kind="show" identifier="segSignUp" id="p40-hG-hLI"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="F8N-Ia-Rsg">
-                                                        <rect key="frame" x="0.0" y="51" width="376" height="23"/>
+                                                        <rect key="frame" x="0.0" y="82" width="376" height="23"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4P-7q-4IO">
                                                                 <rect key="frame" x="0.0" y="0.0" width="188" height="23"/>
@@ -1212,7 +1210,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="a93-A8-9Sn">
-                                                        <rect key="frame" x="0.0" y="75" width="376" height="23"/>
+                                                        <rect key="frame" x="0.0" y="106" width="376" height="23"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="21e-QY-zge">
                                                                 <rect key="frame" x="0.0" y="0.0" width="188" height="23"/>
@@ -1229,7 +1227,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2uA-v9-HBy">
-                                                        <rect key="frame" x="0.0" y="99" width="376" height="23"/>
+                                                        <rect key="frame" x="0.0" y="130" width="376" height="23"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R9m-7n-H6Y">
                                                                 <rect key="frame" x="0.0" y="0.0" width="188" height="23"/>
@@ -1246,7 +1244,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="mrD-La-zxu">
-                                                        <rect key="frame" x="0.0" y="123" width="376" height="23"/>
+                                                        <rect key="frame" x="0.0" y="154" width="376" height="23"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3F2-uv-QCI">
                                                                 <rect key="frame" x="0.0" y="0.0" width="188" height="23"/>
@@ -1263,7 +1261,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="iAJ-Yg-eXv">
-                                                        <rect key="frame" x="0.0" y="147" width="376" height="23"/>
+                                                        <rect key="frame" x="0.0" y="178" width="376" height="23"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A85-o1-asg">
                                                                 <rect key="frame" x="0.0" y="0.0" width="188" height="23"/>
@@ -1280,7 +1278,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="g76-ge-aHR">
-                                                        <rect key="frame" x="0.0" y="171" width="376" height="23"/>
+                                                        <rect key="frame" x="0.0" y="202" width="376" height="23"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favourite Count:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Atz-CM-m5L">
                                                                 <rect key="frame" x="0.0" y="0.0" width="188" height="23"/>
@@ -1297,7 +1295,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="avd-Ox-oag">
-                                                        <rect key="frame" x="0.0" y="195" width="376" height="23"/>
+                                                        <rect key="frame" x="0.0" y="226" width="376" height="23"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pref Genre:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TC9-oi-BpE">
                                                                 <rect key="frame" x="0.0" y="0.0" width="188" height="23"/>
@@ -1314,13 +1312,13 @@
                                                         </subviews>
                                                     </stackView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Evm-ye-ahN">
-                                                        <rect key="frame" x="0.0" y="219" width="376" height="30"/>
+                                                        <rect key="frame" x="0.0" y="250" width="376" height="30"/>
                                                         <state key="normal" title="Sign Out">
                                                             <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTf-Ci-tct">
-                                                        <rect key="frame" x="0.0" y="250" width="376" height="50"/>
+                                                        <rect key="frame" x="0.0" y="281" width="376" height="50"/>
                                                         <color key="backgroundColor" red="0.1409149136" green="0.39582658679999999" blue="0.36829361890000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                                         <color key="textColor" red="0.0098104076460000002" green="0.40432071689999999" blue="0.37254861" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1334,7 +1332,6 @@
                                                     <mask key="subviews">
                                                         <exclude reference="6J1-Mv-Mpb"/>
                                                         <exclude reference="KmU-4r-Z5h"/>
-                                                        <exclude reference="ApB-nO-Oei"/>
                                                     </mask>
                                                 </variation>
                                             </stackView>
@@ -1379,6 +1376,8 @@
                         <outlet property="lblGender" destination="zjA-Sk-apC" id="rIT-aP-xQs"/>
                         <outlet property="lblGenrePref" destination="a6L-EQ-hGe" id="jeo-Pu-iJj"/>
                         <outlet property="lblUsername" destination="mBU-OB-fsc" id="xT2-WX-gq7"/>
+                        <segue destination="kUV-8j-JQf" kind="show" identifier="segSignUp" id="drk-rl-ZGY"/>
+                        <segue destination="rJn-3D-ZoC" kind="show" identifier="segSignIn" id="Mpa-ap-Mlb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SQc-8Z-uXY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1388,7 +1387,7 @@
         <!--Sign In-->
         <scene sceneID="E0N-XM-8F1">
             <objects>
-                <viewController storyboardIdentifier="SignInID" title="Sign In" id="rJn-3D-ZoC" customClass="ProfileView" customModule="XouTube" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignInID" title="Sign In" id="rJn-3D-ZoC" customClass="LoginView" customModule="XouTube" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uBN-Um-UXO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1453,6 +1452,7 @@
                                                                     <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
                                                                 <connections>
+                                                                    <action selector="btnLogin:" destination="rJn-3D-ZoC" eventType="touchUpInside" id="D8n-wc-Was"/>
                                                                     <action selector="btnSignIn:" destination="rJn-3D-ZoC" eventType="touchUpInside" id="aOb-uP-WKh"/>
                                                                 </connections>
                                                             </button>
@@ -1499,6 +1499,10 @@
                     <navigationItem key="navigationItem" title="Sign In" id="uaI-py-JFR">
                         <barButtonItem key="backBarButtonItem" title="Back" id="rgB-Dl-lCN"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="txtPassword" destination="Xe4-aM-Qq8" id="8Lg-Nd-owJ"/>
+                        <outlet property="txtUsername" destination="Hj8-Ab-UJH" id="VCq-Ra-bZV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jRG-Zz-OkG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1507,7 +1511,7 @@
         <!--Sign Up-->
         <scene sceneID="Znm-AD-bZW">
             <objects>
-                <viewController storyboardIdentifier="SignUpID" title="Sign Up" id="kUV-8j-JQf" customClass="ProfileView" customModule="XouTube" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpID" title="Sign Up" id="kUV-8j-JQf" customClass="RegisterView" customModule="XouTube" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NnZ-43-PQY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1668,7 +1672,7 @@
                                                                     <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="btnSignIn:" destination="kUV-8j-JQf" eventType="touchUpInside" id="Wsc-SC-vqP"/>
+                                                                    <action selector="btnRegister:" destination="kUV-8j-JQf" eventType="touchUpInside" id="sLa-Co-M6V"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -1714,6 +1718,16 @@
                     <navigationItem key="navigationItem" title="Sign Up" id="rwW-hO-8BV">
                         <barButtonItem key="backBarButtonItem" title="Back" id="4kN-Hv-ptn"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="txtAge" destination="XdA-lY-PcA" id="ud9-DU-jh5"/>
+                        <outlet property="txtEmail" destination="FrM-Pd-WkG" id="xSN-bH-McP"/>
+                        <outlet property="txtFavouriteCount" destination="4md-dE-8wj" id="SaG-U6-bRU"/>
+                        <outlet property="txtFullName" destination="cOP-uG-vWr" id="92J-0w-Gob"/>
+                        <outlet property="txtGender" destination="T6H-gb-W0M" id="deY-Rv-Xj1"/>
+                        <outlet property="txtGenrePref" destination="UiQ-dU-xsD" id="m8R-Rz-1mX"/>
+                        <outlet property="txtPassword" destination="gVB-ts-g6V" id="d2t-Xq-U5z"/>
+                        <outlet property="txtUsername" destination="1zX-Lf-dbW" id="n0H-Qy-58A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F5J-Rp-ceu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
