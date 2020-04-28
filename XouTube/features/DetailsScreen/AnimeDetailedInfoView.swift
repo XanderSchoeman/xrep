@@ -15,6 +15,7 @@ import WatchConnectivity
 public var faveAnimeListViewModelObject = [AnimeTableModel]()
 public class AnimeDetailedInfoView: UIViewController {
     var session: WCSession?
+    var detailsScreenViewModel = DetailsViewModel()
 
     @IBOutlet weak var lblAnimeTitle: UILabel!
     @IBOutlet weak var imgAnimeImage: UIImageView!
@@ -45,11 +46,14 @@ public class AnimeDetailedInfoView: UIViewController {
         fave.type = animeList.type ?? ""
         faveAnimeListViewModelObject.append(fave)
         displayDefaultAlert(title: "Added to favourites!", message: "= )")
+//        detailsScreenViewModel.saveAnime(model: AnimeDetails(title: fave.title ?? "",
+//                                                             imageUrl: fave.image_url ?? "",
+//                                                             type: fave.type ?? ""))
     }
     var animeList = AnimeTableModel()
-
     override public func viewDidLoad() {
         super.viewDidLoad()
+        detailsScreenViewModel.repo = CoreData()
         lblAnimeTitle.text = animeList.title
         if let imageUrl = animeList.image_url {
           imgAnimeImage.loadImageUsingUrlString(urlString: imageUrl)
@@ -83,11 +87,6 @@ public class AnimeDetailedInfoView: UIViewController {
     }
 }
 
-//if let validSession = self.session, validSession.isReachable {//5.1
-//  let data: [String: Any] = ["iPhone": "Data from iPhone" as Any] // Create your Dictionay as per uses
-//  validSession.sendMessage(data, replyHandler: nil, errorHandler: nil)
-//}
-
 extension AnimeDetailedInfoView: WCSessionDelegate {
   public func sessionDidBecomeInactive(_ session: WCSession) {
   }
@@ -110,3 +109,4 @@ extension AnimeDetailedInfoView: WCSessionDelegate {
     }
   }
 }
+

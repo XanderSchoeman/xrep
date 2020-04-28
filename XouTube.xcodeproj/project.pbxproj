@@ -30,6 +30,14 @@
 		3895A09A2458592D0061C818 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3895A0992458592D0061C818 /* Assets.xcassets */; };
 		3895A09F2458592D0061C818 /* XouTubeWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 3895A0822458592A0061C818 /* XouTubeWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3895A0A9245860520061C818 /* WatchHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3895A0A8245860520061C818 /* WatchHelper.swift */; };
+		3895A0E22458BFD40061C818 /* CoreDataRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3895A0E12458BFD40061C818 /* CoreDataRepo.swift */; };
+		3895A0EF2458CD7C0061C818 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3895A0EE2458CD7C0061C818 /* DetailsViewModel.swift */; };
+		3895A0F12458CEE60061C818 /* FavouriteViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3895A0F02458CEE60061C818 /* FavouriteViewProtocol.swift */; };
+		3895A0F32458DB050061C818 /* XoutubeCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3895A0DD2458BF620061C818 /* XoutubeCoreData.xcdatamodeld */; };
+		3895A0F72458DF650061C818 /* MangaList+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3895A0F42458DF650061C818 /* MangaList+CoreDataClass.swift */; };
+		3895A0F82458DF650061C818 /* MangaList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3895A0F52458DF650061C818 /* MangaList+CoreDataProperties.swift */; };
+		3895A0F92458DF650061C818 /* AnimeList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3895A0F62458DF650061C818 /* AnimeList+CoreDataProperties.swift */; };
+		3895A0FB2458DF900061C818 /* AnimeList+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3895A0FA2458DF900061C818 /* AnimeList+CoreDataClass.swift */; };
 		38C2B8AA2423A8A9003EB0AD /* AnimeDetailedInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C2B8A92423A8A9003EB0AD /* AnimeDetailedInfoView.swift */; };
 		38C2B8E024281C70003EB0AD /* FavouritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C2B8DF24281C70003EB0AD /* FavouritesView.swift */; };
 		38C2B8F8242D1E97003EB0AD /* MangaTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C2B8F7242D1E97003EB0AD /* MangaTableView.swift */; };
@@ -136,6 +144,14 @@
 		3895A09B2458592D0061C818 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3895A09C2458592D0061C818 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		3895A0A8245860520061C818 /* WatchHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchHelper.swift; sourceTree = "<group>"; };
+		3895A0DE2458BF620061C818 /* XoutubeCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = XoutubeCoreData.xcdatamodel; sourceTree = "<group>"; };
+		3895A0E12458BFD40061C818 /* CoreDataRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataRepo.swift; sourceTree = "<group>"; };
+		3895A0EE2458CD7C0061C818 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		3895A0F02458CEE60061C818 /* FavouriteViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewProtocol.swift; sourceTree = "<group>"; };
+		3895A0F42458DF650061C818 /* MangaList+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MangaList+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3895A0F52458DF650061C818 /* MangaList+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MangaList+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3895A0F62458DF650061C818 /* AnimeList+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AnimeList+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3895A0FA2458DF900061C818 /* AnimeList+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AnimeList+CoreDataClass.swift"; sourceTree = "<group>"; };
 		38C2B8A92423A8A9003EB0AD /* AnimeDetailedInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeDetailedInfoView.swift; sourceTree = "<group>"; };
 		38C2B8DF24281C70003EB0AD /* FavouritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesView.swift; sourceTree = "<group>"; };
 		38C2B8F7242D1E97003EB0AD /* MangaTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangaTableView.swift; sourceTree = "<group>"; };
@@ -238,6 +254,7 @@
 				3803EA7923EA998B00DC745C /* LaunchScreen.storyboard */,
 				3803EA7C23EA998B00DC745C /* Info.plist */,
 				38C2B9292432AEBE003EB0AD /* GoogleService-Info.plist */,
+				3895A0DD2458BF620061C818 /* XoutubeCoreData.xcdatamodeld */,
 			);
 			path = XouTube;
 			sourceTree = "<group>";
@@ -303,6 +320,7 @@
 			children = (
 				38C2B8F9242D50AA003EB0AD /* MangaDetailedInfoView.swift */,
 				38C2B8A92423A8A9003EB0AD /* AnimeDetailedInfoView.swift */,
+				3895A0F02458CEE60061C818 /* FavouriteViewProtocol.swift */,
 			);
 			path = DetailsScreen;
 			sourceTree = "<group>";
@@ -348,9 +366,23 @@
 			path = "XouTubeWatch Extension";
 			sourceTree = "<group>";
 		};
+		3895A0E02458BFBC0061C818 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				3895A0FA2458DF900061C818 /* AnimeList+CoreDataClass.swift */,
+				3895A0F62458DF650061C818 /* AnimeList+CoreDataProperties.swift */,
+				3895A0F42458DF650061C818 /* MangaList+CoreDataClass.swift */,
+				3895A0F52458DF650061C818 /* MangaList+CoreDataProperties.swift */,
+				3895A0E12458BFD40061C818 /* CoreDataRepo.swift */,
+				3895A0EE2458CD7C0061C818 /* DetailsViewModel.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		38C2CA85244CEBC8003EB0AD /* features */ = {
 			isa = PBXGroup;
 			children = (
+				3895A0E02458BFBC0061C818 /* CoreData */,
 				38590BBD2451A1C7001FA50D /* TableCells */,
 				3862E370244F1C4400A4C6FA /* HomeScreen */,
 				3862E36F244F1C2F00A4C6FA /* FavouritesScreen */,
@@ -743,19 +775,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3895A0F32458DB050061C818 /* XoutubeCoreData.xcdatamodeld in Sources */,
+				3895A0EF2458CD7C0061C818 /* DetailsViewModel.swift in Sources */,
+				3895A0F12458CEE60061C818 /* FavouriteViewProtocol.swift in Sources */,
 				3803EA6F23EA998900DC745C /* AppDelegate.swift in Sources */,
 				38C2B9082431C66A003EB0AD /* ProfileView.swift in Sources */,
 				38590BC124530E16001FA50D /* RegisterView.swift in Sources */,
 				38590BBA24519AF1001FA50D /* CustomCell.swift in Sources */,
 				38C2B8E024281C70003EB0AD /* FavouritesView.swift in Sources */,
 				38C805E8240E3B0700578FCA /* AnimeTable.swift in Sources */,
+				3895A0F72458DF650061C818 /* MangaList+CoreDataClass.swift in Sources */,
 				38C2B8F8242D1E97003EB0AD /* MangaTableView.swift in Sources */,
+				3895A0FB2458DF900061C818 /* AnimeList+CoreDataClass.swift in Sources */,
+				3895A0F92458DF650061C818 /* AnimeList+CoreDataProperties.swift in Sources */,
+				3895A0E22458BFD40061C818 /* CoreDataRepo.swift in Sources */,
 				38590BBF24530DFD001FA50D /* LoginView.swift in Sources */,
 				38590BBC24519F5D001FA50D /* FavouriteCell.swift in Sources */,
 				38C2B8FA242D50AA003EB0AD /* MangaDetailedInfoView.swift in Sources */,
 				38C2B90C2431E639003EB0AD /* HomeView.m in Sources */,
 				38C2B8AA2423A8A9003EB0AD /* AnimeDetailedInfoView.swift in Sources */,
 				3803EA7123EA998900DC745C /* SceneDelegate.swift in Sources */,
+				3895A0F82458DF650061C818 /* MangaList+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1309,6 +1349,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3895A0DD2458BF620061C818 /* XoutubeCoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3895A0DE2458BF620061C818 /* XoutubeCoreData.xcdatamodel */,
+			);
+			currentVersion = 3895A0DE2458BF620061C818 /* XoutubeCoreData.xcdatamodel */;
+			path = XoutubeCoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3803EA6323EA998900DC745C /* Project object */;
 }

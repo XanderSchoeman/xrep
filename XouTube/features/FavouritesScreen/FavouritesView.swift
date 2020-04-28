@@ -11,6 +11,7 @@ import XouDevSpec
 import Firebase
 
 public class FavouritesView: UITableViewController {
+   var detailsScreenViewModel = DetailsViewModel()
     @IBOutlet weak var tableViewAnime: UITableView!
 
     var mangaList = faveMangaListViewModelObject {
@@ -31,7 +32,10 @@ public class FavouritesView: UITableViewController {
     }
     override public func viewDidLoad() {
         super.viewDidLoad()
+        detailsScreenViewModel.view = self
                      }
+        var animeCoreDataList = [AnimeDetails]()
+        var mangaCoreDataList = [MangaDetails]()
     override public func viewDidAppear(_ animated: Bool) {
     }
 
@@ -100,3 +104,11 @@ extension FavouritesView {
     }
 
     }
+extension FavouritesView: FavouriteViewProtocol {
+    public func displayFavouriteAnime(model: [AnimeDetails]) {
+        animeCoreDataList = model
+    }
+    public func displayFavouriteManga(model: [MangaDetails]) {
+        mangaCoreDataList = model
+    }
+}

@@ -15,6 +15,7 @@ import WatchConnectivity
 public var faveMangaListViewModelObject = [MangaTableModel]()
 public class MangaDetailedInfoView: UIViewController {
     var session: WCSession?
+    var detailsScreenViewModel = DetailsViewModel()
 
     @IBOutlet weak var lblAnimeTitle: UILabel!
     @IBOutlet weak var imgAnimeImage: UIImageView!
@@ -45,11 +46,16 @@ public class MangaDetailedInfoView: UIViewController {
         fave.type = mangaList.type ?? ""
         faveMangaListViewModelObject.append(fave)
         displayDefaultAlert(title: "Added to favourites!", message: " = )")
+//      detailsScreenViewModel.saveAnime(model: AnimeDetails(title: fave.title ?? "",
+//                                                            imageUrl: fave.image_url ?? "",
+//                                                            type: fave.type ?? ""))
+        
     }
     var mangaList = MangaTableModel()
 
     override public func viewDidLoad() {
         super.viewDidLoad()
+        detailsScreenViewModel.repo = CoreData()
         lblAnimeTitle.text = mangaList.title
         if let imageUrl = mangaList.image_url {
           imgAnimeImage.loadImageUsingUrlString(urlString: imageUrl)
