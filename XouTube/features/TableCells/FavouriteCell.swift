@@ -10,12 +10,18 @@ import UIKit
 import XouDevSpec
 
 public class FavouriteCell: UITableViewCell {
-    @IBOutlet weak var imgListItemAnime: UIImageView!
+//    @IBOutlet weak var lblListItemAnime: UILabel!
+//    @IBOutlet weak var imgListItemAnime: UIImageView!
+//    @IBOutlet weak var lblListItemAnimeScore: UILabel!
     @IBOutlet weak var lblListItemAnime: UILabel!
-    @IBOutlet weak var imgListItemManga: UIImageView!
+    @IBOutlet weak var lblListItemAnimeType: UILabel!
+    @IBOutlet weak var imgListItemAnime: UIImageView!
     @IBOutlet weak var lblListItemManga: UILabel!
+    @IBOutlet weak var lblListItemMangaType: UILabel!
+    @IBOutlet weak var imgListItemManga: UIImageView!
      public var animeViewModel: AnimeTableModel! {
          didSet {
+             lblListItemAnimeType.text = animeViewModel?.type
              lblListItemAnime.text = animeViewModel.title
              if let imageUrl = animeViewModel.image_url {
                imgListItemAnime.loadImageUsingUrlString(urlString: imageUrl)
@@ -24,6 +30,7 @@ public class FavouriteCell: UITableViewCell {
      }
      public var mangaViewModel: MangaTableModel! {
           didSet {
+              lblListItemMangaType.text = mangaViewModel?.type
               lblListItemManga.text = mangaViewModel.title
               if let imageUrl = mangaViewModel.image_url {
                 imgListItemManga.loadImageUsingUrlString(urlString: imageUrl)

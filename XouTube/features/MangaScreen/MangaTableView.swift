@@ -40,7 +40,8 @@ extension MangaTableView: UISearchBarDelegate {
             return mangaList.count
         }
         public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "animeVidCell", for: indexPath) as? CustomCell else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "animeVidCell",
+                                                           for: indexPath) as? CustomCell else {
                 return UITableViewCell()
             }
             let manga = mangaList[indexPath.row]

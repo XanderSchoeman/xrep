@@ -38,6 +38,9 @@ class ProfileView: UIViewController {
         isUserLoggedIn = false
         stackViewProfile.isHidden = true
         stackViewSignInSignUp.isHidden = false
+        let alert = UIAlertController(title: "Signed Out", message: "Sign Out successful", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
+        present(alert, animated: true)
     }
     @IBAction func btnSignIn(_ sender: UIButton) {
         Analytics.logEvent("SignInPressed", parameters: nil)

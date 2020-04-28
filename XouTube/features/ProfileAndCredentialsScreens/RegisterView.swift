@@ -33,6 +33,9 @@ class RegisterView: UIViewController {
             _ = self.navigationController?.popViewController(animated: true)
             self.removeSpinner()
         }
+        let alert = UIAlertController(title: "Success", message: "Registration successful", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
+        present(alert, animated: true)
     }
 
     override func viewDidLoad() {
