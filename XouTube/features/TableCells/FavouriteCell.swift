@@ -10,9 +10,6 @@ import UIKit
 import XouDevSpec
 
 public class FavouriteCell: UITableViewCell {
-//    @IBOutlet weak var lblListItemAnime: UILabel!
-//    @IBOutlet weak var imgListItemAnime: UIImageView!
-//    @IBOutlet weak var lblListItemAnimeScore: UILabel!
     @IBOutlet weak var lblListItemAnime: UILabel!
     @IBOutlet weak var lblListItemAnimeType: UILabel!
     @IBOutlet weak var imgListItemAnime: UIImageView!

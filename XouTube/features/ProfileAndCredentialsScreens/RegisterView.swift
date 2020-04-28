@@ -33,9 +33,6 @@ class RegisterView: UIViewController {
             _ = self.navigationController?.popViewController(animated: true)
             self.removeSpinner()
         }
-        let alert = UIAlertController(title: "Success", message: "Registration successful", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
-        present(alert, animated: true)
     }
 
     override func viewDidLoad() {
@@ -47,6 +44,20 @@ class RegisterView: UIViewController {
     }()
 }
 extension RegisterView: RegisterViewProtocol {
-    func retrieveRegisterData(with: User) {
+    func notifyUserOnError() {
+        let alert = UIAlertController(title: "Failure",
+                                      message: "Registration unsuccessful, An error has occurred",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
+        present(alert, animated: true)
+    }
+    func notifyUserOnSuccess(){
+        let alert = UIAlertController(title: "Success",
+                                      message: "Registration successful",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
+        present(alert, animated: true)
+    }
+    func retrievedRegisterData(with: User) {
     }
 }

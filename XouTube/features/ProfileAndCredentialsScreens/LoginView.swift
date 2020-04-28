@@ -21,9 +21,9 @@ class LoginView: UIViewController {
             _ = self.navigationController?.popViewController(animated: true)
             self.removeSpinner()
         }
-        let alert = UIAlertController(title: "Success", message: "Authentication successful", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
-        present(alert, animated: true)
+//        let alert = UIAlertController(title: "Success", message: "Authentication successful", preferredStyle: .alert)
+//        alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
+//        present(alert, animated: true)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +36,20 @@ class LoginView: UIViewController {
     }()
 }
 extension LoginView: LoginViewProtocol {
-    func retrieveLoginData(with: User) {
+    func notifyUserOnError() {
+        let alert = UIAlertController(title: "Failure",
+                                      message: "Login unsuccessful, An error has occurred",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
+        present(alert, animated: true)
+    }
+    func notifyUserOnSuccess() {
+        let alert = UIAlertController(title: "Success",
+                                       message: "Login successful",
+                                       preferredStyle: .alert)
+         alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
+         present(alert, animated: true)
+    }
+    func retrievedLoginData(with: User) {
     }
 }

@@ -25,7 +25,6 @@ public class AnimeTable: UITableViewController {
     override public func viewDidLoad() {
     super.viewDidLoad()
         DispatchQueue.main.async {
-            //self.tableView.reloadData()
             self.showSpinner()
             self.viewModel.getTopAnimeData()
         }
