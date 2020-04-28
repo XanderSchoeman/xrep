@@ -10,9 +10,11 @@ import Foundation
 import UIKit
 import XouDevSpec
 import Firebase
+import WatchConnectivity
 
 public var faveMangaListViewModelObject = [MangaTableModel]()
 public class MangaDetailedInfoView: UIViewController {
+    var session: WCSession?
 
     @IBOutlet weak var lblAnimeTitle: UILabel!
     @IBOutlet weak var imgAnimeImage: UIImageView!
@@ -64,11 +66,41 @@ public class MangaDetailedInfoView: UIViewController {
         } else {
             lblAnimeAiring.text = "False"
         }
+        self.configureWatchKitSesstion()
     }
+    func configureWatchKitSesstion() {
+       if WCSession.isSupported() {
+         session = WCSession.default
+         session?.delegate = self
+         session?.activate()
+       }
+     }
     func displayDefaultAlert(title: String?, message: String?) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
         alert.addAction(okAction)
         self.present(alert, animated: true, completion: nil)
     }
+}
+extension MangaDetailedInfoView: WCSessionDelegate {
+  public func sessionDidBecomeInactive(_ session: WCSession) {
+  }
+  public func sessionDidDeactivate(_ session: WCSession) {
+  }
+  public func session(_ session: WCSession,
+                      activationDidCompleteWith activationState: WCSessionActivationState,
+                      error: Error?) {
+  }
+  public func session(_ session: WCSession, didReceiveMessage message: [String: Any]) {
+    print("received message: \(message)")
+    DispatchQueue.main.async {
+        if (message["watch"] as? String) != nil {
+        if let validSession = self.session, validSession.isReachable {
+            let data: [String: Any] = ["iPhone": self.lblAnimeTitle.text as Any,
+                                       "iPhoneImage": self.mangaList.image_url as Any]
+          validSession.sendMessage(data, replyHandler: nil, errorHandler: nil)
+        }
+      }
+    }
+  }
 }

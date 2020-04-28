@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="15705" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="15501"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="XouTubeWatch" customModuleProvider="target">
+                    <items>
+                        <imageView width="107" height="76" alignment="center" contentMode="scaleAspectFill" id="H2D-kJ-ph3"/>
+                        <label width="134" alignment="center" text="Name" textAlignment="center" numberOfLines="0" id="aoQ-gu-5T2">
+                            <color key="textColor" red="1" green="0.86149917444629276" blue="0.14789343109281106" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                        </label>
+                        <button width="1" alignment="left" title="Show" id="GvL-qj-JjG">
+                            <connections>
+                                <action selector="tapSendToiPhone" destination="AgC-eL-Hgc" id="xaA-0t-tRV"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="imgFromData" destination="H2D-kJ-ph3" id="Ejl-hJ-dzX"/>
+                        <outlet property="label" destination="aoQ-gu-5T2" id="KQ6-C5-IaW"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+    </scenes>
+</document>
