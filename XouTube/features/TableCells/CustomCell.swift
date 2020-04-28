@@ -12,8 +12,10 @@ import XouDevSpec
 public class CustomCell: UITableViewCell {
     @IBOutlet weak var imgListItem: UIImageView!
     @IBOutlet weak var lblListItem: UILabel!
+    @IBOutlet weak var lblListItemScore: UILabel!
        public var animeViewModel: AnimeTableModel? {
             didSet {
+                lblListItemScore.text = "\(animeViewModel?.score ?? 0.0)"
                 lblListItem.text = animeViewModel?.title
                 if let imageUrl = animeViewModel?.image_url {
                   imgListItem.loadImageUsingUrlString(urlString: imageUrl)
@@ -22,6 +24,7 @@ public class CustomCell: UITableViewCell {
         }
         public var mangaViewModel: MangaTableModel? {
              didSet {
+                lblListItemScore.text = "\(mangaViewModel?.score ?? 0.0)"
                 lblListItem.text = mangaViewModel?.title
                 if let imageUrl = mangaViewModel?.image_url {
                    imgListItem.loadImageUsingUrlString(urlString: imageUrl)
