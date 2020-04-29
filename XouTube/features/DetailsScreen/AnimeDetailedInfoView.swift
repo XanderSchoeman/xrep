@@ -46,9 +46,9 @@ public class AnimeDetailedInfoView: UIViewController {
         fave.type = animeList.type ?? ""
         faveAnimeListViewModelObject.append(fave)
         displayDefaultAlert(title: "Added to favourites!", message: "= )")
-//        detailsScreenViewModel.saveAnime(model: AnimeDetails(title: fave.title ?? "",
-//                                                             imageUrl: fave.image_url ?? "",
-//                                                             type: fave.type ?? ""))
+        detailsScreenViewModel.saveAnime(model: AnimeDetails(title: fave.title ?? "",
+                                                             imageUrl: fave.image_url ?? "",
+                                                             type: fave.type ?? ""))
     }
     var animeList = AnimeTableModel()
     override public func viewDidLoad() {
@@ -109,4 +109,3 @@ extension AnimeDetailedInfoView: WCSessionDelegate {
     }
   }
 }
-

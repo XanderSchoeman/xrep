@@ -11,6 +11,7 @@ import XouDevSpec
 
 public class DetailsViewModel {
     var repo = CoreData()
+    //var Repo = CoreDataProtocol
     var view: FavouriteViewProtocol?
     public init() {
     }
@@ -29,5 +30,11 @@ public class DetailsViewModel {
         repo.fetchManga { (fetchedModels) in
             self.view?.displayFavouriteManga(model: fetchedModels)
         }
+    }
+    public func deleteAnime(title: String) {
+        repo.deleteAnime(title: title)
+    }
+    public func deleteManga(title: String) {
+        repo.deleteManga(title: title)
     }
 }

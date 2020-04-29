@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>XouTubeFastLaneSnapShots.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>30</integer>
+		</dict>
 		<key>XouTubeTests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -38,6 +43,16 @@
 			<true/>
 		</dict>
 		<key>385D2AA6241F450D0004FAE9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3895A0812458592A0061C818</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3895A0FF2458E7F40061C818</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -10,14 +10,15 @@ import Foundation
 import CoreData
 import XouDevSpec
 //swiftlint:disable all
-public class CoreData {
-    public init() {
+let appDelegate = UIApplication.shared.delegate as? AppDelegate
+let managedContext = appDelegate!.persistentContainer.viewContext
+public class CoreData: CoreDataProtocol {
+
+    required public init() {
     }
     public func fetchAnime(
                   _ completion: @escaping (_ Models: [AnimeDetails]) -> Void) {
         var anime: [NSManagedObject] = []
-        let appDelegate = UIApplication.shared.delegate as? AppDelegate
-        let managedContext = appDelegate!.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "AnimeList")
         do {
             anime = try managedContext.fetch(fetchRequest)
@@ -38,9 +39,6 @@ public class CoreData {
     public func fetchManga(
                   _ completion: @escaping (_ Models: [MangaDetails]) -> Void) {
         var manga: [NSManagedObject] = []
-        
-        let appDelegate = UIApplication.shared.delegate as? AppDelegate
-        let managedContext = appDelegate!.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "AnimeList")
         do {
             manga = try managedContext.fetch(fetchRequest)
@@ -58,8 +56,6 @@ public class CoreData {
         completion(mangaObj)
     }
     public func saveAnime(model: AnimeDetails) {
-        let appDelegate = UIApplication.shared.delegate as? AppDelegate
-        let managedContext = appDelegate!.persistentContainer.viewContext
         let entity = NSEntityDescription.entity(forEntityName: "AnimeList", in: managedContext)
         let anime = NSManagedObject(entity: entity!, insertInto: managedContext)
         anime.setValue(model.title, forKey: "title")
@@ -67,22 +63,57 @@ public class CoreData {
         anime.setValue(model.type, forKey: "type")
         do {
           try managedContext.save()
+            print("Anime Saved")
         } catch {
         }
     }
     public func saveManga(model: MangaDetails) {
-        let appDelegate = UIApplication.shared.delegate as? AppDelegate
-        let managedContext = appDelegate?.persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "AnimeList", in: managedContext!)
+        let entity = NSEntityDescription.entity(forEntityName: "MangaList", in: managedContext)
         let manga = NSManagedObject(entity: entity!, insertInto: managedContext)
         manga.setValue(model.title, forKey: "title")
         manga.setValue(model.image_url, forKey: "image_url")
         manga.setValue(model.type, forKey: "type")
         do {
-          try managedContext?.save()
+            try managedContext.save()
         } catch {
         }
     }
+    public func deleteAnime(title: String) {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "AnimeList")
+        let predicate = NSPredicate(format: "title == %@", title)
+          fetchRequest.predicate = predicate
+          do {
+            let anime = try managedContext.fetch(fetchRequest)
+            let objectToDelete = anime[0] as! NSManagedObject
+            managedContext.delete(objectToDelete)
+            do {
+                try managedContext.save()
+            } catch {
+              return
+            }
+          } catch {
+            return
+          }
+        
+      }
+    public func deleteManga(title: String) {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "MangaList")
+        let predicate = NSPredicate(format: "title == %@", title)
+          fetchRequest.predicate = predicate
+          do {
+            let manga = try managedContext.fetch(fetchRequest)
+            let objectToDelete = manga[0] as! NSManagedObject
+            managedContext.delete(objectToDelete)
+            do {
+                try managedContext.save()
+            } catch {
+              return
+            }
+          } catch {
+            return
+          }
+        
+      }
 }
 
 

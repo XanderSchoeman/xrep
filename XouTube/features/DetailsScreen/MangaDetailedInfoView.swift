@@ -46,10 +46,9 @@ public class MangaDetailedInfoView: UIViewController {
         fave.type = mangaList.type ?? ""
         faveMangaListViewModelObject.append(fave)
         displayDefaultAlert(title: "Added to favourites!", message: " = )")
-//      detailsScreenViewModel.saveAnime(model: AnimeDetails(title: fave.title ?? "",
-//                                                            imageUrl: fave.image_url ?? "",
-//                                                            type: fave.type ?? ""))
-        
+      detailsScreenViewModel.saveAnime(model: AnimeDetails(title: fave.title ?? "",
+                                                            imageUrl: fave.image_url ?? "",
+                                                            type: fave.type ?? ""))
     }
     var mangaList = MangaTableModel()
 

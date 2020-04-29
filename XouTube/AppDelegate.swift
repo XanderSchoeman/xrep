@@ -39,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     // MARK: Core data required functions
     lazy var persistentContainer: NSPersistentContainer = {
-     let container = NSPersistentContainer(name: "XoutubeCoreData")
+     let container = NSPersistentContainer(name: "XouTubeDM")
      container.loadPersistentStores(completionHandler: { (_, error) in
       if let error = error as NSError? {
        fatalError("Unresolved error \(error), \(error.userInfo)")
