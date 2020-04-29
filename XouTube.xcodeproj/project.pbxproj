@@ -38,6 +38,7 @@
 		3895A11424597ED70061C818 /* XouTubeDM.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3895A11224597ED70061C818 /* XouTubeDM.xcdatamodeld */; };
 		3895A11E2459A94B0061C818 /* FavouriteViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3895A11D2459A94B0061C818 /* FavouriteViewProtocol.swift */; };
 		3895A1202459DB310061C818 /* App Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3895A11F2459DB310061C818 /* App Icon.png */; };
+		3895A122245A41FB0061C818 /* AppNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3895A121245A41FB0061C818 /* AppNavigation.swift */; };
 		38C2B8AA2423A8A9003EB0AD /* AnimeDetailedInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C2B8A92423A8A9003EB0AD /* AnimeDetailedInfoView.swift */; };
 		38C2B8E024281C70003EB0AD /* FavouritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C2B8DF24281C70003EB0AD /* FavouritesView.swift */; };
 		38C2B8F8242D1E97003EB0AD /* MangaTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C2B8F7242D1E97003EB0AD /* MangaTableView.swift */; };
@@ -161,6 +162,7 @@
 		3895A11324597ED70061C818 /* XouTubeDM.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = XouTubeDM.xcdatamodel; sourceTree = "<group>"; };
 		3895A11D2459A94B0061C818 /* FavouriteViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewProtocol.swift; sourceTree = "<group>"; };
 		3895A11F2459DB310061C818 /* App Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "App Icon.png"; sourceTree = "<group>"; };
+		3895A121245A41FB0061C818 /* AppNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigation.swift; sourceTree = "<group>"; };
 		38C2B8A92423A8A9003EB0AD /* AnimeDetailedInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeDetailedInfoView.swift; sourceTree = "<group>"; };
 		38C2B8DF24281C70003EB0AD /* FavouritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesView.swift; sourceTree = "<group>"; };
 		38C2B8F7242D1E97003EB0AD /* MangaTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangaTableView.swift; sourceTree = "<group>"; };
@@ -312,6 +314,7 @@
 				385D2AAB241F450D0004FAE9 /* Info.plist */,
 				385D2AB6241F49580004FAE9 /* FirstTestCheckSomeButtons.swift */,
 				385D2AB8241F4E5B0004FAE9 /* CheckIfBackButtonsWork.swift */,
+				3895A121245A41FB0061C818 /* AppNavigation.swift */,
 			);
 			path = XouTubeUITests;
 			sourceTree = "<group>";
@@ -877,6 +880,7 @@
 			files = (
 				385D2AB5241F46460004FAE9 /* TestEnvironment.swift in Sources */,
 				385D2AB3241F46120004FAE9 /* TestCase.swift in Sources */,
+				3895A122245A41FB0061C818 /* AppNavigation.swift in Sources */,
 				385D2AB7241F49580004FAE9 /* FirstTestCheckSomeButtons.swift in Sources */,
 				385D2AB9241F4E5B0004FAE9 /* CheckIfBackButtonsWork.swift in Sources */,
 			);

@@ -18,7 +18,7 @@ import XCTest
 var deviceLanguage = ""
 var locale = ""
 
-func setupSnapshot(_ app: XCUIApplication, waitForAnimations: Bool = true) {
+public func setupSnapshot(_ app: XCUIApplication, waitForAnimations: Bool = true) {
     Snapshot.setupSnapshot(app, waitForAnimations: waitForAnimations)
 }
 
