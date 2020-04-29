@@ -44,6 +44,8 @@ extension MangaTableView: UISearchBarDelegate {
                                                            for: indexPath) as? CustomCell else {
                 return UITableViewCell()
             }
+            cell.setBackgroundCellGradient(colorOne: UIColor.init(red: 6/255, green: 32/255, blue: 64/255, alpha: 1),
+                                            colorTwo: UIColor.init(red: 19/255, green: 97/255, blue: 191/255, alpha: 1))
             let manga = mangaList[indexPath.row]
             cell.mangaViewModel = manga
             return cell

@@ -43,6 +43,8 @@ public class AnimeTable: UITableViewController {
         }
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "animeVidCell", for: indexPath) as? CustomCell
+            cell!.setBackgroundCellGradient(colorOne: UIColor.init(red: 6/255, green: 32/255, blue: 64/255, alpha: 1),
+                                            colorTwo: UIColor.init(red: 19/255, green: 97/255, blue: 191/255, alpha: 1))
             let anime = animeList[indexPath.row]
             cell?.animeViewModel = anime
             return cell ?? UITableViewCell()
