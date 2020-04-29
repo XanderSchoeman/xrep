@@ -49,6 +49,16 @@
                ReferencedContainer = "container:XouTube.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3895A0FF2458E7F40061C818"
+               BuildableName = "XouTubeFastLaneSnapShots.xctest"
+               BlueprintName = "XouTubeFastLaneSnapShots"
+               ReferencedContainer = "container:XouTube.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

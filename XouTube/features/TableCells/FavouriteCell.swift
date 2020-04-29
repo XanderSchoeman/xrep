@@ -16,7 +16,7 @@ public class FavouriteCell: UITableViewCell {
     @IBOutlet weak var lblListItemManga: UILabel!
     @IBOutlet weak var lblListItemMangaType: UILabel!
     @IBOutlet weak var imgListItemManga: UIImageView!
-     public var animeViewModel: AnimeTableModel! {
+     public var animeViewModel: AnimeDetails! {
          didSet {
              lblListItemAnimeType.text = animeViewModel?.type
              lblListItemAnime.text = animeViewModel.title
@@ -25,7 +25,7 @@ public class FavouriteCell: UITableViewCell {
              }
          }
      }
-     public var mangaViewModel: MangaTableModel! {
+     public var mangaViewModel: MangaDetails! {
           didSet {
               lblListItemMangaType.text = mangaViewModel?.type
               lblListItemManga.text = mangaViewModel.title

@@ -51,7 +51,7 @@ extension RegisterView: RegisterViewProtocol {
         alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
         present(alert, animated: true)
     }
-    func notifyUserOnSuccess(){
+    func notifyUserOnSuccess() {
         let alert = UIAlertController(title: "Success",
                                       message: "Registration successful",
                                       preferredStyle: .alert)

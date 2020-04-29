@@ -11,6 +11,7 @@ import XouDevSpec
 import Firebase
 
 public class FavouritesView: UITableViewController {
+    var detailsScreenViewModel = DetailsViewModel(repo: CoreData())
     @IBOutlet weak var tableViewAnime: UITableView!
 
     var mangaList = faveMangaListViewModelObject {
@@ -31,7 +32,11 @@ public class FavouritesView: UITableViewController {
     }
     override public func viewDidLoad() {
         super.viewDidLoad()
+        detailsScreenViewModel.view = self
+        detailsScreenViewModel.fetchAnime()
                      }
+        var animeCoreDataList = [AnimeDetails]()
+        var mangaCoreDataList = [MangaDetails]()
     override public func viewDidAppear(_ animated: Bool) {
     }
 
@@ -44,31 +49,30 @@ extension FavouritesView {
     }
         public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
            var numberOfRows = 1
-            if (section == 0) {
-              numberOfRows =  animeList.count
+            if(section == 0) {
+              numberOfRows =  animeCoreDataList.count
                 return numberOfRows
-            } else if (section == 1) {
-               numberOfRows =  mangaList.count
+            } else if(section == 1) {
+               numberOfRows =  mangaCoreDataList.count
                return numberOfRows
             }
             return numberOfRows
         }
         //swiftlint:disable all
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //var cell = FavouriteCell()
         switch indexPath.section {
          case 0:
            guard let cell = tableView.dequeueReusableCell(withIdentifier: "animeFavouriteCell", for: indexPath) as? FavouriteCell else {
                 return UITableViewCell()
             }
-         let anime = animeList[indexPath.row]
+         let anime = animeCoreDataList[indexPath.row]
          cell.animeViewModel = anime
             return cell
          case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "mangaFavouriteCell", for: indexPath) as? FavouriteCell else {
                 return UITableViewCell()
             }
-         let manga = mangaList[indexPath.row]
+         let manga = mangaCoreDataList[indexPath.row]
          cell.mangaViewModel = manga
             return cell
          default:
@@ -79,20 +83,20 @@ extension FavouritesView {
         //swiftlint:enable all
     public override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle,
                                    forRowAt indexPath: IndexPath) {
-        switch indexPath.section {
+         switch indexPath.section {
          case 0:
          if editingStyle == .delete {
          Analytics.logEvent("AnimeDeleted", parameters: nil)
-         animeList.remove(at: indexPath.row)
+         detailsScreenViewModel.deleteAnime(title: animeCoreDataList[indexPath.item].title ?? "")
+         animeCoreDataList.remove(at: indexPath.row)
          tableView.deleteRows(at: [indexPath], with: .bottom)
-         faveAnimeListViewModelObject.remove(at: indexPath.row)
          }
          case 1:
          if editingStyle == .delete {
          Analytics.logEvent("MangaDeleted", parameters: nil)
-         mangaList.remove(at: indexPath.row)
+         detailsScreenViewModel.deleteManga(title: mangaCoreDataList[indexPath.item].title ?? "")
+         mangaCoreDataList.remove(at: indexPath.row)
          tableView.deleteRows(at: [indexPath], with: .bottom)
-         faveMangaListViewModelObject.remove(at: indexPath.row)
          }
          default:
          print("An error has occured in the table delete")
@@ -100,3 +104,11 @@ extension FavouritesView {
     }
 
     }
+extension FavouritesView: FavouriteViewProtocol {
+    public func displayFavouriteAnime(model: [AnimeDetails]) {
+        animeCoreDataList = model
+    }
+    public func displayFavouriteManga(model: [MangaDetails]) {
+        mangaCoreDataList = model
+    }
+}

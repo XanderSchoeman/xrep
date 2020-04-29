@@ -21,6 +21,22 @@
 		385D2AB5241F46460004FAE9 /* TestEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D2AB4241F46460004FAE9 /* TestEnvironment.swift */; };
 		385D2AB7241F49580004FAE9 /* FirstTestCheckSomeButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D2AB6241F49580004FAE9 /* FirstTestCheckSomeButtons.swift */; };
 		385D2AB9241F4E5B0004FAE9 /* CheckIfBackButtonsWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D2AB8241F4E5B0004FAE9 /* CheckIfBackButtonsWork.swift */; };
+		3895A0862458592A0061C818 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3895A0842458592A0061C818 /* Interface.storyboard */; };
+		3895A0882458592D0061C818 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3895A0872458592D0061C818 /* Assets.xcassets */; };
+		3895A08F2458592D0061C818 /* XouTubeWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3895A08E2458592D0061C818 /* XouTubeWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3895A0942458592D0061C818 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3895A0932458592D0061C818 /* InterfaceController.swift */; };
+		3895A0962458592D0061C818 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3895A0952458592D0061C818 /* ExtensionDelegate.swift */; };
+		3895A0982458592D0061C818 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3895A0972458592D0061C818 /* NotificationController.swift */; };
+		3895A09A2458592D0061C818 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3895A0992458592D0061C818 /* Assets.xcassets */; };
+		3895A09F2458592D0061C818 /* XouTubeWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 3895A0822458592A0061C818 /* XouTubeWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3895A0A9245860520061C818 /* WatchHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3895A0A8245860520061C818 /* WatchHelper.swift */; };
+		3895A0E22458BFD40061C818 /* CoreDataRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3895A0E12458BFD40061C818 /* CoreDataRepo.swift */; };
+		3895A0EF2458CD7C0061C818 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3895A0EE2458CD7C0061C818 /* DetailsViewModel.swift */; };
+		3895A1032458E7F40061C818 /* XouTubeFastLaneSnapShots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3895A1022458E7F40061C818 /* XouTubeFastLaneSnapShots.swift */; };
+		3895A10B2458E83D0061C818 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3895A10A2458E83D0061C818 /* SnapshotHelper.swift */; };
+		3895A10D245965320061C818 /* CoreDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3895A10C245965320061C818 /* CoreDataProtocol.swift */; };
+		3895A11424597ED70061C818 /* XouTubeDM.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3895A11224597ED70061C818 /* XouTubeDM.xcdatamodeld */; };
+		3895A11E2459A94B0061C818 /* FavouriteViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3895A11D2459A94B0061C818 /* FavouriteViewProtocol.swift */; };
 		38C2B8AA2423A8A9003EB0AD /* AnimeDetailedInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C2B8A92423A8A9003EB0AD /* AnimeDetailedInfoView.swift */; };
 		38C2B8E024281C70003EB0AD /* FavouritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C2B8DF24281C70003EB0AD /* FavouritesView.swift */; };
 		38C2B8F8242D1E97003EB0AD /* MangaTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C2B8F7242D1E97003EB0AD /* MangaTableView.swift */; };
@@ -51,7 +67,53 @@
 			remoteGlobalIDString = 3803EA6A23EA998900DC745C;
 			remoteInfo = XouTube;
 		};
+		3895A0902458592D0061C818 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3803EA6323EA998900DC745C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3895A08D2458592D0061C818;
+			remoteInfo = "XouTubeWatch Extension";
+		};
+		3895A09D2458592D0061C818 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3803EA6323EA998900DC745C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3895A0812458592A0061C818;
+			remoteInfo = XouTubeWatch;
+		};
+		3895A1052458E7F40061C818 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3803EA6323EA998900DC745C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3803EA6A23EA998900DC745C;
+			remoteInfo = XouTube;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3895A0A02458592D0061C818 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				3895A09F2458592D0061C818 /* XouTubeWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3895A0A32458592D0061C818 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3895A08F2458592D0061C818 /* XouTubeWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		18FB1BF811D48B585E15CBB9 /* Pods-XouTubeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XouTubeUITests.release.xcconfig"; path = "Target Support Files/Pods-XouTubeUITests/Pods-XouTubeUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -76,6 +138,27 @@
 		385D2AB4241F46460004FAE9 /* TestEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestEnvironment.swift; sourceTree = "<group>"; };
 		385D2AB6241F49580004FAE9 /* FirstTestCheckSomeButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTestCheckSomeButtons.swift; sourceTree = "<group>"; };
 		385D2AB8241F4E5B0004FAE9 /* CheckIfBackButtonsWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckIfBackButtonsWork.swift; sourceTree = "<group>"; };
+		3895A0822458592A0061C818 /* XouTubeWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XouTubeWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3895A0852458592A0061C818 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		3895A0872458592D0061C818 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3895A0892458592D0061C818 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3895A08E2458592D0061C818 /* XouTubeWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "XouTubeWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3895A0932458592D0061C818 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		3895A0952458592D0061C818 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		3895A0972458592D0061C818 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		3895A0992458592D0061C818 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3895A09B2458592D0061C818 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3895A09C2458592D0061C818 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		3895A0A8245860520061C818 /* WatchHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchHelper.swift; sourceTree = "<group>"; };
+		3895A0E12458BFD40061C818 /* CoreDataRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataRepo.swift; sourceTree = "<group>"; };
+		3895A0EE2458CD7C0061C818 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		3895A1002458E7F40061C818 /* XouTubeFastLaneSnapShots.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XouTubeFastLaneSnapShots.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3895A1022458E7F40061C818 /* XouTubeFastLaneSnapShots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XouTubeFastLaneSnapShots.swift; sourceTree = "<group>"; };
+		3895A1042458E7F40061C818 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3895A10A2458E83D0061C818 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
+		3895A10C245965320061C818 /* CoreDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataProtocol.swift; sourceTree = "<group>"; };
+		3895A11324597ED70061C818 /* XouTubeDM.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = XouTubeDM.xcdatamodel; sourceTree = "<group>"; };
+		3895A11D2459A94B0061C818 /* FavouriteViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewProtocol.swift; sourceTree = "<group>"; };
 		38C2B8A92423A8A9003EB0AD /* AnimeDetailedInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeDetailedInfoView.swift; sourceTree = "<group>"; };
 		38C2B8DF24281C70003EB0AD /* FavouritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesView.swift; sourceTree = "<group>"; };
 		38C2B8F7242D1E97003EB0AD /* MangaTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangaTableView.swift; sourceTree = "<group>"; };
@@ -121,6 +204,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3895A08B2458592D0061C818 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3895A0FD2458E7F40061C818 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -140,6 +237,9 @@
 				3803EA6D23EA998900DC745C /* XouTube */,
 				3803EA8423EA998B00DC745C /* XouTubeTests */,
 				385D2AA8241F450D0004FAE9 /* XouTubeUITests */,
+				3895A0832458592A0061C818 /* XouTubeWatch */,
+				3895A0922458592D0061C818 /* XouTubeWatch Extension */,
+				3895A1012458E7F40061C818 /* XouTubeFastLaneSnapShots */,
 				3803EA6C23EA998900DC745C /* Products */,
 				5770C5905CFB4132DD65FA68 /* Pods */,
 				2121C3D468F0CCF692BB0C54 /* Frameworks */,
@@ -152,6 +252,9 @@
 				3803EA6B23EA998900DC745C /* XouTube.app */,
 				3803EA8123EA998B00DC745C /* XouTubeTests.xctest */,
 				385D2AA7241F450D0004FAE9 /* XouTubeUITests.xctest */,
+				3895A0822458592A0061C818 /* XouTubeWatch.app */,
+				3895A08E2458592D0061C818 /* XouTubeWatch Extension.appex */,
+				3895A1002458E7F40061C818 /* XouTubeFastLaneSnapShots.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -167,6 +270,7 @@
 				3803EA7923EA998B00DC745C /* LaunchScreen.storyboard */,
 				3803EA7C23EA998B00DC745C /* Info.plist */,
 				38C2B9292432AEBE003EB0AD /* GoogleService-Info.plist */,
+				3895A11224597ED70061C818 /* XouTubeDM.xcdatamodeld */,
 			);
 			path = XouTube;
 			sourceTree = "<group>";
@@ -240,6 +344,7 @@
 			isa = PBXGroup;
 			children = (
 				38C2B8DF24281C70003EB0AD /* FavouritesView.swift */,
+				3895A11D2459A94B0061C818 /* FavouriteViewProtocol.swift */,
 			);
 			path = FavouritesScreen;
 			sourceTree = "<group>";
@@ -253,9 +358,54 @@
 			path = HomeScreen;
 			sourceTree = "<group>";
 		};
+		3895A0832458592A0061C818 /* XouTubeWatch */ = {
+			isa = PBXGroup;
+			children = (
+				3895A0842458592A0061C818 /* Interface.storyboard */,
+				3895A0872458592D0061C818 /* Assets.xcassets */,
+				3895A0892458592D0061C818 /* Info.plist */,
+			);
+			path = XouTubeWatch;
+			sourceTree = "<group>";
+		};
+		3895A0922458592D0061C818 /* XouTubeWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3895A0932458592D0061C818 /* InterfaceController.swift */,
+				3895A0952458592D0061C818 /* ExtensionDelegate.swift */,
+				3895A0972458592D0061C818 /* NotificationController.swift */,
+				3895A0992458592D0061C818 /* Assets.xcassets */,
+				3895A09B2458592D0061C818 /* Info.plist */,
+				3895A09C2458592D0061C818 /* PushNotificationPayload.apns */,
+				3895A0A8245860520061C818 /* WatchHelper.swift */,
+			);
+			path = "XouTubeWatch Extension";
+			sourceTree = "<group>";
+		};
+		3895A0E02458BFBC0061C818 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				3895A0E12458BFD40061C818 /* CoreDataRepo.swift */,
+				3895A0EE2458CD7C0061C818 /* DetailsViewModel.swift */,
+				3895A10C245965320061C818 /* CoreDataProtocol.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		3895A1012458E7F40061C818 /* XouTubeFastLaneSnapShots */ = {
+			isa = PBXGroup;
+			children = (
+				3895A10A2458E83D0061C818 /* SnapshotHelper.swift */,
+				3895A1022458E7F40061C818 /* XouTubeFastLaneSnapShots.swift */,
+				3895A1042458E7F40061C818 /* Info.plist */,
+			);
+			path = XouTubeFastLaneSnapShots;
+			sourceTree = "<group>";
+		};
 		38C2CA85244CEBC8003EB0AD /* features */ = {
 			isa = PBXGroup;
 			children = (
+				3895A0E02458BFBC0061C818 /* CoreData */,
 				38590BBD2451A1C7001FA50D /* TableCells */,
 				3862E370244F1C4400A4C6FA /* HomeScreen */,
 				3862E36F244F1C2F00A4C6FA /* FavouritesScreen */,
@@ -304,10 +454,12 @@
 				3832795823F2C26B00E9BF23 /* ShellScript */,
 				39078235640DA300D533C71B /* [CP] Embed Pods Frameworks */,
 				38C2BB4F243AF4F6003EB0AD /* ShellScript */,
+				3895A0A02458592D0061C818 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3895A09E2458592D0061C818 /* PBXTargetDependency */,
 			);
 			name = XouTube;
 			productName = XouTube;
@@ -354,6 +506,58 @@
 			productReference = 385D2AA7241F450D0004FAE9 /* XouTubeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		3895A0812458592A0061C818 /* XouTubeWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3895A0A72458592D0061C818 /* Build configuration list for PBXNativeTarget "XouTubeWatch" */;
+			buildPhases = (
+				3895A0802458592A0061C818 /* Resources */,
+				3895A0A32458592D0061C818 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3895A0912458592D0061C818 /* PBXTargetDependency */,
+			);
+			name = XouTubeWatch;
+			productName = XouTubeWatch;
+			productReference = 3895A0822458592A0061C818 /* XouTubeWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		3895A08D2458592D0061C818 /* XouTubeWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3895A0A62458592D0061C818 /* Build configuration list for PBXNativeTarget "XouTubeWatch Extension" */;
+			buildPhases = (
+				3895A08A2458592D0061C818 /* Sources */,
+				3895A08B2458592D0061C818 /* Frameworks */,
+				3895A08C2458592D0061C818 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "XouTubeWatch Extension";
+			productName = "XouTubeWatch Extension";
+			productReference = 3895A08E2458592D0061C818 /* XouTubeWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		3895A0FF2458E7F40061C818 /* XouTubeFastLaneSnapShots */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3895A1092458E7F40061C818 /* Build configuration list for PBXNativeTarget "XouTubeFastLaneSnapShots" */;
+			buildPhases = (
+				3895A0FC2458E7F40061C818 /* Sources */,
+				3895A0FD2458E7F40061C818 /* Frameworks */,
+				3895A0FE2458E7F40061C818 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3895A1062458E7F40061C818 /* PBXTargetDependency */,
+			);
+			name = XouTubeFastLaneSnapShots;
+			productName = XouTubeFastLaneSnapShots;
+			productReference = 3895A1002458E7F40061C818 /* XouTubeFastLaneSnapShots.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -376,6 +580,16 @@
 						CreatedOnToolsVersion = 11.3.1;
 						TestTargetID = 3803EA6A23EA998900DC745C;
 					};
+					3895A0812458592A0061C818 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					3895A08D2458592D0061C818 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					3895A0FF2458E7F40061C818 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 3803EA6A23EA998900DC745C;
+					};
 				};
 			};
 			buildConfigurationList = 3803EA6623EA998900DC745C /* Build configuration list for PBXProject "XouTube" */;
@@ -394,6 +608,9 @@
 				3803EA6A23EA998900DC745C /* XouTube */,
 				3803EA8023EA998B00DC745C /* XouTubeTests */,
 				385D2AA6241F450D0004FAE9 /* XouTubeUITests */,
+				3895A0812458592A0061C818 /* XouTubeWatch */,
+				3895A08D2458592D0061C818 /* XouTubeWatch Extension */,
+				3895A0FF2458E7F40061C818 /* XouTubeFastLaneSnapShots */,
 			);
 		};
 /* End PBXProject section */
@@ -418,6 +635,30 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		385D2AA5241F450D0004FAE9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3895A0802458592A0061C818 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3895A0882458592D0061C818 /* Assets.xcassets in Resources */,
+				3895A0862458592A0061C818 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3895A08C2458592D0061C818 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3895A09A2458592D0061C818 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3895A0FE2458E7F40061C818 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -587,19 +828,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3895A0EF2458CD7C0061C818 /* DetailsViewModel.swift in Sources */,
 				3803EA6F23EA998900DC745C /* AppDelegate.swift in Sources */,
 				38C2B9082431C66A003EB0AD /* ProfileView.swift in Sources */,
+				3895A11E2459A94B0061C818 /* FavouriteViewProtocol.swift in Sources */,
 				38590BC124530E16001FA50D /* RegisterView.swift in Sources */,
 				38590BBA24519AF1001FA50D /* CustomCell.swift in Sources */,
 				38C2B8E024281C70003EB0AD /* FavouritesView.swift in Sources */,
 				38C805E8240E3B0700578FCA /* AnimeTable.swift in Sources */,
 				38C2B8F8242D1E97003EB0AD /* MangaTableView.swift in Sources */,
+				3895A0E22458BFD40061C818 /* CoreDataRepo.swift in Sources */,
 				38590BBF24530DFD001FA50D /* LoginView.swift in Sources */,
 				38590BBC24519F5D001FA50D /* FavouriteCell.swift in Sources */,
+				3895A10D245965320061C818 /* CoreDataProtocol.swift in Sources */,
 				38C2B8FA242D50AA003EB0AD /* MangaDetailedInfoView.swift in Sources */,
 				38C2B90C2431E639003EB0AD /* HomeView.m in Sources */,
 				38C2B8AA2423A8A9003EB0AD /* AnimeDetailedInfoView.swift in Sources */,
 				3803EA7123EA998900DC745C /* SceneDelegate.swift in Sources */,
+				3895A11424597ED70061C818 /* XouTubeDM.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,6 +870,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3895A08A2458592D0061C818 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3895A0982458592D0061C818 /* NotificationController.swift in Sources */,
+				3895A0962458592D0061C818 /* ExtensionDelegate.swift in Sources */,
+				3895A0942458592D0061C818 /* InterfaceController.swift in Sources */,
+				3895A0A9245860520061C818 /* WatchHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3895A0FC2458E7F40061C818 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3895A1032458E7F40061C818 /* XouTubeFastLaneSnapShots.swift in Sources */,
+				3895A10B2458E83D0061C818 /* SnapshotHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -636,6 +902,21 @@
 			isa = PBXTargetDependency;
 			target = 3803EA6A23EA998900DC745C /* XouTube */;
 			targetProxy = 385D2AAC241F450D0004FAE9 /* PBXContainerItemProxy */;
+		};
+		3895A0912458592D0061C818 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3895A08D2458592D0061C818 /* XouTubeWatch Extension */;
+			targetProxy = 3895A0902458592D0061C818 /* PBXContainerItemProxy */;
+		};
+		3895A09E2458592D0061C818 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3895A0812458592A0061C818 /* XouTubeWatch */;
+			targetProxy = 3895A09D2458592D0061C818 /* PBXContainerItemProxy */;
+		};
+		3895A1062458E7F40061C818 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3803EA6A23EA998900DC745C /* XouTube */;
+			targetProxy = 3895A1052458E7F40061C818 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -654,6 +935,14 @@
 				3803EA7A23EA998B00DC745C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3895A0842458592A0061C818 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3895A0852458592A0061C818 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -984,6 +1273,128 @@
 			};
 			name = Release;
 		};
+		3895A0A12458592D0061C818 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GLK7J5PP82;
+				IBSC_MODULE = XouTubeWatch_Extension;
+				INFOPLIST_FILE = XouTubeWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = za.co.dvt.XouTube.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Debug;
+		};
+		3895A0A22458592D0061C818 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GLK7J5PP82;
+				IBSC_MODULE = XouTubeWatch_Extension;
+				INFOPLIST_FILE = XouTubeWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = za.co.dvt.XouTube.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Release;
+		};
+		3895A0A42458592D0061C818 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GLK7J5PP82;
+				INFOPLIST_FILE = "XouTubeWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = za.co.dvt.XouTube.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Debug;
+		};
+		3895A0A52458592D0061C818 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GLK7J5PP82;
+				INFOPLIST_FILE = "XouTubeWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = za.co.dvt.XouTube.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Release;
+		};
+		3895A1072458E7F40061C818 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GLK7J5PP82;
+				INFOPLIST_FILE = XouTubeFastLaneSnapShots/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = za.co.dvt.XouTubeFastLaneSnapShots;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = XouTube;
+			};
+			name = Debug;
+		};
+		3895A1082458E7F40061C818 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GLK7J5PP82;
+				INFOPLIST_FILE = XouTubeFastLaneSnapShots/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = za.co.dvt.XouTubeFastLaneSnapShots;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = XouTube;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1023,7 +1434,47 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		3895A0A62458592D0061C818 /* Build configuration list for PBXNativeTarget "XouTubeWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3895A0A42458592D0061C818 /* Debug */,
+				3895A0A52458592D0061C818 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3895A0A72458592D0061C818 /* Build configuration list for PBXNativeTarget "XouTubeWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3895A0A12458592D0061C818 /* Debug */,
+				3895A0A22458592D0061C818 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3895A1092458E7F40061C818 /* Build configuration list for PBXNativeTarget "XouTubeFastLaneSnapShots" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3895A1072458E7F40061C818 /* Debug */,
+				3895A1082458E7F40061C818 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3895A11224597ED70061C818 /* XouTubeDM.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3895A11324597ED70061C818 /* XouTubeDM.xcdatamodel */,
+			);
+			currentVersion = 3895A11324597ED70061C818 /* XouTubeDM.xcdatamodel */;
+			path = XouTubeDM.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3803EA6323EA998900DC745C /* Project object */;
 }

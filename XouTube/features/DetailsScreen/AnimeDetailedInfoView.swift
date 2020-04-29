@@ -10,9 +10,12 @@ import Foundation
 import UIKit
 import XouDevSpec
 import Firebase
+import WatchConnectivity
 
 public var faveAnimeListViewModelObject = [AnimeTableModel]()
 public class AnimeDetailedInfoView: UIViewController {
+    var session: WCSession?
+    var detailsScreenViewModel = DetailsViewModel(repo: CoreData())
 
     @IBOutlet weak var lblAnimeTitle: UILabel!
     @IBOutlet weak var imgAnimeImage: UIImageView!
@@ -43,11 +46,14 @@ public class AnimeDetailedInfoView: UIViewController {
         fave.type = animeList.type ?? ""
         faveAnimeListViewModelObject.append(fave)
         displayDefaultAlert(title: "Added to favourites!", message: "= )")
+        detailsScreenViewModel.saveAnime(model: AnimeDetails(title: fave.title ?? "",
+                                                             imageUrl: fave.image_url ?? "",
+                                                             type: fave.type ?? ""))
     }
     var animeList = AnimeTableModel()
-
     override public func viewDidLoad() {
         super.viewDidLoad()
+        detailsScreenViewModel.repo = CoreData()
         lblAnimeTitle.text = animeList.title
         if let imageUrl = animeList.image_url {
           imgAnimeImage.loadImageUsingUrlString(urlString: imageUrl)
@@ -64,6 +70,14 @@ public class AnimeDetailedInfoView: UIViewController {
         } else {
             lblAnimeAiring.text = "False"
         }
+        self.configureWatchKitSesstion()
+    }
+    func configureWatchKitSesstion() {
+      if WCSession.isSupported() {
+        session = WCSession.default
+        session?.delegate = self
+        session?.activate()
+      }
     }
     func displayDefaultAlert(title: String?, message: String?) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -71,4 +85,27 @@ public class AnimeDetailedInfoView: UIViewController {
         alert.addAction(okAction)
         self.present(alert, animated: true, completion: nil)
     }
+}
+
+extension AnimeDetailedInfoView: WCSessionDelegate {
+  public func sessionDidBecomeInactive(_ session: WCSession) {
+  }
+  public func sessionDidDeactivate(_ session: WCSession) {
+  }
+  public func session(_ session: WCSession,
+                      activationDidCompleteWith activationState: WCSessionActivationState,
+                      error: Error?) {
+  }
+  public func session(_ session: WCSession, didReceiveMessage message: [String: Any]) {
+    print("received message: \(message)")
+    DispatchQueue.main.async {
+        if (message["watch"] as? String) != nil {
+        if let validSession = self.session, validSession.isReachable {
+            let data: [String: Any] = ["iPhone": self.lblAnimeTitle.text as Any,
+                                       "iPhoneImage": self.animeList.image_url as Any]
+          validSession.sendMessage(data, replyHandler: nil, errorHandler: nil)
+        }
+      }
+    }
+  }
 }
