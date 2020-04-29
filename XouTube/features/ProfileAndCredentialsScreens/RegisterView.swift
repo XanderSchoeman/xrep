@@ -19,6 +19,7 @@ class RegisterView: UIViewController {
     @IBOutlet weak var txtAge: UITextField!
     @IBOutlet weak var txtFavouriteCount: UITextField!
     @IBOutlet weak var txtGenrePref: UITextField!
+    @IBOutlet weak var stackViewPrefGenre: UIStackView!
     @IBAction func btnRegister(_ sender: UIButton) {
         var user = User(gender: txtGender.text ?? "",
                              password: txtPassword.text ?? "", profileImage: "",
@@ -37,6 +38,7 @@ class RegisterView: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        stackViewPrefGenre.isHidden = true
         // Do any additional setup after loading the view.
     }
     lazy var viewModel: RegisterViewModel = {
