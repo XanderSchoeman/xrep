@@ -19,11 +19,11 @@ class CheckIfBackButtonsWork: TestCase {
     func testBackButtonGoesToPreviousPage() {
         application.launch()
         sleep(1)
-        application.buttons["Anime"].tap()
+        application.buttons["AnimeButton"].tap()
         sleep(1)
         application.buttons["Back"].tap()
         sleep(1)
-        XCTAssert(application.buttons["Anime"].exists)
+        XCTAssert(application.buttons["AnimeButton"].exists)
     }
 
 }

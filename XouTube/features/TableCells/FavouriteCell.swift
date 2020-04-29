@@ -10,27 +10,28 @@ import UIKit
 import XouDevSpec
 
 public class FavouriteCell: UITableViewCell {
-    @IBOutlet weak var lblListItemAnime: UILabel!
-    @IBOutlet weak var lblListItemAnimeType: UILabel!
-    @IBOutlet weak var imgListItemAnime: UIImageView!
-    @IBOutlet weak var lblListItemManga: UILabel!
-    @IBOutlet weak var lblListItemMangaType: UILabel!
-    @IBOutlet weak var imgListItemManga: UIImageView!
+    @IBOutlet weak var lblAnimeName: UILabel!
+    @IBOutlet weak var lblAnimeType: UILabel!
+    @IBOutlet weak var imgAnime: UIImageView!
+    @IBOutlet weak var lblMangaName: UILabel!
+    @IBOutlet weak var lblMangaType: UILabel!
+    @IBOutlet weak var imgManga: UIImageView!
+    
      public var animeViewModel: AnimeDetails! {
          didSet {
-             lblListItemAnimeType.text = animeViewModel?.type
-             lblListItemAnime.text = animeViewModel.title
+             lblAnimeType.text = animeViewModel?.type
+             lblAnimeName.text = animeViewModel.title
              if let imageUrl = animeViewModel.image_url {
-               imgListItemAnime.loadImageUsingUrlString(urlString: imageUrl)
+               imgAnime.loadImageUsingUrlString(urlString: imageUrl)
              }
          }
      }
      public var mangaViewModel: MangaDetails! {
           didSet {
-              lblListItemMangaType.text = mangaViewModel?.type
-              lblListItemManga.text = mangaViewModel.title
+              lblMangaName.text = mangaViewModel?.type
+              lblMangaType.text = mangaViewModel.title
               if let imageUrl = mangaViewModel.image_url {
-                imgListItemManga.loadImageUsingUrlString(urlString: imageUrl)
+                imgManga.loadImageUsingUrlString(urlString: imageUrl)
               }
           }
       }

@@ -18,7 +18,7 @@ public class FavouritesView: UITableViewController {
         didSet {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
-                self.navigationItem.title = "Favourites Left: \(self.animeList.count + self.mangaList.count)"
+                self.navigationItem.title = "Favourites Left: \(self.animeCoreDataList.count + self.mangaCoreDataList.count)"
             }
         }
     }
@@ -26,7 +26,7 @@ public class FavouritesView: UITableViewController {
         didSet {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
-                self.navigationItem.title = "Favourites Left: \(self.animeList.count + self.mangaList.count)"
+                self.navigationItem.title = "Favourites Left: \(self.animeCoreDataList.count + self.mangaCoreDataList.count)"
             }
         }
     }
@@ -65,6 +65,8 @@ extension FavouritesView {
            guard let cell = tableView.dequeueReusableCell(withIdentifier: "animeFavouriteCell", for: indexPath) as? FavouriteCell else {
                 return UITableViewCell()
             }
+         cell.setBackgroundCellGradient(colorOne: UIColor.init(red: 6/255, green: 32/255, blue: 64/255, alpha: 1),
+                                        colorTwo: UIColor.init(red: 19/255, green: 97/255, blue: 191/255, alpha: 1))
          let anime = animeCoreDataList[indexPath.row]
          cell.animeViewModel = anime
             return cell
@@ -72,6 +74,8 @@ extension FavouritesView {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "mangaFavouriteCell", for: indexPath) as? FavouriteCell else {
                 return UITableViewCell()
             }
+         cell.setBackgroundCellGradient(colorOne: UIColor.init(red: 6/255, green: 32/255, blue: 64/255, alpha: 1),
+                                        colorTwo: UIColor.init(red: 19/255, green: 97/255, blue: 191/255, alpha: 1))
          let manga = mangaCoreDataList[indexPath.row]
          cell.mangaViewModel = manga
             return cell

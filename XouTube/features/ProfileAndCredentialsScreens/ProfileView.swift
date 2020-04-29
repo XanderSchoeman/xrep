@@ -22,6 +22,9 @@ class ProfileView: UIViewController {
     @IBOutlet weak var imgProfile: UIImageView!
     @IBOutlet weak var stackViewSignInSignUp: UIStackView!
     @IBOutlet weak var stackViewProfile: UIStackView!
+    @IBOutlet weak var stackViewPrefGenre: UIStackView!
+    @IBOutlet weak var stackViewFavouriteCount: UIStackView!
+    
     @IBAction func btnSignOut(_ sender: UIButton) {
         DispatchQueue.main.async {
             self.lblUsername.text = ""
@@ -55,6 +58,8 @@ class ProfileView: UIViewController {
         super.viewDidLoad()
         stackViewSignInSignUp.isHidden = false
         stackViewProfile.isHidden = true
+        stackViewFavouriteCount.isHidden = true
+        stackViewPrefGenre.isHidden = true
     }
     override func viewWillAppear(_ animated: Bool) {
         if (isUserLoggedIn) {
