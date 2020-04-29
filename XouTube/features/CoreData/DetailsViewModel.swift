@@ -10,10 +10,10 @@ import Foundation
 import XouDevSpec
 
 public class DetailsViewModel {
-    var repo = CoreData()
-    //var Repo = CoreDataProtocol
+    var repo: CoreDataProtocol
     var view: FavouriteViewProtocol?
-    public init() {
+    public init(repo: CoreDataProtocol) {
+        self.repo = repo
     }
     public func saveAnime(model: AnimeDetails) {
         repo.saveAnime(model: model)

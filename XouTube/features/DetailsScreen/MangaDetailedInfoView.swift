@@ -15,7 +15,7 @@ import WatchConnectivity
 public var faveMangaListViewModelObject = [MangaTableModel]()
 public class MangaDetailedInfoView: UIViewController {
     var session: WCSession?
-    var detailsScreenViewModel = DetailsViewModel()
+    var detailsScreenViewModel = DetailsViewModel(repo: CoreData())
 
     @IBOutlet weak var lblAnimeTitle: UILabel!
     @IBOutlet weak var imgAnimeImage: UIImageView!

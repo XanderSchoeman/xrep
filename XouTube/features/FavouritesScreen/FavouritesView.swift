@@ -11,7 +11,7 @@ import XouDevSpec
 import Firebase
 
 public class FavouritesView: UITableViewController {
-   var detailsScreenViewModel = DetailsViewModel()
+    var detailsScreenViewModel = DetailsViewModel(repo: CoreData())
     @IBOutlet weak var tableViewAnime: UITableView!
 
     var mangaList = faveMangaListViewModelObject {
