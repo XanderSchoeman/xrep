@@ -19,22 +19,22 @@ class FirstTestCheckSomeButtons: TestCase {
     func testAnimeButtonExists() {
         application.launch()
         sleep(2)
-        XCTAssert(application.buttons["Anime"].exists)
+        XCTAssert(application.buttons["AnimeButton"].exists)
     }
     func testMangaButtonExists() {
         application.launch()
         sleep(2)
-        XCTAssert(application.buttons["Manga"].exists)
+        XCTAssert(application.buttons["MangaButton"].exists)
     }
     func testFavesButtonExists() {
         application.launch()
         sleep(2)
-        XCTAssert(application.buttons["Faves"].exists)
+        XCTAssert(application.buttons["FavouritesButton"].exists)
     }
     func testProfileButtonExists() {
         application.launch()
         sleep(2)
-        XCTAssert(application.buttons["Profile"].exists)
+        XCTAssert(application.buttons["ProfileButton"].exists)
     }
 
 }
