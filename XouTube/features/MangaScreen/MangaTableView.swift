@@ -23,6 +23,9 @@ public class MangaTableView: UITableViewController {
     }
     override public func viewDidLoad() {
         super.viewDidLoad()
+        let searchBar = UISearchBar()
+        searchBar.isAccessibilityElement = true
+        searchBar.accessibilityIdentifier = "searchBarManga"
         DispatchQueue.main.async {
             self.showSpinner()
         }

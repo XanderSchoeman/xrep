@@ -15,52 +15,65 @@ class TestApiMethods: XCTestCase {
     override func setUp() {
     }
     func testApiGetAnimeDataTopIsNotEmpty () {
-        var testSearchString = "Attack"
+        let testSearchString = "Attack"
 
         var dataObj = [TopAnime]()
         var apiCaller = ApiCallerRepo()
         apiCaller = .init(SearchText: testSearchString)
-            apiCaller.getAnimeTopData { [weak self] result in
+            apiCaller.getAnimeTopData {  result in
             switch result {
             case .failure( let error):
             print(error)
             case .success(let animes):
             dataObj = animes
-            XCTAssert(!animes.isEmpty)
+            XCTAssert(!dataObj.isEmpty)
         }
         }
     }
     func testApiGetAnimeDetailsSearchIsNotEmpty () {
-        var testSearchString = "Attack"
-        var testGenreString = "action"
+        let testSearchString = "Attack"
+        let testGenreString = "action"
 
         var dataObj = [AnimeDetails]()
         var apiCaller = ApiCallerRepo()
         apiCaller = .init(SearchText: testSearchString, GenreSelected: testGenreString)
-            apiCaller.getAnimeData { [weak self] result in
+            apiCaller.getAnimeData { result in
             switch result {
             case .failure( let error):
             print(error)
             case .success(let animes):
             dataObj = animes
-            XCTAssert(!animes.isEmpty)
+            XCTAssert(!dataObj.isEmpty)
         }
         }
     }
     func testApiGetMangaDetailsSearchIsNotEmpty () {
-        var testSearchString = "Tokyo"
-        var testGenreString = "romance"
-
+        let testSearchString = "Tokyo"
+        let testGenreString = "romance"
         var dataObj = [MangaDetails]()
         var apiCaller = ApiCallerRepo()
         apiCaller = .init(SearchText: testSearchString, GenreSelected: testGenreString)
-            apiCaller.getMangaData { [weak self] result in
+            apiCaller.getMangaData { result in
             switch result {
             case .failure( let error):
             print(error)
             case .success(let animes):
             dataObj = animes
-            XCTAssert(!animes.isEmpty)
+            XCTAssert(!dataObj.isEmpty)
+        }
+        }
+    }
+    func testApiGetUsersIsNotEmpty() {
+
+        var dataObj = [User]()
+        let apiCaller = XouBaseApiCalls()
+            apiCaller.getUsers { result in
+            switch result {
+            case .failure( let error):
+            print(error)
+            case .success(let users):
+            dataObj = users
+            XCTAssert(!dataObj.isEmpty)
         }
         }
     }

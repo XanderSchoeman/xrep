@@ -25,6 +25,7 @@ class AppNavigation: TestCase {
             sleep(2)
             application.buttons["AnimeButton"].tap()
             sleep(2)
+            
             application.buttons["Back"].tap()
             sleep(2)
             application.buttons["MangaButton"].tap()
