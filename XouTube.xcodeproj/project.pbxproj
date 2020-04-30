@@ -38,6 +38,17 @@
 		3895A11424597ED70061C818 /* XouTubeDM.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3895A11224597ED70061C818 /* XouTubeDM.xcdatamodeld */; };
 		3895A11E2459A94B0061C818 /* FavouriteViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3895A11D2459A94B0061C818 /* FavouriteViewProtocol.swift */; };
 		3895A1202459DB310061C818 /* App Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3895A11F2459DB310061C818 /* App Icon.png */; };
+		3895A122245A41FB0061C818 /* AppNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3895A121245A41FB0061C818 /* AppNavigation.swift */; };
+		3895A12E245A4BB40061C818 /* SignInScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 3895A125245A4BB40061C818 /* SignInScreen.png */; };
+		3895A12F245A4BB40061C818 /* RegisterScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 3895A126245A4BB40061C818 /* RegisterScreen.png */; };
+		3895A130245A4BB40061C818 /* ProfileSignedInScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 3895A127245A4BB40061C818 /* ProfileSignedInScreen.png */; };
+		3895A131245A4BB40061C818 /* FaveScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 3895A128245A4BB40061C818 /* FaveScreen.png */; };
+		3895A132245A4BB40061C818 /* ProfileScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 3895A129245A4BB40061C818 /* ProfileScreen.png */; };
+		3895A133245A4BB40061C818 /* DetailsScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 3895A12A245A4BB40061C818 /* DetailsScreen.png */; };
+		3895A134245A4BB40061C818 /* MangaScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 3895A12B245A4BB40061C818 /* MangaScreen.png */; };
+		3895A135245A4BB40061C818 /* HomeScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 3895A12C245A4BB40061C818 /* HomeScreen.png */; };
+		3895A136245A4BB40061C818 /* AnimeScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 3895A12D245A4BB40061C818 /* AnimeScreen.png */; };
+		3895A138245A55E10061C818 /* TestUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3895A137245A55E10061C818 /* TestUrls.swift */; };
 		38C2B8AA2423A8A9003EB0AD /* AnimeDetailedInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C2B8A92423A8A9003EB0AD /* AnimeDetailedInfoView.swift */; };
 		38C2B8E024281C70003EB0AD /* FavouritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C2B8DF24281C70003EB0AD /* FavouritesView.swift */; };
 		38C2B8F8242D1E97003EB0AD /* MangaTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C2B8F7242D1E97003EB0AD /* MangaTableView.swift */; };
@@ -161,6 +172,17 @@
 		3895A11324597ED70061C818 /* XouTubeDM.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = XouTubeDM.xcdatamodel; sourceTree = "<group>"; };
 		3895A11D2459A94B0061C818 /* FavouriteViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewProtocol.swift; sourceTree = "<group>"; };
 		3895A11F2459DB310061C818 /* App Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "App Icon.png"; sourceTree = "<group>"; };
+		3895A121245A41FB0061C818 /* AppNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigation.swift; sourceTree = "<group>"; };
+		3895A125245A4BB40061C818 /* SignInScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SignInScreen.png; sourceTree = "<group>"; };
+		3895A126245A4BB40061C818 /* RegisterScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RegisterScreen.png; sourceTree = "<group>"; };
+		3895A127245A4BB40061C818 /* ProfileSignedInScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ProfileSignedInScreen.png; sourceTree = "<group>"; };
+		3895A128245A4BB40061C818 /* FaveScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FaveScreen.png; sourceTree = "<group>"; };
+		3895A129245A4BB40061C818 /* ProfileScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ProfileScreen.png; sourceTree = "<group>"; };
+		3895A12A245A4BB40061C818 /* DetailsScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DetailsScreen.png; sourceTree = "<group>"; };
+		3895A12B245A4BB40061C818 /* MangaScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MangaScreen.png; sourceTree = "<group>"; };
+		3895A12C245A4BB40061C818 /* HomeScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeScreen.png; sourceTree = "<group>"; };
+		3895A12D245A4BB40061C818 /* AnimeScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AnimeScreen.png; sourceTree = "<group>"; };
+		3895A137245A55E10061C818 /* TestUrls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUrls.swift; sourceTree = "<group>"; };
 		38C2B8A92423A8A9003EB0AD /* AnimeDetailedInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeDetailedInfoView.swift; sourceTree = "<group>"; };
 		38C2B8DF24281C70003EB0AD /* FavouritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesView.swift; sourceTree = "<group>"; };
 		38C2B8F7242D1E97003EB0AD /* MangaTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangaTableView.swift; sourceTree = "<group>"; };
@@ -271,6 +293,7 @@
 		3803EA6D23EA998900DC745C /* XouTube */ = {
 			isa = PBXGroup;
 			children = (
+				3895A124245A4BB40061C818 /* Images */,
 				38C2CA85244CEBC8003EB0AD /* features */,
 				3803EA6E23EA998900DC745C /* AppDelegate.swift */,
 				3803EA7023EA998900DC745C /* SceneDelegate.swift */,
@@ -292,6 +315,7 @@
 				38C8060224160BFA00578FCA /* Structs.swift */,
 				38C80604241616B900578FCA /* Extensions.swift */,
 				38C2B92524329C52003EB0AD /* TestApiMethods.swift */,
+				3895A137245A55E10061C818 /* TestUrls.swift */,
 			);
 			path = XouTubeTests;
 			sourceTree = "<group>";
@@ -312,6 +336,7 @@
 				385D2AAB241F450D0004FAE9 /* Info.plist */,
 				385D2AB6241F49580004FAE9 /* FirstTestCheckSomeButtons.swift */,
 				385D2AB8241F4E5B0004FAE9 /* CheckIfBackButtonsWork.swift */,
+				3895A121245A41FB0061C818 /* AppNavigation.swift */,
 			);
 			path = XouTubeUITests;
 			sourceTree = "<group>";
@@ -410,6 +435,22 @@
 				3895A1042458E7F40061C818 /* Info.plist */,
 			);
 			path = XouTubeFastLaneSnapShots;
+			sourceTree = "<group>";
+		};
+		3895A124245A4BB40061C818 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				3895A125245A4BB40061C818 /* SignInScreen.png */,
+				3895A126245A4BB40061C818 /* RegisterScreen.png */,
+				3895A127245A4BB40061C818 /* ProfileSignedInScreen.png */,
+				3895A128245A4BB40061C818 /* FaveScreen.png */,
+				3895A129245A4BB40061C818 /* ProfileScreen.png */,
+				3895A12A245A4BB40061C818 /* DetailsScreen.png */,
+				3895A12B245A4BB40061C818 /* MangaScreen.png */,
+				3895A12C245A4BB40061C818 /* HomeScreen.png */,
+				3895A12D245A4BB40061C818 /* AnimeScreen.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		38C2CA85244CEBC8003EB0AD /* features */ = {
@@ -631,11 +672,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3895A135245A4BB40061C818 /* HomeScreen.png in Resources */,
 				3803EA7B23EA998B00DC745C /* LaunchScreen.storyboard in Resources */,
+				3895A132245A4BB40061C818 /* ProfileScreen.png in Resources */,
 				38C2B92A2432AEBE003EB0AD /* GoogleService-Info.plist in Resources */,
+				3895A136245A4BB40061C818 /* AnimeScreen.png in Resources */,
+				3895A133245A4BB40061C818 /* DetailsScreen.png in Resources */,
 				3803EA7823EA998B00DC745C /* Assets.xcassets in Resources */,
+				3895A12F245A4BB40061C818 /* RegisterScreen.png in Resources */,
+				3895A134245A4BB40061C818 /* MangaScreen.png in Resources */,
 				3803EA7623EA998900DC745C /* Main.storyboard in Resources */,
 				3895A1202459DB310061C818 /* App Icon.png in Resources */,
+				3895A131245A4BB40061C818 /* FaveScreen.png in Resources */,
+				3895A130245A4BB40061C818 /* ProfileSignedInScreen.png in Resources */,
+				3895A12E245A4BB40061C818 /* SignInScreen.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -868,6 +918,7 @@
 				38C8060324160BFA00578FCA /* Structs.swift in Sources */,
 				38C2B92624329C52003EB0AD /* TestApiMethods.swift in Sources */,
 				38C80605241616B900578FCA /* Extensions.swift in Sources */,
+				3895A138245A55E10061C818 /* TestUrls.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -877,6 +928,7 @@
 			files = (
 				385D2AB5241F46460004FAE9 /* TestEnvironment.swift in Sources */,
 				385D2AB3241F46120004FAE9 /* TestCase.swift in Sources */,
+				3895A122245A41FB0061C818 /* AppNavigation.swift in Sources */,
 				385D2AB7241F49580004FAE9 /* FirstTestCheckSomeButtons.swift in Sources */,
 				385D2AB9241F4E5B0004FAE9 /* CheckIfBackButtonsWork.swift in Sources */,
 			);

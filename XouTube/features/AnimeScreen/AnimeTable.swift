@@ -24,6 +24,9 @@ public class AnimeTable: UITableViewController {
 
     override public func viewDidLoad() {
     super.viewDidLoad()
+        let searchBar = UISearchBar()
+        searchBar.isAccessibilityElement = true
+        searchBar.accessibilityIdentifier = "searchBarAnime"
         DispatchQueue.main.async {
             self.showSpinner()
             self.viewModel.getTopAnimeData()
